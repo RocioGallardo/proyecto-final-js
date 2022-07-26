@@ -265,7 +265,7 @@ if(prueba6 != null){
 }
 
 
-
+// CREO BOTON PARA INTERCAMBIAR FUNCIONES DEL MOUSE
 
 const boton = document.getElementById("boton")
 boton.addEventListener("click", () => {
@@ -276,7 +276,7 @@ boton.addEventListener("click", () => {
     }
 })
 
-
+// TRAIGO A JS ELEMENTOS DEL DOM
 
 const p = document.getElementsByClassName("escuchadorP")
 const vidasP = document.getElementById("vidas")
@@ -286,127 +286,126 @@ let infoFila1 = document.getElementById("infoFila1")
 let infoFila2 = document.getElementById("infoFila2")
 let infoFila3 = document.getElementById("infoFila3")
 let infoFila4 = document.getElementById("infoFila4")
-let infoColumn0 = document.getElementById("infoColumn0")
-let infoColumn1 = document.getElementById("infoColumn1")
-let infoColumn2 = document.getElementById("infoColumn2")
-let infoColumn3 = document.getElementById("infoColumn3")
-let infoColumn4 = document.getElementById("infoColumn4")
+let infoColumnp0 = document.getElementById("infoColumnp0")
+let infoColumnp1 = document.getElementById("infoColumnp1")
+let infoColumnp2 = document.getElementById("infoColumnp2")
+let infoColumnp3 = document.getElementById("infoColumnp3")
+let infoColumnp4 = document.getElementById("infoColumnp4")
 
 
-// OBVIO MODIFICAR ESTO SI O SIIIIIIIIIIIII
-function verificarFYC (){
-    if(((p[0].innerText == 1 && p[0].classList[1] == "activo") || (p[0].innerText == 0)) && 
-        ((p[1].innerText == 1 && p[1].classList[1] == "activo") || (p[1].innerText == 0))&& 
-        ((p[2].innerText == 1 && p[2].classList[1] == "activo") || (p[2].innerText == 0))&& 
-        ((p[3].innerText == 1 && p[3].classList[1] == "activo") || (p[3].innerText == 0))&& 
-        ((p[4].innerText == 1 && p[4].classList[1] == "activo") || (p[4].innerText == 0))){
-        infoFila0.innerText = `✓`
-    }
-    if(((p[5].innerText == 1 && p[5].classList[1] == "activo") || (p[5].innerText == 0)) && 
-        ((p[6].innerText == 1 && p[6].classList[1] == "activo") || (p[6].innerText == 0))&& 
-        ((p[7].innerText == 1 && p[7].classList[1] == "activo") || (p[7].innerText == 0))&& 
-        ((p[8].innerText == 1 && p[8].classList[1] == "activo") || (p[8].innerText == 0))&& 
-        ((p[9].innerText == 1 && p[9].classList[1] == "activo") || (p[9].innerText == 0))){
-        infoFila1.innerText = `✓`
-    }
-        if(((p[10].innerText == 1 && p[10].classList[1] == "activo") || (p[10].innerText == 0)) && 
-        ((p[11].innerText == 1 && p[11].classList[1] == "activo") || (p[11].innerText == 0))&& 
-        ((p[12].innerText == 1 && p[12].classList[1] == "activo") || (p[12].innerText == 0))&& 
-        ((p[13].innerText == 1 && p[13].classList[1] == "activo") || (p[13].innerText == 0))&& 
-        ((p[14].innerText == 1 && p[14].classList[1] == "activo") || (p[14].innerText == 0))){
-        infoFila2.innerText = `✓`
-    }
-    if(((p[15].innerText == 1 && p[15].classList[1] == "activo") || (p[15].innerText == 0)) && 
-        ((p[16].innerText == 1 && p[16].classList[1] == "activo") || (p[16].innerText == 0))&& 
-        ((p[17].innerText == 1 && p[17].classList[1] == "activo") || (p[17].innerText == 0))&& 
-        ((p[18].innerText == 1 && p[18].classList[1] == "activo") || (p[18].innerText == 0))&& 
-        ((p[19].innerText == 1 && p[19].classList[1] == "activo") || (p[19].innerText == 0))){
-        infoFila3.innerText = `✓`
+// CREO VERIFICACIONES DE CELDAS CLICKEADAS, SI VALE 0 O SI VALE 1 Y ESTÁ ACTIVO.. DE FILAS Y COLUMNAS, LUEJO LO EJECUTO TODO JUNTO EN OTRA FUNCION
+
+
+
+function verificacionF5(desde, hasta, datodom){
+    let condicion = []
+    let filtrado 
+    for(let i = desde ; i < hasta ; i++){
+        if((p[i].innerText == 1 && p[i].classList[1] == "activo") || (p[i].innerText == 0 )){
+            condicion.push("listo")
         }
-    if(((p[20].innerText == 1 && p[20].classList[1] == "activo") || (p[20].innerText == 0)) && 
-        ((p[21].innerText == 1 && p[21].classList[1] == "activo") || (p[21].innerText == 0))&& 
-        ((p[22].innerText == 1 && p[22].classList[1] == "activo") || (p[22].innerText == 0))&& 
-        ((p[23].innerText == 1 && p[23].classList[1] == "activo") || (p[23].innerText == 0))&& 
-        ((p[24].innerText == 1 && p[24].classList[1] == "activo") || (p[24].innerText == 0))){
-        infoFila4.innerText = `✓`
-        }
-    if(((p[0].innerText == 1 && p[0].classList[1] == "activo") || (p[0].innerText == 0)) && 
-        ((p[5].innerText == 1 && p[5].classList[1] == "activo") || (p[5].innerText == 0))&& 
-        ((p[10].innerText == 1 && p[10].classList[1] == "activo") || (p[10].innerText == 0))&& 
-        ((p[15].innerText == 1 && p[15].classList[1] == "activo") || (p[15].innerText == 0))&& 
-        ((p[20].innerText == 1 && p[20].classList[1] == "activo") || (p[20].innerText == 0))){
-        infoColumnp0.innerText = `✓`
     }
-    if(((p[1].innerText == 1 && p[1].classList[1] == "activo") || (p[1].innerText == 0)) && 
-    ((p[6].innerText == 1 && p[6].classList[1] == "activo") || (p[6].innerText == 0))&& 
-    ((p[11].innerText == 1 && p[11].classList[1] == "activo") || (p[11].innerText == 0))&& 
-    ((p[16].innerText == 1 && p[16].classList[1] == "activo") || (p[16].innerText == 0))&& 
-    ((p[21].innerText == 1 && p[21].classList[1] == "activo") || (p[21].innerText == 0))){
-    infoColumnp1.innerText = `✓`
-    }
-    if(((p[2].innerText == 1 && p[2].classList[1] == "activo") || (p[2].innerText == 0)) && 
-    ((p[7].innerText == 1 && p[7].classList[1] == "activo") || (p[7].innerText == 0))&& 
-    ((p[12].innerText == 1 && p[12].classList[1] == "activo") || (p[12].innerText == 0))&& 
-    ((p[17].innerText == 1 && p[17].classList[1] == "activo") || (p[17].innerText == 0))&& 
-    ((p[22].innerText == 1 && p[22].classList[1] == "activo") || (p[22].innerText == 0))){
-    infoColumnp2.innerText = `✓`
-    }
-    if(((p[3].innerText == 1 && p[3].classList[1] == "activo") || (p[3].innerText == 0)) && 
-    ((p[8].innerText == 1 && p[8].classList[1] == "activo") || (p[8].innerText == 0))&& 
-    ((p[13].innerText == 1 && p[13].classList[1] == "activo") || (p[13].innerText == 0))&& 
-    ((p[18].innerText == 1 && p[18].classList[1] == "activo") || (p[18].innerText == 0))&& 
-    ((p[23].innerText == 1 && p[23].classList[1] == "activo") || (p[23].innerText == 0))){
-    infoColumnp3.innerText = `✓`
-    }
-    if(((p[4].innerText == 1 && p[4].classList[1] == "activo") || (p[4].innerText == 0)) && 
-    ((p[9].innerText == 1 && p[9].classList[1] == "activo") || (p[9].innerText == 0))&& 
-    ((p[14].innerText == 1 && p[14].classList[1] == "activo") || (p[14].innerText == 0))&& 
-    ((p[19].innerText == 1 && p[19].classList[1] == "activo") || (p[19].innerText == 0))&& 
-    ((p[24].innerText == 1 && p[24].classList[1] == "activo") || (p[24].innerText == 0))){
-    infoColumnp4.innerText = `✓`
+    filtrado = condicion.filter(valor => valor == "listo")
+    if(filtrado.length == 5){
+        datodom.innerText = `✓`
+        
     }
 }
 
+
+function verificacionC5(desde, hasta, datodom){
+    let condicion = []
+    let filtrado
+    for(let i = desde ; i < hasta ; i = i + 5){
+        if((p[i].innerText == 1 && p[i].classList[1] == "activo") || (p[i].innerText == 0 )){
+            condicion.push("listo")
+        }
+    }
+    filtrado = condicion.filter(valor => valor == "listo")
+    if(filtrado.length == 5){
+        datodom.innerText = `✓`
+    }
+}
+
+function verificacionFYC(){
+    verificacionF5(0, 5, infoFila0)
+    verificacionF5(5, 10, infoFila1)
+    verificacionF5(10, 15, infoFila2)
+    verificacionF5(15, 20, infoFila3)
+    verificacionF5(20, 25, infoFila4)
+
+
+    verificacionC5(0, 25, infoColumnp0)
+    verificacionC5(1, 25, infoColumnp1)
+    verificacionC5(2, 25, infoColumnp2)
+    verificacionC5(3, 25, infoColumnp3)
+    verificacionC5(4, 25, infoColumnp4)
+}
+
+
+
 function ganar(){
-    if (infoColumnp0.innerText == `✓` && infoColumnp1.innerText == `✓` && infoColumnp2.innerText == `✓` && infoColumnp3.innerText == `✓` && infoColumnp4.innerText == `✓` && vidas > 0){
+    if (infoColumnp0.innerText == `✓` && 
+        infoColumnp1.innerText == `✓` && 
+        infoColumnp2.innerText == `✓` && 
+        infoColumnp3.innerText == `✓` && 
+        infoColumnp4.innerText == `✓`){
         resultado.innerText = `GANASTE`
     }
 }
 
-// aplico escuchadores en todos los P, NO ES DEFINITIVO, SON PRUEBAS
+
+
+// FUNCION PARA aplicar escuchadores en todos los P, NO ES DEFINITIVO, SON PRUEBAS
 
 function marcarTableroYContarVidas(a,b){
     for(let i = 0 ; i<a*b; i++){
-        verificarFYC()
+        verificacionFYC()
         p[i].addEventListener("click", () => {
-            if(boton.innerText == "cruz"){
-                if(p[i].classList[1] == "gris"){
-                    p[i].classList.remove("gris")
-                } else{
-                    p[i].classList.add("gris")
+            if(resultado.innerText != `GANASTE` && resultado.innerText != `PERDISTE`){
+                if(boton.innerText == "cruz"){
+                    if(p[i].classList[1] == "gris"){
+                        p[i].classList.remove("gris")
+                    } else{
+                        p[i].classList.add("gris")
+                    }
+                }else {
+                    if(p[i].innerText == 1){
+                        p[i].classList.remove("gris")
+                        p[i].classList.add("activo")
+                        verificacionFYC()
+                        ganar()
+                    } else{
+                        p[i].classList.add("cambiarColorIncorrecto")
+                        vidas --
+                        vidasP.innerText = `${vidas} vidas`
+                    }
                 }
-            }else {
-                if(p[i].innerText == 1){
-                    p[i].classList.remove("gris")
-                    p[i].classList.add("activo")
-                    verificarFYC()
-                    ganar()
-                } else{
-                    p[i].classList.add("cambiarColorIncorrecto")
-                    vidas --
-                    vidasP.innerText = `${vidas} vidas`
+                if(vidas <= 0){
+                    vidasP.innerText = ``
+                resultado.innerText = `PERDISTE`
                 }
-            }
-            if(vidas <= 0){
-            vidasP.innerText = ``
-            resultado.innerText = `PERDISTE`
             }
         })
     }
 }
 
 
+
+
 marcarTableroYContarVidas(5,5)
+
+
+
+
+
+// do{
+//     console.log("todaviano")
+//     
+// } while(resultado.innerText != `PERDISTE` || resultado.innerText != `GANASTE`) 
+
+
+
 
 
 

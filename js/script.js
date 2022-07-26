@@ -362,7 +362,7 @@ function marcarTableroYContarVidas(a,b){
     for(let i = 0 ; i<a*b; i++){
         verificacionFYC()
         p[i].addEventListener("click", () => {
-            if(resultado.innerText != `GANASTE` && resultado.innerText != `PERDISTE`){
+            if((resultado.innerText != `GANASTE`) && (resultado.innerText != `PERDISTE`)){
                 if(boton.innerText == "cruz"){
                     if(p[i].classList[1] == "gris"){
                         p[i].classList.remove("gris")

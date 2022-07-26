@@ -3,17 +3,19 @@
     padding: 0;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
+
 body{
     background-color: #F1F7ED;
+    /* cursor: url(../assets/cursor30.png), auto; */
 }
 
-nav{
-    background-color: #F1F7ED;
-    width: 100%;
-    height: 50px;
+.oscuro{
+    background-color: #2C061F;
+    color: #B33951;
 }
+
+
 
 
 h3{
@@ -27,29 +29,50 @@ h3{
     grid-template-columns: 100px 250px;
     grid-template-rows: 100px 250px;
     grid-template-areas: 
-    "none infoColumn5x5"
-    "infoFilas5x5 casilleros5x5";
+    "boton infoColumn5x5"
+    "infoFilas5x5 casilleros5x5"
+    "none corazon";
     justify-content: center;
-    align-items: center;
+    gap: 2px;
 }
+
+.boton{
+    grid-area: boton;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+    color: lightgrey;
+}
+
+.botonVerde{
+    background-color: #0E402D;
+    color: #0E402D;
+}
+
+
+
 
 .infoColumn5x5{
     grid-area: infoColumn5x5;
     display: grid;
     grid-template-columns: 50px 50px 50px 50px 50px;
-    grid-template-rows: 100px;
-    justify-content: center;
     align-items: center;
-    background-color:#E3D081;
+    gap: 2px;
 }
+
+
 .infoFilas5x5{
     grid-area: infoFilas5x5;
     display: grid;
     grid-template-columns: 100px;
     grid-template-rows: 50px 50px 50px 50px 50px;
     align-items: center;
-    background-color:#E3D081;
+    gap: 2px;
 }
+
+
 
 .casilleros5x5{
     grid-area: casilleros5x5;
@@ -57,20 +80,25 @@ h3{
     grid-template-columns: 50px 50px 50px 50px 50px;
     grid-template-rows: 50px 50px 50px 50px 50px;
     align-items: center;
+    gap: 2px;
 }
 
+.corazon{
+    grid-area: corazon;
+}
 
 p{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #F1F7ED;
+    border-radius: 3px;
     user-select: none;
 }
 
 .escuchadorP{
     background-color: #91C7B1;
     color: #91C7B1;
+    border-radius: 10px;
     width: 50px;
     height: 50px;
 }
@@ -115,41 +143,50 @@ p{
 
 
 .infoColumn10x10 p, .infoColumn5x5 p {
-    color: #bc2c1a;
+    color: #B33951;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    line-height: 20px;
     width: 50px;
     height: 100px;
+    background-color: #E3D081;
+    border-radius: 10px;
 }
 
 .infoFilas10x10 p, .infoFilas5x5 p {
+    color: #B33951;
     width: 100px;
     height: 50px;
+    background-color: #E3D081;
+    border-radius: 10px;
 }
 
 .gris{
     background-color: lightgrey;
     color: lightgrey;
 }
+
 .activo{
     background-color: #0E402D;
     color: #0E402D;
 }
 
 .cambiarColorIncorrecto{
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #B33951;
+    color: #B33951;
 }
 
 .cambiarColorIncorrecto::after{
     content: " ";
-    width: 10px;
-    height: 10px;
-    background-color: #B33951;
-    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    background-color: lightgrey;
+    border-radius: 8px;
     position: absolute;
 }
 
+img{
+    width: 40px;
+    margin-top: 20px;
+}
 
-/* 93b7be - f1fffa - d6c7bc - bc2c1a - 3c3744 */
+

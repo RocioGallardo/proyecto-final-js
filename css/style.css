@@ -6,28 +6,20 @@
 
 }
 body{
-    background-color: #f1fffa;
+    background-color: #F1F7ED;
 }
 
 nav{
-    background-color: #3c3744;
+    background-color: #F1F7ED;
     width: 100%;
     height: 50px;
 }
 
 
-table{
-    background-color: #f1fffa;
-    margin: 50px auto;
-    border-spacing: 0;
-    border: 0;
-}
-
-
 h3{
     margin: 50px auto 10px;
+    text-transform: capitalize;
 }
-
 
 
 .gridTablero5x5{
@@ -48,7 +40,7 @@ h3{
     grid-template-rows: 100px;
     justify-content: center;
     align-items: center;
-    background-color:#d6c7bc;
+    background-color:#E3D081;
 }
 .infoFilas5x5{
     grid-area: infoFilas5x5;
@@ -56,7 +48,7 @@ h3{
     grid-template-columns: 100px;
     grid-template-rows: 50px 50px 50px 50px 50px;
     align-items: center;
-    background-color:#d6c7bc;
+    background-color:#E3D081;
 }
 
 .casilleros5x5{
@@ -72,13 +64,13 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #f1fffa;
+    border: 1px solid #F1F7ED;
     user-select: none;
 }
 
 .escuchadorP{
-    background-color: #93b7be;
-    color: #93b7be;
+    background-color: #91C7B1;
+    color: #91C7B1;
     width: 50px;
     height: 50px;
 }
@@ -101,7 +93,7 @@ p{
     grid-template-rows: 100px;
     justify-content: center;
     align-items: center;
-    background-color:#d6c7bc;
+    background-color:#E3D081;
 }
 .infoFilas10x10{
     grid-area: infoFilas10x10;
@@ -109,7 +101,7 @@ p{
     grid-template-columns: 100px;
     grid-template-rows: repeat(10, 50px);
     align-items: center;
-    background-color:#d6c7bc;
+    background-color:#E3D081;
 }
 
 .casilleros10x10{
@@ -136,13 +128,28 @@ p{
     height: 50px;
 }
 
-.cambiarColorCorrecto{
-    background-color: green;
-    color: green;
+.gris{
+    background-color: lightgrey;
+    color: lightgrey;
+}
+.activo{
+    background-color: #0E402D;
+    color: #0E402D;
 }
 
 .cambiarColorIncorrecto{
-    background-color: #bc2c1a;
-    color: #bc2c1a;
+    background-color: lightgrey;
+    color: lightgrey;
 }
+
+.cambiarColorIncorrecto::after{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background-color: #B33951;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
 /* 93b7be - f1fffa - d6c7bc - bc2c1a - 3c3744 */

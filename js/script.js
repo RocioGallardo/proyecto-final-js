@@ -1,53 +1,45 @@
+// creo una clase para crear Juegos Predeterminados
+
 class JuegoPredeterminado{
     constructor(id,nombre,tablerojuego){
         this.id = id
         this.nombre = nombre
         this.tablerojuego = tablerojuego
+        this.vidas = 5
     }
 }
+
+// Funcion que aumenta en uno el último elemento de un array, sirve para la funcion de Informacion Filas / Informacion columnas
 
 function aumentarValorIndiceFinal(horizontal){
     let indiceFinal = horizontal.length - 1
     horizontal[indiceFinal]++
 }
 
-
-
-function crearTableroRandom (filas,columnas){
-arrayTablero =[]
-    for(let j = 0 ; j<filas; j++){
-        let arrayfilas = []
-    for(let i=0 ; i<columnas ; i++){
-    const random = (Math.random())
-    const redondeado = Math.round(random)
-    arrayfilas.push(redondeado)
-    }
-    arrayTablero.push(arrayfilas)
-    }
-    return arrayTablero
-}
-
-
-
-
-
+//Funcion que dice por cada fila del tablero, la cantidad de casilleros correlativos que deben pintarse, retorna un array con la info necesaria
 function informacionFilas(objeto){
     let filaFiltrada
     let arrayFila = []
     for (let i=0 ; i< objeto.tablerojuego.length; i++){
         let fila = [0]
         for (let j=0 ; j<objeto.tablerojuego[i].length; j++){
+            // si cada elemento del array que recorremos es un 0, pusheamos un 0 en un nuevo array, si es 1 se lo sumamos al último elemento del array
             if(objeto.tablerojuego[i][j] === 1){
                 aumentarValorIndiceFinal(fila)
             }else{
                 fila.push(0)
             }
         }
+        // filtramos todos los elementos del array que el valor sea 0
         filaFiltrada = fila.filter(valor => valor != 0)
+        // pusheo los arrays filtrados a arrayfila
         arrayFila.push(filaFiltrada)
     }
 return arrayFila
 }
+
+//Funcion que dice por cada columna del tablero, la cantidad de casilleros correlativos que deben pintarse, retorna un array con la info necesaria, es bastante parecida a la funcion informacionFilas, solo que en vez de recorrer el array de una manera horizontal, lo recorrro de manera vertical.
+
 
 function informacionColumnas(objeto){
     let columnaFiltrada
@@ -68,6 +60,27 @@ return arrayColumna
 }
 
 
+
+// Creo una función para usar cuando el usuario quiera jugar un juego random ( no predeterminado ), el usuario podrá elegir cantidad de filas y columnas. en esta funcion solo creo el tablero
+function crearTableroRandom (filas,columnas){
+arrayTablero =[]
+    for(let j = 0 ; j<filas; j++){
+        let arrayfilas = []
+    for(let i=0 ; i<columnas ; i++){
+    const random = (Math.random())
+    const redondeado = Math.round(random)
+    arrayfilas.push(redondeado)
+    }
+    arrayTablero.push(arrayfilas)
+    }
+    return arrayTablero
+}
+
+
+let vidas = 5
+
+
+// Funcion para mostrar en dom el juego
 function dom (prueba, tablero, tamaño){
 
 prueba.innerHTML +=`
@@ -77,6 +90,9 @@ prueba.innerHTML +=`
 <div class="infoFilas${tamaño}"id="infoFilas${tablero.id}" ></div>
 <div class="casilleros${tamaño}"id="casilleros${tablero.id}" ></div>
 </div>
+<button id="boton">verde</button>
+<p id="vidas">${vidas} vidas</p>
+<div id= "resultado"></div>
 `
 const infoColumn = document.getElementById(`infoColumn${tablero.id}`)
 const infoFilas = document.getElementById(`infoFilas${tablero.id}`)
@@ -84,12 +100,12 @@ const casilleros = document.getElementById(`casilleros${tablero.id}`)
 
 for(let i = 0 ; i<tablero.informacionColumnas.length ; i++){
     infoColumn.innerHTML +=`
-    <p>${tablero.informacionColumnas[i].join("")}</p>`
+    <p id="infoColumnp${i}">${tablero.informacionColumnas[i].join("")}</p>`
 }
 
 for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
     infoFilas.innerHTML +=`
-    <p>${tablero.informacionFilas[i].join(" ")}</p>`
+    <p id="infoFila${i}">${tablero.informacionFilas[i].join(" ")}</p>`
 }
 
 for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
@@ -99,17 +115,19 @@ for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
         `
     }
 }
+
 }
 
+
+// creo un tablero random para ver si funciona
 let tableroRandom = crearTableroRandom(5,5) 
 const juegoRandom = new JuegoPredeterminado(1000, "random", tableroRandom)
 juegoRandom.informacionFilas = informacionFilas(juegoRandom)
 juegoRandom.informacionColumnas = informacionColumnas(juegoRandom)
-console.log(juegoRandom)
 
 
 
-
+//creo tableros predeterminados
 const tablero1_5x5 = new JuegoPredeterminado (1, "castle", [
     [1,0,1,0,1],
     [0,1,1,1,0],
@@ -119,7 +137,6 @@ const tablero1_5x5 = new JuegoPredeterminado (1, "castle", [
 
 tablero1_5x5.informacionFilas = informacionFilas(tablero1_5x5)
 tablero1_5x5.informacionColumnas = informacionColumnas(tablero1_5x5)
-//console.log(tablero1_5x5)
 
 
 
@@ -133,7 +150,6 @@ const tablero2_5x5 = new JuegoPredeterminado (2, "button", [
 
 tablero2_5x5.informacionFilas = informacionFilas(tablero2_5x5)
 tablero2_5x5.informacionColumnas = informacionColumnas(tablero2_5x5)
-//console.log(tablero2_5x5)
 
 const tablero3_5x5 = new JuegoPredeterminado (3, "pause", [
     [1,1,1,1,1],
@@ -144,7 +160,6 @@ const tablero3_5x5 = new JuegoPredeterminado (3, "pause", [
 
 tablero3_5x5.informacionFilas = informacionFilas(tablero3_5x5)
 tablero3_5x5.informacionColumnas = informacionColumnas(tablero3_5x5)
-//console.log(tablero3_5x5)
 
 const tablero4_5x5 = new JuegoPredeterminado (4, "crab", [
     [1,0,0,0,1],
@@ -155,7 +170,7 @@ const tablero4_5x5 = new JuegoPredeterminado (4, "crab", [
 
 tablero4_5x5.informacionFilas = informacionFilas(tablero4_5x5)
 tablero4_5x5.informacionColumnas = informacionColumnas(tablero4_5x5)
-//console.log(tablero4_5x5)
+
 
 const tablero5_5x5 = new JuegoPredeterminado (5, "kiss", [
     [0,0,0,0,0],
@@ -166,7 +181,7 @@ const tablero5_5x5 = new JuegoPredeterminado (5, "kiss", [
 
 tablero5_5x5.informacionFilas = informacionFilas(tablero5_5x5)
 tablero5_5x5.informacionColumnas = informacionColumnas(tablero5_5x5)
-//console.log(tablero5_5x5)
+
 
 let arrayJuegos5x5 = [tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5]
 
@@ -184,55 +199,226 @@ const tablero1_10x10 = new JuegoPredeterminado(6, "egypt", [
 
     tablero1_10x10.informacionFilas = informacionFilas(tablero1_10x10)
     tablero1_10x10.informacionColumnas = informacionColumnas(tablero1_10x10)
-    //console.log(tablero1_10x10) 
 
 
 
 
-//para elegir juegos 5x5
-const divLista5x5 = document.getElementById("lista5x5")
-arrayJuegos5x5.forEach(juego => {
-    divLista5x5.innerHTML += `
-    <a href="#"> ${juego.nombre} </a>
-`
+// A HREF PARA LUEGO MOSTRAR EN DOM
+// para elegir juegos 5x5
+// const divLista5x5 = document.getElementById("lista5x5")
+// arrayJuegos5x5.forEach(juego => {
+//     divLista5x5.innerHTML += `
+//     <a href="#"> ${juego.nombre} </a>
+// `
+// })
+
+
+// creo constantes de divs que tengo en el HTML
+
+const prueba0 = document.getElementById("prueba0") // Random
+const prueba1 = document.getElementById("prueba1") // Castle
+const prueba2 = document.getElementById("prueba2") // Button
+const prueba3 = document.getElementById("prueba3") // Pause
+const prueba4 = document.getElementById("prueba4") // Crab
+const prueba5 = document.getElementById("prueba5") // Kiss
+const prueba6 = document.getElementById("prueba6") // Egypt
+
+
+// aplico la funcion DOM, para que mis tableros se muestren en el HTML solo en el caso que se encuentre el Div
+
+if(prueba0 != null){
+    dom(prueba0, juegoRandom, "5x5")
+}
+
+
+if(prueba1 != null){
+    dom(prueba1, tablero1_5x5, "5x5")
+}
+
+
+
+if(prueba2 != null){
+    dom(prueba2, tablero2_5x5, "5x5")
+}
+
+
+
+if(prueba3 != null){
+    dom(prueba3, tablero3_5x5, "5x5")
+}
+
+
+if(prueba4 != null){
+    dom(prueba4, tablero4_5x5, "5x5")
+}
+
+
+
+if(prueba5 != null){
+    dom(prueba5, tablero5_5x5, "5x5")
+}
+
+
+
+if(prueba6 != null){
+    dom(prueba6, tablero1_10x10, "10x10")
+}
+
+
+
+
+const boton = document.getElementById("boton")
+boton.addEventListener("click", () => {
+    if(boton.innerText == "verde"){
+        boton.innerText = "cruz"
+    } else{
+        boton.innerText = "verde"
+    }
 })
 
 
 
-const prueba0 = document.getElementById("prueba0")
-const prueba1 = document.getElementById("prueba1")
-const prueba2 = document.getElementById("prueba2")
-const prueba3 = document.getElementById("prueba3")
-const prueba4 = document.getElementById("prueba4")
-const prueba5 = document.getElementById("prueba5")
-const prueba6 = document.getElementById("prueba6")
-
-
-
-dom(prueba0, juegoRandom, "5x5")
-dom(prueba1, tablero1_5x5, "5x5")
-dom(prueba2, tablero2_5x5, "5x5")
-dom(prueba3, tablero3_5x5, "5x5")
-dom(prueba4, tablero4_5x5, "5x5")
-dom(prueba5, tablero5_5x5, "5x5")
-dom(prueba6, tablero1_10x10, "10x10")
-
-
-
-
-
 const p = document.getElementsByClassName("escuchadorP")
+const vidasP = document.getElementById("vidas")
+let resultado = document.getElementById("resultado")
+let infoFila0 = document.getElementById("infoFila0")
+let infoFila1 = document.getElementById("infoFila1")
+let infoFila2 = document.getElementById("infoFila2")
+let infoFila3 = document.getElementById("infoFila3")
+let infoFila4 = document.getElementById("infoFila4")
+let infoColumn0 = document.getElementById("infoColumn0")
+let infoColumn1 = document.getElementById("infoColumn1")
+let infoColumn2 = document.getElementById("infoColumn2")
+let infoColumn3 = document.getElementById("infoColumn3")
+let infoColumn4 = document.getElementById("infoColumn4")
 
 
-for(let i = 0; i<25; i++){
-    p[i].addEventListener("click", () => {
-        if(p[i].innerText == 1){
-            p[i].classList.add("cambiarColorCorrecto")
-        } else {
-            p[i].classList.add("cambiarColorIncorrecto")
+// OBVIO MODIFICAR ESTO SI O SIIIIIIIIIIIII
+function verificarFYC (){
+    if(((p[0].innerText == 1 && p[0].classList[1] == "activo") || (p[0].innerText == 0)) && 
+        ((p[1].innerText == 1 && p[1].classList[1] == "activo") || (p[1].innerText == 0))&& 
+        ((p[2].innerText == 1 && p[2].classList[1] == "activo") || (p[2].innerText == 0))&& 
+        ((p[3].innerText == 1 && p[3].classList[1] == "activo") || (p[3].innerText == 0))&& 
+        ((p[4].innerText == 1 && p[4].classList[1] == "activo") || (p[4].innerText == 0))){
+        infoFila0.innerText = `✓`
+    }
+    if(((p[5].innerText == 1 && p[5].classList[1] == "activo") || (p[5].innerText == 0)) && 
+        ((p[6].innerText == 1 && p[6].classList[1] == "activo") || (p[6].innerText == 0))&& 
+        ((p[7].innerText == 1 && p[7].classList[1] == "activo") || (p[7].innerText == 0))&& 
+        ((p[8].innerText == 1 && p[8].classList[1] == "activo") || (p[8].innerText == 0))&& 
+        ((p[9].innerText == 1 && p[9].classList[1] == "activo") || (p[9].innerText == 0))){
+        infoFila1.innerText = `✓`
+    }
+        if(((p[10].innerText == 1 && p[10].classList[1] == "activo") || (p[10].innerText == 0)) && 
+        ((p[11].innerText == 1 && p[11].classList[1] == "activo") || (p[11].innerText == 0))&& 
+        ((p[12].innerText == 1 && p[12].classList[1] == "activo") || (p[12].innerText == 0))&& 
+        ((p[13].innerText == 1 && p[13].classList[1] == "activo") || (p[13].innerText == 0))&& 
+        ((p[14].innerText == 1 && p[14].classList[1] == "activo") || (p[14].innerText == 0))){
+        infoFila2.innerText = `✓`
+    }
+    if(((p[15].innerText == 1 && p[15].classList[1] == "activo") || (p[15].innerText == 0)) && 
+        ((p[16].innerText == 1 && p[16].classList[1] == "activo") || (p[16].innerText == 0))&& 
+        ((p[17].innerText == 1 && p[17].classList[1] == "activo") || (p[17].innerText == 0))&& 
+        ((p[18].innerText == 1 && p[18].classList[1] == "activo") || (p[18].innerText == 0))&& 
+        ((p[19].innerText == 1 && p[19].classList[1] == "activo") || (p[19].innerText == 0))){
+        infoFila3.innerText = `✓`
         }
-    })
+    if(((p[20].innerText == 1 && p[20].classList[1] == "activo") || (p[20].innerText == 0)) && 
+        ((p[21].innerText == 1 && p[21].classList[1] == "activo") || (p[21].innerText == 0))&& 
+        ((p[22].innerText == 1 && p[22].classList[1] == "activo") || (p[22].innerText == 0))&& 
+        ((p[23].innerText == 1 && p[23].classList[1] == "activo") || (p[23].innerText == 0))&& 
+        ((p[24].innerText == 1 && p[24].classList[1] == "activo") || (p[24].innerText == 0))){
+        infoFila4.innerText = `✓`
+        }
+    if(((p[0].innerText == 1 && p[0].classList[1] == "activo") || (p[0].innerText == 0)) && 
+        ((p[5].innerText == 1 && p[5].classList[1] == "activo") || (p[5].innerText == 0))&& 
+        ((p[10].innerText == 1 && p[10].classList[1] == "activo") || (p[10].innerText == 0))&& 
+        ((p[15].innerText == 1 && p[15].classList[1] == "activo") || (p[15].innerText == 0))&& 
+        ((p[20].innerText == 1 && p[20].classList[1] == "activo") || (p[20].innerText == 0))){
+        infoColumnp0.innerText = `✓`
+    }
+    if(((p[1].innerText == 1 && p[1].classList[1] == "activo") || (p[1].innerText == 0)) && 
+    ((p[6].innerText == 1 && p[6].classList[1] == "activo") || (p[6].innerText == 0))&& 
+    ((p[11].innerText == 1 && p[11].classList[1] == "activo") || (p[11].innerText == 0))&& 
+    ((p[16].innerText == 1 && p[16].classList[1] == "activo") || (p[16].innerText == 0))&& 
+    ((p[21].innerText == 1 && p[21].classList[1] == "activo") || (p[21].innerText == 0))){
+    infoColumnp1.innerText = `✓`
+    }
+    if(((p[2].innerText == 1 && p[2].classList[1] == "activo") || (p[2].innerText == 0)) && 
+    ((p[7].innerText == 1 && p[7].classList[1] == "activo") || (p[7].innerText == 0))&& 
+    ((p[12].innerText == 1 && p[12].classList[1] == "activo") || (p[12].innerText == 0))&& 
+    ((p[17].innerText == 1 && p[17].classList[1] == "activo") || (p[17].innerText == 0))&& 
+    ((p[22].innerText == 1 && p[22].classList[1] == "activo") || (p[22].innerText == 0))){
+    infoColumnp2.innerText = `✓`
+    }
+    if(((p[3].innerText == 1 && p[3].classList[1] == "activo") || (p[3].innerText == 0)) && 
+    ((p[8].innerText == 1 && p[8].classList[1] == "activo") || (p[8].innerText == 0))&& 
+    ((p[13].innerText == 1 && p[13].classList[1] == "activo") || (p[13].innerText == 0))&& 
+    ((p[18].innerText == 1 && p[18].classList[1] == "activo") || (p[18].innerText == 0))&& 
+    ((p[23].innerText == 1 && p[23].classList[1] == "activo") || (p[23].innerText == 0))){
+    infoColumnp3.innerText = `✓`
+    }
+    if(((p[4].innerText == 1 && p[4].classList[1] == "activo") || (p[4].innerText == 0)) && 
+    ((p[9].innerText == 1 && p[9].classList[1] == "activo") || (p[9].innerText == 0))&& 
+    ((p[14].innerText == 1 && p[14].classList[1] == "activo") || (p[14].innerText == 0))&& 
+    ((p[19].innerText == 1 && p[19].classList[1] == "activo") || (p[19].innerText == 0))&& 
+    ((p[24].innerText == 1 && p[24].classList[1] == "activo") || (p[24].innerText == 0))){
+    infoColumnp4.innerText = `✓`
+    }
 }
+
+function ganar(){
+    if (infoColumnp0.innerText == `✓` && infoColumnp1.innerText == `✓` && infoColumnp2.innerText == `✓` && infoColumnp3.innerText == `✓` && infoColumnp4.innerText == `✓` && vidas > 0){
+        resultado.innerText = `GANASTE`
+    }
+}
+
+// aplico escuchadores en todos los P, NO ES DEFINITIVO, SON PRUEBAS
+
+function marcarTableroYContarVidas(a,b){
+    for(let i = 0 ; i<a*b; i++){
+        verificarFYC()
+        p[i].addEventListener("click", () => {
+            if(boton.innerText == "cruz"){
+                if(p[i].classList[1] == "gris"){
+                    p[i].classList.remove("gris")
+                } else{
+                    p[i].classList.add("gris")
+                }
+            }else {
+                if(p[i].innerText == 1){
+                    p[i].classList.remove("gris")
+                    p[i].classList.add("activo")
+                    verificarFYC()
+                    ganar()
+                } else{
+                    p[i].classList.add("cambiarColorIncorrecto")
+                    vidas --
+                    vidasP.innerText = `${vidas} vidas`
+                }
+            }
+            if(vidas <= 0){
+            vidasP.innerText = ``
+            resultado.innerText = `PERDISTE`
+            }
+        })
+    }
+}
+
+
+marcarTableroYContarVidas(5,5)
+
+
+
+/*if(((p[0].innerText == 1 && p[0].classList[1] == "activo") || (p[0].innerText == 0)) && 
+((p[1].innerText == 1 && p[1].classList[1] == "activo") || (p[1].innerText == 0))&& 
+((p[2].innerText == 1 && p[2].classList[1] == "activo") || (p[2].innerText == 0))&& 
+((p[3].innerText == 1 && p[3].classList[1] == "activo") || (p[3].innerText == 0))&& 
+((p[4].innerText == 1 && p[4].classList[1] == "activo") || (p[4].innerText == 0))){
+    console.log("fila 0 terminada")
+    pInfoFila0.innerText += ` ✓`
+}
+
 
 
 // p[0].addEventListener("click", () => {

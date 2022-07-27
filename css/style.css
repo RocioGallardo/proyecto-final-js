@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #B33951;
 }
 
 body{
@@ -11,16 +14,15 @@ body{
 }
 
 .oscuro{
-    background-color: #2C061F;
-    color: #B33951;
+    background-color: #333;
 }
 
 
 
 
 h3{
-    margin: 50px auto 10px;
-    text-transform: capitalize;
+    margin: 50px auto;
+    text-transform: uppercase;
 }
 
 
@@ -31,7 +33,7 @@ h3{
     grid-template-areas: 
     "boton infoColumn5x5"
     "infoFilas5x5 casilleros5x5"
-    "none corazon";
+    "reloj corazon";
     justify-content: center;
     gap: 2px;
 }
@@ -47,12 +49,12 @@ h3{
 }
 
 .botonVerde{
-    background-color: #0E402D;
-    color: #0E402D;
+    background-color: #429973;
+    color: #429973;
 }
 
 
-
+/* #0E402D*/
 
 .infoColumn5x5{
     grid-area: infoColumn5x5;
@@ -87,6 +89,7 @@ h3{
     grid-area: corazon;
 }
 
+
 p{
     display: flex;
     justify-content: center;
@@ -95,7 +98,7 @@ p{
     user-select: none;
 }
 
-.escuchadorP{
+.celdas{
     background-color: #91C7B1;
     color: #91C7B1;
     border-radius: 10px;
@@ -166,8 +169,8 @@ p{
 }
 
 .activo{
-    background-color: #0E402D;
-    color: #0E402D;
+    background-color: #429973;
+    color: #429973;
 }
 
 .cambiarColorIncorrecto{
@@ -189,4 +192,16 @@ img{
     margin-top: 20px;
 }
 
+.reloj{
+    grid-area: reloj;
+    margin-top: 30px;
+}
 
+.reloj p{
+    display: inline;
+    color: #B33951;
+}
+
+footer{
+    margin-top: 70px;
+}

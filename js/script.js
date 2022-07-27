@@ -116,17 +116,20 @@ let vidas = 5
 function dom (prueba, tablero, tamaño){
 
 prueba.innerHTML +=`
-<h3>${tablero.nombre}</h3>
-<div class="gridTablero${tamaño}">
-<button class="boton botonVerde" id="boton"></button>
-<div class="infoColumn${tamaño}" id="infoColumn${tablero.id}" ></div>
-<div class="infoFilas${tamaño}"id="infoFilas${tablero.id}" ></div>
-<div class="casilleros${tamaño}"id="casilleros${tablero.id}" ></div>
-<div class="corazon"id="corazon">
-</div>
-</div>
-<div id= "resultado"></div>
-`
+    <h3>${tablero.nombre}</h3>
+    <div class="gridTablero${tamaño}">
+        <button class="boton botonVerde" id="boton"></button>
+        <div class="infoColumn${tamaño}" id="infoColumn${tablero.id}" ></div>
+        <div class="infoFilas${tamaño}"id="infoFilas${tablero.id}" ></div>
+        <div class="casilleros${tamaño}"id="casilleros${tablero.id}"></div>
+        <div class="reloj">
+            <p id="minutos">00</p>
+            <p id="segundos">: 00</p>
+        </div>
+        <div class="corazon"id="corazon"> </div>
+    </div>
+    <div id="resultado"></div>
+    `
 const infoColumn = document.getElementById(`infoColumn${tablero.id}`)
 const infoFilas = document.getElementById(`infoFilas${tablero.id}`)
 const casilleros = document.getElementById(`casilleros${tablero.id}`)
@@ -144,7 +147,7 @@ for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
 for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
     for(let j = 0 ; j<tablero.tablerojuego[i].length ; j++){
         casilleros.innerHTML +=`
-        <p class="escuchadorP">${tablero.tablerojuego[i][j]}</p>
+        <p class="celdas">${tablero.tablerojuego[i][j]}</p>
         `
     }
 }
@@ -301,28 +304,6 @@ if(prueba6 != null){
 
 // CREO BOTON PARA INTERCAMBIAR FUNCIONES DEL MOUSE
 
-// 
-// boton.addEventListener("click", () => {
-//     if(boton.innerText == "verde"){
-//         boton.innerText = "cruz"
-//     } else{
-//         boton.innerText = "verde"
-//     }
-// })
-
-// const boton = document.getElementById("boton")
-// if(boton != null){
-//     boton.addEventListener("click", () => {
-//     if(boton.innerText == "verde"){
-//         boton.classList.remove("botonVerde")
-//         boton.innerText = "cruz"
-//     } else{
-//         boton.classList.add("botonVerde")
-//         boton.innerText = "verde"
-//     }
-// })
-// }
-
 const boton = document.getElementById("boton")
 if(boton != null){
     boton.addEventListener("click", () => {
@@ -337,7 +318,7 @@ if(boton != null){
 
 // TRAIGO A JS ELEMENTOS DEL DOM
 
-const p = document.getElementsByClassName("escuchadorP")
+const p = document.getElementsByClassName("celdas")
 const vidasP = document.getElementById("vidas")
 let resultado = document.getElementById("resultado")
 let infoFila0 = document.getElementById("infoFila0")
@@ -412,6 +393,7 @@ function ganar(){
         resultado.innerText = `GANASTE`
     }
 }
+
 
 
 
@@ -521,3 +503,43 @@ marcarTableroYContarVidas(5,5)
 
 
 
+// CRONOMETRO
+
+let segundosP = document.getElementById("segundos")
+let minutosP = document.getElementById("minutos")
+function reloj (){
+    let segundos = 00
+    let minutos = 00
+    
+    let contar = function(){
+        segundos++
+        // si el contador de segundos llega a 60 que se '0nga de nuevo en 0 y sume 1 en minutos
+        if (segundos == 60){
+            segundos = 0
+            minutos++
+            // si minutos es menor a 10 agregar un 0 antes en el dom
+            if(minutos < 10){
+                minutosP.innerText = `: 0${segundos}`
+            }else{
+                minutosP.innerText = `: ${segundos}`
+            }
+            minutosP.innerText = `${minutos} `
+        }
+        // si segundos es menor a 10 agregar un 0 antes en el dom
+        if(segundos < 10){
+            segundosP.innerText = `: 0${segundos}`
+        }else{
+            segundosP.innerText = `: ${segundos}`
+        }
+        
+        if((resultado.innerText == `GANASTE`) || (resultado.innerText == `PERDISTE`)){
+        clearInterval(intervalo)
+        console.log(`${minutos} : ${segundos}`)
+        }
+    }
+    
+    let intervalo = setInterval(contar, 1000)
+
+}
+
+reloj()

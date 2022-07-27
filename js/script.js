@@ -2,6 +2,7 @@
 
 const claro = document.getElementById("claro")
 const oscuro = document.getElementById("oscuro")
+const fondo = document.getElementById("fondo")
 
 let infoLocalS
 
@@ -15,15 +16,17 @@ if(infoLocalS == "oscuro"){
     document.body.classList.add("oscuro")
 }
 
-let divinfocolumnas = document.getElementsByClassName("infoColumn5x5")
+
 
 oscuro.addEventListener("click", () =>{
     document.body.classList.add("oscuro")
+    fondo.classList.add("fondoOscuro")
     localStorage.setItem("theme", "oscuro")
 })
 
 claro.addEventListener("click", () =>{
     document.body.classList.remove("oscuro")
+    fondo.classList.remove("fondoOscuro")
     localStorage.setItem("theme", "claro")
 })
 
@@ -119,19 +122,24 @@ prueba.innerHTML +=`
     <h3>${tablero.nombre}</h3>
     <div class="gridTablero${tamaño}">
         <button class="boton botonVerde" id="boton"></button>
-        <div class="infoColumn${tamaño}" id="infoColumn${tablero.id}" ></div>
-        <div class="infoFilas${tamaño}"id="infoFilas${tablero.id}" ></div>
+        <div class="infoColumn${tamaño}" id="infoColumn" ></div>
+        <div class="infoFilas${tamaño}"id="infoFilas" ></div>
         <div class="casilleros${tamaño}"id="casilleros${tablero.id}"></div>
         <div class="reloj">
+            <img class="btnPause pause" id="pause" src="../../assets/playpause.png" alt="">
             <p id="minutos">00</p>
             <p id="segundos">: 00</p>
+            
         </div>
-        <div class="corazon"id="corazon"> </div>
+        <div class="corazon"id="corazon">
+        
+        </div>
     </div>
+    
     <div id="resultado"></div>
     `
-const infoColumn = document.getElementById(`infoColumn${tablero.id}`)
-const infoFilas = document.getElementById(`infoFilas${tablero.id}`)
+const infoColumn = document.getElementById(`infoColumn`)
+const infoFilas = document.getElementById(`infoFilas`)
 const casilleros = document.getElementById(`casilleros${tablero.id}`)
 
 for(let i = 0 ; i<tablero.informacionColumnas.length ; i++){
@@ -501,9 +509,16 @@ marcarTableroYContarVidas(5,5)
 
 
 // CRONOMETRO
+const infoColumn = document.getElementById(`infoColumn`)
+const infoFilas = document.getElementById(`infoFilas`)
 
 let segundosP = document.getElementById("segundos")
 let minutosP = document.getElementById("minutos")
+let pause = document.getElementById("pause")
+let infoColumnDiv = document.getElementById("infoColumn1000")
+let divPause = document.getElementById("divPause")
+
+let tiempoTotal 
 function reloj (){
     let segundos = 00
     let minutos = 00
@@ -516,11 +531,11 @@ function reloj (){
             minutos++
             // si minutos es menor a 10 agregar un 0 antes en el dom
             if(minutos < 10){
-                minutosP.innerText = `: 0${segundos}`
+                minutosP.innerText = `0${minutos}`
             }else{
-                minutosP.innerText = `: ${segundos}`
+                minutosP.innerText = `${minutos}`
             }
-            minutosP.innerText = `${minutos} `
+            // minutosP.innerText = `${minutos} `
         }
         // si segundos es menor a 10 agregar un 0 antes en el dom
         if(segundos < 10){
@@ -530,13 +545,30 @@ function reloj (){
         }
         
         if((resultado.innerText == `GANASTE`) || (resultado.innerText == `PERDISTE`)){
-        clearInterval(intervalo)
-        console.log(`${minutos} : ${segundos}`)
+            clearInterval(intervalo)
+            tiempoTotal = `${minutos} : ${segundos}`
+            console.log(`${minutos} : ${segundos}`)
         }
+        
     }
-    
     let intervalo = setInterval(contar, 1000)
-
+    pause.addEventListener("click", () => {
+        if(pause.classList[1] == "pause"){
+            clearInterval(intervalo)
+            infoColumn.classList.add("esconder")
+            infoFilas.classList.add("esconder")
+            pause.classList.remove("pause")
+            pause.classList.add("play")
+        } else if (pause.classList[1] == "play"){
+            intervalo = setInterval(contar, 1000)
+            infoColumn.classList.remove("esconder")
+            infoFilas.classList.remove("esconder")
+            pause.classList.remove("play")
+            pause.classList.add("pause")
+        }
+    })
 }
+// 
+
 
 reloj()

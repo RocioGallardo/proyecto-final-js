@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap');
-
+/* CONFIGURACIONES GENERALES */
 *{
     margin: 0;
     padding: 0;
@@ -18,13 +18,17 @@ body{
 }
 
 
-
-
-h3{
+h1, h3{
     margin: 50px auto;
     text-transform: uppercase;
 }
 
+footer{
+    margin-top: 70px;
+}
+
+
+/*  JUEGOS 5X5  #0E402D*/
 
 .gridTablero5x5{
     display: grid;
@@ -38,23 +42,6 @@ h3{
     gap: 2px;
 }
 
-.boton{
-    grid-area: boton;
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    border: none;
-    background-color: lightgrey;
-    color: lightgrey;
-}
-
-.botonVerde{
-    background-color: #429973;
-    color: #429973;
-}
-
-
-/* #0E402D*/
 
 .infoColumn5x5{
     grid-area: infoColumn5x5;
@@ -85,26 +72,8 @@ h3{
     gap: 2px;
 }
 
-.corazon{
-    grid-area: corazon;
-}
 
-
-p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    user-select: none;
-}
-
-.celdas{
-    background-color: #91C7B1;
-    color: #91C7B1;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-}
+/* PARA JUEGOS 10X10*/
 
 .gridTablero10x10{
     display: grid;
@@ -143,6 +112,47 @@ p{
     align-items: center;
 }
 
+/* PARA TODOS LOS JUEGOS*/
+
+.boton{
+    grid-area: boton;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+    color: lightgrey;
+}
+
+.botonVerde{
+    background-color: #429973;
+    color: #429973;
+}
+
+.corazon{
+    grid-area: corazon;
+}
+
+img{
+    width: 40px;
+    margin-top: 20px;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.celdas{
+    background-color: #91C7B1;
+    color: #91C7B1;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
 
 
 .infoColumn10x10 p, .infoColumn5x5 p {
@@ -187,10 +197,7 @@ p{
     position: absolute;
 }
 
-img{
-    width: 40px;
-    margin-top: 20px;
-}
+
 
 .reloj{
     grid-area: reloj;
@@ -202,6 +209,3 @@ img{
     color: #B33951;
 }
 
-footer{
-    margin-top: 70px;
-}

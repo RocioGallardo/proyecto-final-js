@@ -174,9 +174,6 @@ const tablero1_5x5 = new JuegoPredeterminado (1, "castle", [
 tablero1_5x5.informacionFilas = informacionFilas(tablero1_5x5)
 tablero1_5x5.informacionColumnas = informacionColumnas(tablero1_5x5)
 
-
-
-
 const tablero2_5x5 = new JuegoPredeterminado (2, "button", [
     [0,1,1,1,0],
     [1,1,1,1,1],
@@ -219,7 +216,7 @@ tablero5_5x5.informacionFilas = informacionFilas(tablero5_5x5)
 tablero5_5x5.informacionColumnas = informacionColumnas(tablero5_5x5)
 
 
-let arrayJuegos5x5 = [tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5]
+
 
 const tablero1_10x10 = new JuegoPredeterminado(6, "egypt", [
     [1,0,0,0,0,0,0,0,0,0],
@@ -236,7 +233,7 @@ const tablero1_10x10 = new JuegoPredeterminado(6, "egypt", [
     tablero1_10x10.informacionFilas = informacionFilas(tablero1_10x10)
     tablero1_10x10.informacionColumnas = informacionColumnas(tablero1_10x10)
 
-
+let arrayJuegos5x5 = [tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5]
 
 
 // A HREF PARA LUEGO MOSTRAR EN DOM
@@ -397,7 +394,7 @@ function ganar(){
 
 
 
-// Creo las "vidas"
+// IMAGENES DE VIDAS
 
 const corazonesDiv = document.getElementById("corazon")
 
@@ -460,7 +457,7 @@ function mostrarVidas(){
 }
 }
 
-// FUNCION PARA aplicar escuchadores en todos los P, NO ES DEFINITIVO, SON PRUEBAS
+// ESCUCHADORES EN CELDAS / VERIFICACIONES / VIDAS / MOSTRAR RESULTADO
 
 function marcarTableroYContarVidas(a,b){
     for(let i = 0 ; i<a*b; i++){

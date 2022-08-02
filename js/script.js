@@ -268,18 +268,12 @@ const tablero1_5x5 = new JuegoPredeterminado (1, "castillo", [
     [0,1,1,1,0],
     [0,1,0,1,0]], "5x5")
 
-tablero1_5x5.informacionFilas = informacionFilas(tablero1_5x5)
-tablero1_5x5.informacionColumnas = informacionColumnas(tablero1_5x5)
-
 const tablero2_5x5 = new JuegoPredeterminado (2, "boton", [
     [0,1,1,1,0],
     [1,1,1,1,1],
     [1,0,1,0,1],
     [1,1,1,1,1],
     [0,1,1,1,0]], "5x5")
-
-tablero2_5x5.informacionFilas = informacionFilas(tablero2_5x5)
-tablero2_5x5.informacionColumnas = informacionColumnas(tablero2_5x5)
 
 const tablero3_5x5 = new JuegoPredeterminado (3, "pausa", [
     [1,1,1,1,1],
@@ -288,19 +282,12 @@ const tablero3_5x5 = new JuegoPredeterminado (3, "pausa", [
     [1,0,1,0,1],
     [1,1,1,1,1]], "5x5")
 
-tablero3_5x5.informacionFilas = informacionFilas(tablero3_5x5)
-tablero3_5x5.informacionColumnas = informacionColumnas(tablero3_5x5)
-
 const tablero4_5x5 = new JuegoPredeterminado (4, "cangrejo", [
     [1,0,0,0,1],
     [1,1,1,1,1],
     [0,1,1,1,0],
     [1,1,0,1,1],
     [1,0,0,0,1]], "5x5")
-
-tablero4_5x5.informacionFilas = informacionFilas(tablero4_5x5)
-tablero4_5x5.informacionColumnas = informacionColumnas(tablero4_5x5)
-
 
 const tablero5_5x5 = new JuegoPredeterminado (5, "beso", [
     [0,0,0,0,0],
@@ -309,17 +296,12 @@ const tablero5_5x5 = new JuegoPredeterminado (5, "beso", [
     [0,1,1,1,0],
     [0,0,0,0,0]], "5x5")
 
-tablero5_5x5.informacionFilas = informacionFilas(tablero5_5x5)
-tablero5_5x5.informacionColumnas = informacionColumnas(tablero5_5x5)
-
 const tablero6_5x5 = new JuegoPredeterminado(6, "e", [
     [0,1,1,1,0],
     [0,1,0,0,0],
     [0,1,1,1,0],
     [0,1,0,0,0],
     [0,1,1,1,0]], "5x5")
-tablero6_5x5.informacionFilas = informacionFilas(tablero6_5x5)
-tablero6_5x5.informacionColumnas = informacionColumnas(tablero6_5x5)
 
 const tablero7_5x5 = new JuegoPredeterminado(7, "sonrisa",[
     [1,1,1,1,1],
@@ -327,8 +309,6 @@ const tablero7_5x5 = new JuegoPredeterminado(7, "sonrisa",[
     [1,1,1,1,1],
     [1,0,1,0,1],
     [1,1,0,1,1]], "5x5")
-tablero7_5x5.informacionFilas = informacionFilas(tablero7_5x5)
-tablero7_5x5.informacionColumnas = informacionColumnas(tablero7_5x5)
 
 const tablero8_5x5 = new JuegoPredeterminado(8, "fantasma", [
     [0,1,1,1,0],
@@ -336,8 +316,6 @@ const tablero8_5x5 = new JuegoPredeterminado(8, "fantasma", [
     [1,1,1,1,1],
     [1,0,0,0,1],
     [1,1,1,1,1]], "5x5")
-tablero8_5x5.informacionFilas = informacionFilas(tablero8_5x5)
-tablero8_5x5.informacionColumnas = informacionColumnas(tablero8_5x5)
 
 const tablero9_5x5 = new JuegoPredeterminado(9, "vendetta", [
     [0,1,1,1,0],
@@ -345,8 +323,6 @@ const tablero9_5x5 = new JuegoPredeterminado(9, "vendetta", [
     [0,1,1,1,0],
     [1,0,1,0,1],
     [1,1,0,1,1]], "5x5")
-tablero9_5x5.informacionFilas = informacionFilas(tablero9_5x5)
-tablero9_5x5.informacionColumnas = informacionColumnas(tablero9_5x5)
 
 const tablero10_5x5 = new JuegoPredeterminado(10,"x", [
     [0,1,1,1,0],
@@ -354,8 +330,6 @@ const tablero10_5x5 = new JuegoPredeterminado(10,"x", [
     [1,1,0,1,1],
     [1,0,1,0,1],
     [0,1,1,1,0]], "5x5")
-tablero10_5x5.informacionFilas = informacionFilas(tablero10_5x5)
-tablero10_5x5.informacionColumnas = informacionColumnas(tablero10_5x5)
 
 const tablero11_5x5 = new JuegoPredeterminado(11,"sol",[
     [1,0,1,0,1],
@@ -363,8 +337,6 @@ const tablero11_5x5 = new JuegoPredeterminado(11,"sol",[
     [1,1,1,1,1],
     [0,1,1,1,0],
     [1,0,1,0,1]], "5x5")
-tablero11_5x5.informacionFilas = informacionFilas(tablero11_5x5)
-tablero11_5x5.informacionColumnas = informacionColumnas(tablero11_5x5)
 
 const tablero12_5x5 = new JuegoPredeterminado(12,"mantel",[
     [1,0,1,0,1],
@@ -372,8 +344,6 @@ const tablero12_5x5 = new JuegoPredeterminado(12,"mantel",[
     [1,0,1,0,1],
     [0,1,0,1,0],
     [1,0,1,0,1]], "5x5")
-tablero12_5x5.informacionFilas = informacionFilas(tablero12_5x5)
-tablero12_5x5.informacionColumnas = informacionColumnas(tablero12_5x5)
 
 const tablero13_5x5 = new JuegoPredeterminado(13,"w",[
     [1,0,0,0,1],
@@ -381,8 +351,6 @@ const tablero13_5x5 = new JuegoPredeterminado(13,"w",[
     [1,0,1,0,1],
     [1,1,0,1,1],
     [1,0,0,0,1]], "5x5")
-tablero13_5x5.informacionFilas = informacionFilas(tablero13_5x5)
-tablero13_5x5.informacionColumnas = informacionColumnas(tablero13_5x5)
 
 const tablero14_5x5 = new JuegoPredeterminado(14,"rey",[
     [0,0,1,0,0],
@@ -390,8 +358,6 @@ const tablero14_5x5 = new JuegoPredeterminado(14,"rey",[
     [1,1,1,1,1],
     [1,1,1,1,1],
     [0,0,0,0,0]], "5x5")
-tablero14_5x5.informacionFilas = informacionFilas(tablero14_5x5)
-tablero14_5x5.informacionColumnas = informacionColumnas(tablero14_5x5)
 
 const tablero15_5x5 = new JuegoPredeterminado(15,"t",[
     [1,1,1,1,1],
@@ -399,8 +365,6 @@ const tablero15_5x5 = new JuegoPredeterminado(15,"t",[
     [0,0,1,0,0],
     [0,0,1,0,0],
     [0,0,1,0,0]], "5x5")
-tablero15_5x5.informacionFilas = informacionFilas(tablero15_5x5)
-tablero15_5x5.informacionColumnas = informacionColumnas(tablero15_5x5)
 
 const tablero16_5x5 = new JuegoPredeterminado(16,"tridente",[
     [0,1,0,1,0],
@@ -408,8 +372,6 @@ const tablero16_5x5 = new JuegoPredeterminado(16,"tridente",[
     [1,1,0,1,1],
     [1,1,0,1,1],
     [1,1,0,1,1]], "5x5")
-tablero16_5x5.informacionFilas = informacionFilas(tablero16_5x5)
-tablero16_5x5.informacionColumnas = informacionColumnas(tablero16_5x5)
 
 const tablero17_5x5 = new JuegoPredeterminado(17, "suiza",[
     [1,1,1,1,1],
@@ -417,8 +379,6 @@ const tablero17_5x5 = new JuegoPredeterminado(17, "suiza",[
     [1,0,0,0,1],
     [1,1,0,1,1],
     [1,1,1,1,1]], "5x5")
-tablero17_5x5.informacionFilas = informacionFilas(tablero17_5x5)
-tablero17_5x5.informacionColumnas = informacionColumnas(tablero17_5x5)
 
 const tablero18_5x5 = new JuegoPredeterminado(18, "ocho",[
     [1,1,0,1,1],
@@ -426,8 +386,6 @@ const tablero18_5x5 = new JuegoPredeterminado(18, "ocho",[
     [1,1,0,1,1],
     [1,0,1,0,1],
     [1,1,0,1,1]], "5x5")
-tablero18_5x5.informacionFilas = informacionFilas(tablero18_5x5)
-tablero18_5x5.informacionColumnas = informacionColumnas(tablero18_5x5)
 
 const tablero19_5x5 = new JuegoPredeterminado(19, "cortinas", [
     [1,1,1,1,1],
@@ -435,8 +393,6 @@ const tablero19_5x5 = new JuegoPredeterminado(19, "cortinas", [
     [1,0,0,0,1],
     [1,0,0,0,1],
     [1,1,0,1,1]], "5x5")
-tablero19_5x5.informacionFilas = informacionFilas(tablero19_5x5)
-tablero19_5x5.informacionColumnas = informacionColumnas(tablero19_5x5)
 
 const tablero20_5x5 = new JuegoPredeterminado(20, "escalera", [
     [1,0,0,0,1],
@@ -444,8 +400,6 @@ const tablero20_5x5 = new JuegoPredeterminado(20, "escalera", [
     [1,0,0,0,1],
     [1,1,1,1,1],
     [1,0,0,0,1]], "5x5")
-tablero20_5x5.informacionFilas = informacionFilas(tablero20_5x5)
-tablero20_5x5.informacionColumnas = informacionColumnas(tablero20_5x5)
 
 const tablero21_5x5 = new JuegoPredeterminado(21, "estrella",[
     [1,0,1,0,1],
@@ -453,8 +407,6 @@ const tablero21_5x5 = new JuegoPredeterminado(21, "estrella",[
     [1,1,1,1,1],
     [0,1,1,1,0],
     [1,0,1,0,1]], "5x5")
-tablero21_5x5.informacionFilas = informacionFilas(tablero21_5x5)
-tablero21_5x5.informacionColumnas = informacionColumnas(tablero21_5x5)
 
 const tablero22_5x5 = new JuegoPredeterminado(22, "diamante",[
     [0,0,1,0,0],
@@ -462,190 +414,139 @@ const tablero22_5x5 = new JuegoPredeterminado(22, "diamante",[
     [1,0,1,0,1],
     [0,1,0,1,0],
     [0,0,1,0,0]], "5x5")
-tablero22_5x5.informacionFilas = informacionFilas(tablero22_5x5)
-tablero22_5x5.informacionColumnas = informacionColumnas(tablero22_5x5) 
 
 const tablero23_5x5 = new JuegoPredeterminado(23, "campanita",[
     [0,0,1,0,0],
     [0,1,1,1,0],
     [0,1,1,1,0],
     [1,1,1,1,1],
-    [0,0,1,0,0]
-], "5x5")
-tablero23_5x5.informacionFilas = informacionFilas(tablero23_5x5)
-tablero23_5x5.informacionColumnas = informacionColumnas(tablero23_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero24_5x5 = new JuegoPredeterminado(24, "buzon",[
     [0,1,0,0,0],
     [1,1,1,1,1],
     [1,1,1,1,1],
     [0,0,1,0,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero24_5x5.informacionFilas = informacionFilas(tablero24_5x5)
-tablero24_5x5.informacionColumnas = informacionColumnas(tablero24_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero25_5x5 = new JuegoPredeterminado(25, "doce",[
     [0,1,0,0,0],
     [0,1,1,1,0],
     [0,1,0,0,0],
     [0,1,0,1,1],
-    [0,1,0,0,0]
-], "5x5")
-tablero25_5x5.informacionFilas = informacionFilas(tablero25_5x5)
-tablero25_5x5.informacionColumnas = informacionColumnas(tablero25_5x5)
+    [0,1,0,0,0]], "5x5")
 
 const tablero26_5x5 = new JuegoPredeterminado(26, "navidad",[
     [0,0,1,0,0],
     [0,1,1,1,0],
     [0,1,1,1,0],
     [1,1,1,1,1],
-    [0,0,1,0,0]
-], "5x5")
-tablero26_5x5.informacionFilas = informacionFilas(tablero26_5x5)
-tablero26_5x5.informacionColumnas = informacionColumnas(tablero26_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero27_5x5 = new JuegoPredeterminado(27, "izquierda",[
     [0,0,1,0,0],
     [0,1,1,0,0],
     [1,1,1,1,1],
     [0,1,1,0,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero27_5x5.informacionFilas = informacionFilas(tablero27_5x5)
-tablero27_5x5.informacionColumnas = informacionColumnas(tablero27_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero28_5x5 = new JuegoPredeterminado(28, "derecha",[
     [0,0,1,0,0],
     [0,0,1,1,0],
     [1,1,1,1,1],
     [0,0,1,1,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero28_5x5.informacionFilas = informacionFilas(tablero28_5x5)
-tablero28_5x5.informacionColumnas = informacionColumnas(tablero28_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero29_5x5 = new JuegoPredeterminado(29, "plus",[
     [0,0,0,1,1],
     [0,1,0,0,1],
     [1,1,1,0,1],
     [0,1,0,0,1],
-    [0,0,0,0,1]
-], "5x5")
-tablero29_5x5.informacionFilas = informacionFilas(tablero29_5x5)
-tablero29_5x5.informacionColumnas = informacionColumnas(tablero29_5x5)
+    [0,0,0,0,1]], "5x5")
 
 const tablero30_5x5 = new JuegoPredeterminado(30, "cometa",[
     [0,1,1,1,1],
     [0,0,1,1,1],
     [0,1,1,1,1],
     [1,0,0,0,1],
-    [1,1,1,0,0]
-], "5x5")
-tablero30_5x5.informacionFilas = informacionFilas(tablero30_5x5)
-tablero30_5x5.informacionColumnas = informacionColumnas(tablero30_5x5)
+    [1,1,1,0,0]], "5x5")
 
 const tablero31_5x5 = new JuegoPredeterminado(31, "iglesia",[
     [0,0,1,0,0],
     [0,1,1,1,0],
     [0,0,1,0,0],
     [0,1,1,1,0],
-    [1,1,1,1,1]
-], "5x5")
-tablero31_5x5.informacionFilas = informacionFilas(tablero31_5x5)
-tablero31_5x5.informacionColumnas = informacionColumnas(tablero31_5x5)
+    [1,1,1,1,1]], "5x5")
 
 const tablero32_5x5 = new JuegoPredeterminado(32, "perro",[
     [0,0,0,1,0],
     [1,0,0,1,1],
     [1,1,1,1,0],
     [1,0,0,1,0],
-    [1,0,0,1,0]
-], "5x5")
-tablero32_5x5.informacionFilas = informacionFilas(tablero32_5x5)
-tablero32_5x5.informacionColumnas = informacionColumnas(tablero32_5x5)
+    [1,0,0,1,0]], "5x5")
 
 const tablero33_5x5 = new JuegoPredeterminado(33, "ola",[
     [0,0,0,1,1],
     [0,1,1,1,0],
     [1,1,1,0,0],
     [1,1,1,0,0],
-    [1,1,1,1,0]
-], "5x5")
-tablero33_5x5.informacionFilas = informacionFilas(tablero33_5x5)
-tablero33_5x5.informacionColumnas = informacionColumnas(tablero33_5x5)
+    [1,1,1,1,0]], "5x5")
 
 const tablero34_5x5 = new JuegoPredeterminado(34, "on",[
     [0,0,1,0,0],
     [1,0,1,0,1],
     [1,0,1,0,1],
     [1,0,0,0,1],
-    [0,1,1,1,0]
-], "5x5")
-tablero34_5x5.informacionFilas = informacionFilas(tablero34_5x5)
-tablero34_5x5.informacionColumnas = informacionColumnas(tablero34_5x5)
+    [0,1,1,1,0]], "5x5")
 
 const tablero35_5x5 = new JuegoPredeterminado(35, "abajo",[
     [0,0,1,0,0],
     [0,0,1,0,0],
     [1,1,1,1,1],
     [0,1,1,1,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero35_5x5.informacionFilas = informacionFilas(tablero35_5x5)
-tablero35_5x5.informacionColumnas = informacionColumnas(tablero35_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero36_5x5 = new JuegoPredeterminado(36, "flor",[
     [0,0,1,0,0],
     [0,1,0,1,0],
     [1,0,1,0,1],
     [0,1,1,1,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero36_5x5.informacionFilas = informacionFilas(tablero36_5x5)
-tablero36_5x5.informacionColumnas = informacionColumnas(tablero36_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero37_5x5 = new JuegoPredeterminado(37, "corazon",[
     [0,1,0,1,0],
     [1,1,1,1,1],
     [1,1,1,1,1],
     [0,1,1,1,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero37_5x5.informacionFilas = informacionFilas(tablero37_5x5)
-tablero37_5x5.informacionColumnas = informacionColumnas(tablero37_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero38_5x5 = new JuegoPredeterminado(38, "pi",[
     [1,1,1,0,0],
     [1,0,1,0,1],
     [1,1,1,0,0],
     [1,0,0,0,1],
-    [1,0,0,0,1]
-], "5x5")
-tablero38_5x5.informacionFilas = informacionFilas(tablero38_5x5)
-tablero38_5x5.informacionColumnas = informacionColumnas(tablero38_5x5)
+    [1,0,0,0,1]], "5x5")
 
 const tablero39_5x5 = new JuegoPredeterminado(39, "femenino",[
     [0,0,1,0,0],
     [0,1,0,1,0],
     [0,0,1,0,0],
     [0,1,1,1,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero39_5x5.informacionFilas = informacionFilas(tablero39_5x5)
-tablero39_5x5.informacionColumnas = informacionColumnas(tablero39_5x5)
+    [0,0,1,0,0]], "5x5")
 
 const tablero40_5x5 = new JuegoPredeterminado(40, "arriba",[
     [0,0,1,0,0],
     [0,1,1,1,0],
     [1,1,1,1,1],
     [0,0,1,0,0],
-    [0,0,1,0,0]
-], "5x5")
-tablero40_5x5.informacionFilas = informacionFilas(tablero40_5x5)
-tablero40_5x5.informacionColumnas = informacionColumnas(tablero40_5x5)
+    [0,0,1,0,0]], "5x5")
 
 let arrayJuegos5x5 = [tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5,tablero6_5x5,tablero7_5x5,tablero8_5x5,tablero9_5x5,tablero10_5x5,tablero11_5x5,tablero12_5x5,tablero13_5x5,tablero14_5x5,tablero15_5x5,tablero16_5x5,tablero17_5x5,tablero18_5x5,tablero19_5x5,tablero20_5x5,tablero21_5x5,tablero22_5x5,tablero23_5x5,tablero24_5x5,tablero25_5x5,tablero26_5x5,tablero27_5x5,tablero28_5x5,tablero29_5x5,tablero30_5x5,tablero31_5x5,tablero32_5x5,tablero33_5x5,tablero34_5x5,tablero35_5x5,tablero36_5x5,tablero37_5x5,tablero38_5x5,tablero39_5x5,tablero40_5x5]
+
+arrayJuegos5x5.forEach(tablero =>{
+    tablero.informacionFilas = informacionFilas(tablero)
+    tablero.informacionColumnas = informacionColumnas(tablero)
+})
 
 
 
@@ -659,10 +560,7 @@ const tablero1_10x10 = new JuegoPredeterminado(41, "computadora", [
     [0,0,1,1,0,0,0,0,0,1],
     [0,1,1,0,1,0,1,0,1,1],
     [1,1,0,0,0,0,0,1,1,0],
-    [1,1,1,1,1,1,1,1,0,0]])
-
-    tablero1_10x10.informacionFilas = informacionFilas(tablero1_10x10)
-    tablero1_10x10.informacionColumnas = informacionColumnas(tablero1_10x10)
+    [1,1,1,1,1,1,1,1,0,0]], "10x10")
 
 const tablero2_10x10 = new JuegoPredeterminado(42, "shorts", [
     [0,0,0,1,0,0,0,0,0,1],
@@ -674,10 +572,7 @@ const tablero2_10x10 = new JuegoPredeterminado(42, "shorts", [
     [0,0,0,1,0,1,0,1,0,1],
     [0,0,0,1,0,1,0,1,0,1],
     [0,0,1,1,1,1,0,1,1,1],
-    [0,1,1,1,1,1,0,1,1,1]])
-
-    tablero2_10x10.informacionFilas = informacionFilas(tablero2_10x10)
-    tablero2_10x10.informacionColumnas = informacionColumnas(tablero2_10x10)
+    [0,1,1,1,1,1,0,1,1,1]], "10x10")
 
 const tablero3_10x10 = new JuegoPredeterminado(43, "cena", [
     [1,0,1,0,1,0,1,1,1,0],
@@ -689,10 +584,7 @@ const tablero3_10x10 = new JuegoPredeterminado(43, "cena", [
     [1,1,1,0,1,1,1,1,0,0],
     [1,1,1,0,1,1,1,1,0,0],
     [1,1,1,0,1,1,1,1,1,0],
-    [1,1,1,0,1,1,1,1,1,0]])
-
-    tablero3_10x10.informacionFilas = informacionFilas(tablero3_10x10)
-    tablero3_10x10.informacionColumnas = informacionColumnas(tablero3_10x10)
+    [1,1,1,0,1,1,1,1,1,0]], "10x10")
 
 const tablero4_10x10 = new JuegoPredeterminado(44, "juego-ruso", [
     [1,1,1,1,1,1,0,0,0,0],
@@ -704,10 +596,7 @@ const tablero4_10x10 = new JuegoPredeterminado(44, "juego-ruso", [
     [1,1,1,1,1,1,0,0,1,0],
     [0,1,1,1,1,1,0,0,1,0],
     [0,1,1,1,0,1,1,1,1,0],
-    [0,0,1,0,0,0,1,1,1,0]])
-
-    tablero4_10x10.informacionFilas = informacionFilas(tablero4_10x10)
-    tablero4_10x10.informacionColumnas = informacionColumnas(tablero4_10x10)
+    [0,0,1,0,0,0,1,1,1,0]], "10x10")
 
 const tablero5_10x10 = new JuegoPredeterminado(45, "monstruo", [
     [1,1,0,0,0,0,0,0,0,1],
@@ -719,10 +608,7 @@ const tablero5_10x10 = new JuegoPredeterminado(45, "monstruo", [
     [1,1,1,1,1,1,1,0,0,1],
     [1,1,1,1,1,1,1,0,0,1],
     [1,1,1,0,0,1,1,1,0,0],
-    [1,1,1,1,0,1,1,1,1,1]])
-
-    tablero5_10x10.informacionFilas = informacionFilas(tablero5_10x10)
-    tablero5_10x10.informacionColumnas = informacionColumnas(tablero5_10x10)
+    [1,1,1,1,0,1,1,1,1,1]], "10x10")
 
 const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,0,1,0,0,0,0,0,0],
@@ -734,12 +620,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,0,0,0,0],
     [0,1,1,0,1,1,0,0,0,0],
     [1,1,1,1,1,1,0,1,1,1],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero6_10x10.informacionFilas = informacionFilas(tablero6_10x10)
-    tablero6_10x10.informacionColumnas = informacionColumnas(tablero6_10x10)
-
-    const tablero7_10x10 = new JuegoPredeterminado(47, "egipto", [
+const tablero7_10x10 = new JuegoPredeterminado(47, "egipto", [
     [1,0,0,0,0,0,0,0,0,0],
     [1,1,0,0,0,0,0,0,0,0],
     [1,0,0,0,0,0,0,0,0,1],
@@ -749,13 +632,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,1,1,1,1,1,1,1,1],
     [1,1,1,1,1,1,1,1,1,1],
     [1,1,1,1,1,1,1,1,1,1],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero7_10x10.informacionFilas = informacionFilas(tablero7_10x10)
-    tablero7_10x10.informacionColumnas = informacionColumnas(tablero7_10x10)
-
-
-    const tablero8_10x10 = new JuegoPredeterminado(48, "malvado", [
+const tablero8_10x10 = new JuegoPredeterminado(48, "malvado", [
     [1,1,1,1,1,1,1,1,1,1],
     [1,0,1,1,1,1,1,1,0,1],
     [1,0,0,1,1,1,1,0,0,1],
@@ -765,13 +644,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,1,1,1,1,1,0,1,0],
     [1,0,0,1,1,1,1,0,0,1],
     [1,1,0,0,0,0,0,0,1,1],
-    [1,1,1,0,0,0,0,1,1,1]])
+    [1,1,1,0,0,0,0,1,1,1]], "10x10")
 
-    tablero8_10x10.informacionFilas = informacionFilas(tablero8_10x10)
-    tablero8_10x10.informacionColumnas = informacionColumnas(tablero8_10x10)
-
-
-    const tablero9_10x10 = new JuegoPredeterminado(49, "bosque", [
+const tablero9_10x10 = new JuegoPredeterminado(49, "bosque", [
     [1,1,1,1,1,1,1,1,1,1],
     [1,1,1,0,1,1,1,1,1,1],
     [1,1,0,1,0,1,1,1,0,1],
@@ -781,13 +656,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,0,0,0,0,1,1,0,0,1],
     [1,0,0,0,0,1,1,0,0,1],
     [1,1,0,0,0,1,1,0,1,1],
-    [1,1,1,0,1,1,1,1,1,1]])
+    [1,1,1,0,1,1,1,1,1,1]], "10x10")
 
-    tablero9_10x10.informacionFilas = informacionFilas(tablero9_10x10)
-    tablero9_10x10.informacionColumnas = informacionColumnas(tablero9_10x10)
-
-
-    const tablero10_10x10 = new JuegoPredeterminado(50, "no-fumar", [
+const tablero10_10x10 = new JuegoPredeterminado(50, "no-fumar", [
     [1,1,1,0,0,0,0,1,1,1],
     [1,1,0,1,1,1,1,0,1,1],
     [1,0,0,1,1,1,1,1,0,1],
@@ -797,13 +668,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,0,1,1,0],
     [1,0,1,1,1,1,1,0,0,1],
     [1,1,0,1,1,1,1,0,1,1],
-    [1,1,1,0,0,0,0,1,1,1]])
+    [1,1,1,0,0,0,0,1,1,1]], "10x10")
 
-    tablero10_10x10.informacionFilas = informacionFilas(tablero10_10x10)
-    tablero10_10x10.informacionColumnas = informacionColumnas(tablero10_10x10)
-
-
-    const tablero11_10x10 = new JuegoPredeterminado(51, "halloween", [
+const tablero11_10x10 = new JuegoPredeterminado(51, "halloween", [
     [0,0,0,0,0,0,1,1,0,0],
     [0,0,0,1,1,1,1,0,0,0],
     [0,0,1,1,1,1,1,1,0,0],
@@ -813,13 +680,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,0,1,0,0,1,1,0],
     [0,0,1,1,0,0,1,1,0,0],
     [0,0,0,1,1,1,1,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero11_10x10.informacionFilas = informacionFilas(tablero11_10x10)
-    tablero11_10x10.informacionColumnas = informacionColumnas(tablero11_10x10)
-
-
-    const tablero12_10x10 = new JuegoPredeterminado(52, "fuego", [
+const tablero12_10x10 = new JuegoPredeterminado(52, "fuego", [
     [1,1,1,0,0,1,0,1,0,0],
     [0,1,1,0,0,0,0,1,1,0],
     [0,0,1,1,0,1,0,1,1,0],
@@ -829,13 +692,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,1,1,1,1,1,1,1,0],
     [1,1,1,1,1,1,1,1,1,1],
     [1,1,1,1,1,1,1,1,1,1],
-    [0,1,1,1,1,1,1,1,1,0]])
+    [0,1,1,1,1,1,1,1,1,0]], "10x10")
 
-    tablero12_10x10.informacionFilas = informacionFilas(tablero12_10x10)
-    tablero12_10x10.informacionColumnas = informacionColumnas(tablero12_10x10)
-
-
-    const tablero13_10x10 = new JuegoPredeterminado(53, "pava", [
+const tablero13_10x10 = new JuegoPredeterminado(53, "pava", [
     [0,0,0,1,1,0,1,1,1,1],
     [0,0,1,1,0,0,1,0,0,1],
     [0,0,1,0,0,1,0,0,0,0],
@@ -845,13 +704,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,1,1,0,0],
     [0,1,1,1,1,1,1,1,0,0],
     [0,0,1,1,1,1,1,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero13_10x10.informacionFilas = informacionFilas(tablero13_10x10)
-    tablero13_10x10.informacionColumnas = informacionColumnas(tablero13_10x10)
-
-
-    const tablero14_10x10 = new JuegoPredeterminado(54, "avestruz", [
+const tablero14_10x10 = new JuegoPredeterminado(54, "avestruz", [
     [0,0,0,0,0,0,0,0,1,1],
     [0,0,0,0,0,0,0,0,1,0],
     [0,0,0,0,0,0,0,0,1,0],
@@ -861,13 +716,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,0,0,0,1,1,1,1,0,0],
     [1,1,1,1,1,1,1,0,0,0],
     [0,1,0,1,0,0,0,0,0,0],
-    [0,1,0,1,0,0,0,0,0,0]])
+    [0,1,0,1,0,0,0,0,0,0]], "10x10")
 
-    tablero14_10x10.informacionFilas = informacionFilas(tablero14_10x10)
-    tablero14_10x10.informacionColumnas = informacionColumnas(tablero14_10x10)
-
-
-    const tablero15_10x10 = new JuegoPredeterminado(55, "robot", [
+const tablero15_10x10 = new JuegoPredeterminado(55, "robot", [
     [1,1,0,1,1,1,1,1,1,1],
     [1,1,0,1,0,0,0,0,0,1],
     [0,0,1,1,0,1,0,1,0,1],
@@ -877,13 +728,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,0,0,0,1,0,1,0,0],
     [0,0,1,1,1,1,1,1,1,1],
     [0,1,1,0,1,1,1,1,1,0],
-    [1,0,1,0,0,1,1,1,0,0]])
+    [1,0,1,0,0,1,1,1,0,0]], "10x10")
 
-    tablero15_10x10.informacionFilas = informacionFilas(tablero15_10x10)
-    tablero15_10x10.informacionColumnas = informacionColumnas(tablero15_10x10)
-
-
-    const tablero16_10x10 = new JuegoPredeterminado(56, "naturaleza-muerta", [
+const tablero16_10x10 = new JuegoPredeterminado(56, "naturaleza-muerta", [
     [0,0,0,0,1,0,0,0,1,0],
     [0,1,1,1,1,1,1,0,1,1],
     [0,0,1,1,1,1,0,0,0,1],
@@ -893,13 +740,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,1,0,0,0],
     [1,1,1,1,1,1,1,1,1,1],
     [0,1,1,1,1,1,1,0,1,0],
-    [1,0,1,1,1,1,0,1,0,1]])
+    [1,0,1,1,1,1,0,1,0,1]], "10x10")
 
-    tablero16_10x10.informacionFilas = informacionFilas(tablero16_10x10)
-    tablero16_10x10.informacionColumnas = informacionColumnas(tablero16_10x10)
-
-
-    const tablero17_10x10 = new JuegoPredeterminado(57, "amanecer", [
+const tablero17_10x10 = new JuegoPredeterminado(57, "amanecer", [
     [1,0,0,0,0,1,0,0,0,1],
     [1,1,0,0,0,1,0,0,0,1],
     [1,1,0,0,0,1,0,0,1,1],
@@ -909,13 +752,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,0,0,0,0,0,0,0,1],
     [0,1,1,0,1,1,1,0,1,1],
     [0,0,0,1,1,1,1,1,0,0],
-    [1,1,0,1,1,1,1,1,0,1]])
+    [1,1,0,1,1,1,1,1,0,1]], "10x10")
 
-    tablero17_10x10.informacionFilas = informacionFilas(tablero17_10x10)
-    tablero17_10x10.informacionColumnas = informacionColumnas(tablero17_10x10)
-
-
-    const tablero18_10x10 = new JuegoPredeterminado(58, "tv", [
+const tablero18_10x10 = new JuegoPredeterminado(58, "tv", [
     [0,1,1,0,0,0,0,0,1,1],
     [0,0,1,1,0,0,0,1,1,0],
     [0,0,0,1,1,0,1,1,0,0],
@@ -925,13 +764,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,1,0,0,0,0,1,1,0],
     [0,0,1,0,0,0,0,1,1,0],
     [0,0,1,1,1,1,1,1,1,0],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero18_10x10.informacionFilas = informacionFilas(tablero18_10x10)
-    tablero18_10x10.informacionColumnas = informacionColumnas(tablero18_10x10)
-
-
-    const tablero19_10x10 = new JuegoPredeterminado(59, "jardin", [
+const tablero19_10x10 = new JuegoPredeterminado(59, "jardin", [
     [0,0,0,0,0,0,0,1,1,0],
     [0,0,0,0,0,0,1,0,0,1],
     [1,0,1,0,0,1,0,1,1,0],
@@ -941,13 +776,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,0,0,0,0,0,0,1,0],
     [0,1,0,1,0,0,1,0,1,0],
     [1,1,1,0,1,0,1,1,1,1],
-    [0,1,0,1,1,1,0,1,1,1]])
+    [0,1,0,1,1,1,0,1,1,1]], "10x10")
 
-    tablero19_10x10.informacionFilas = informacionFilas(tablero19_10x10)
-    tablero19_10x10.informacionColumnas = informacionColumnas(tablero19_10x10)
-
-
-    const tablero20_10x10 = new JuegoPredeterminado(60, "vino", [
+const tablero20_10x10 = new JuegoPredeterminado(60, "vino", [
     [0,0,1,0,0,0,0,0,0,0],
     [0,0,1,0,0,0,0,0,0,0],
     [0,0,1,0,0,1,1,1,1,1],
@@ -957,13 +788,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,0,1,0,0,0,1,0,0],
     [0,1,0,1,0,0,0,1,0,0],
     [0,1,1,1,0,0,0,1,0,0],
-    [0,1,1,1,0,0,1,1,1,0]])
+    [0,1,1,1,0,0,1,1,1,0]], "10x10")
 
-    tablero20_10x10.informacionFilas = informacionFilas(tablero20_10x10)
-    tablero20_10x10.informacionColumnas = informacionColumnas(tablero20_10x10)
-
-
-    const tablero21_10x10 = new JuegoPredeterminado(61, "superman", [
+const tablero21_10x10 = new JuegoPredeterminado(61, "superman", [
     [0,0,0,0,0,0,0,0,0,0],
     [0,0,1,1,1,1,1,1,0,0],
     [0,1,1,0,0,0,0,1,1,0],
@@ -973,13 +800,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,1,0,1,0],
     [0,0,1,0,0,0,0,1,0,0],
     [0,0,0,1,1,1,1,0,0,0],
-    [0,0,0,0,1,1,0,0,0,0]])
+    [0,0,0,0,1,1,0,0,0,0]], "10x10")
 
-    tablero21_10x10.informacionFilas = informacionFilas(tablero21_10x10)
-    tablero21_10x10.informacionColumnas = informacionColumnas(tablero21_10x10)
-
-
-    const tablero22_10x10 = new JuegoPredeterminado(62, "hogar", [
+const tablero22_10x10 = new JuegoPredeterminado(62, "hogar", [
     [0,0,0,0,1,0,0,0,0,0],
     [0,0,0,1,1,1,0,1,0,0],
     [0,0,1,1,1,1,1,1,0,0],
@@ -989,13 +812,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,0,0,1,0,0,1,0,0],
     [0,1,1,1,1,1,1,1,0,0],
     [0,1,1,0,0,1,1,1,0,0],
-    [0,1,1,0,0,1,1,1,0,0]])
+    [0,1,1,0,0,1,1,1,0,0]], "10x10")
 
-    tablero22_10x10.informacionFilas = informacionFilas(tablero22_10x10)
-    tablero22_10x10.informacionColumnas = informacionColumnas(tablero22_10x10)
-
-
-    const tablero23_10x10 = new JuegoPredeterminado(63, "ojo", [
+const tablero23_10x10 = new JuegoPredeterminado(63, "ojo", [
     [0,0,0,1,1,1,1,0,0,0],
     [0,0,1,1,1,1,1,1,0,0],
     [0,1,1,1,0,0,1,1,1,0],
@@ -1005,13 +824,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,0,0,1,1,0,0,1,1],
     [0,1,1,1,0,0,1,1,1,0],
     [0,0,1,1,1,1,1,1,0,0],
-    [0,0,0,1,1,1,1,0,0,0]])
+    [0,0,0,1,1,1,1,0,0,0]], "10x10")
 
-    tablero23_10x10.informacionFilas = informacionFilas(tablero23_10x10)
-    tablero23_10x10.informacionColumnas = informacionColumnas(tablero23_10x10)
-
-
-    const tablero24_10x10 = new JuegoPredeterminado(64, "barbudo", [
+const tablero24_10x10 = new JuegoPredeterminado(64, "barbudo", [
     [0,0,0,0,0,1,1,1,1,1],
     [0,0,0,0,0,1,0,0,0,1],
     [0,0,1,1,1,1,1,1,1,1],
@@ -1021,13 +836,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,0,0,0,0,1,1,0,1,1],
     [1,1,0,0,1,1,1,1,1,0],
     [1,1,1,1,1,1,1,1,1,0],
-    [0,1,1,1,1,1,1,0,0,0]])
+    [0,1,1,1,1,1,1,0,0,0]], "10x10")
 
-    tablero24_10x10.informacionFilas = informacionFilas(tablero24_10x10)
-    tablero24_10x10.informacionColumnas = informacionColumnas(tablero24_10x10)
-
-
-    const tablero25_10x10 = new JuegoPredeterminado(65, "caverna", [
+const tablero25_10x10 = new JuegoPredeterminado(65, "caverna", [
     [1,0,0,0,0,0,1,0,0,0],
     [1,1,0,0,0,1,1,1,0,0],
     [1,1,0,0,0,1,1,1,0,1],
@@ -1037,13 +848,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,1,1,0,0,1,1],
     [0,0,1,1,1,0,0,0,1,1],
     [0,0,1,1,1,0,0,0,1,1],
-    [0,0,0,1,0,0,0,0,0,1]])
+    [0,0,0,1,0,0,0,0,0,1]], "10x10")
 
-    tablero25_10x10.informacionFilas = informacionFilas(tablero25_10x10)
-    tablero25_10x10.informacionColumnas = informacionColumnas(tablero25_10x10)
-
-
-    const tablero26_10x10 = new JuegoPredeterminado(66, "cocodrilo", [
+const tablero26_10x10 = new JuegoPredeterminado(66, "cocodrilo", [
     [0,0,0,0,0,0,0,0,0,0],
     [0,1,1,1,0,0,1,1,1,0],
     [0,1,0,1,0,0,1,0,1,0],
@@ -1053,13 +860,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,1,0,1,1,0,1,0,0],
     [0,0,0,1,0,0,1,0,0,0],
     [0,0,0,0,1,1,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0]])
+    [0,0,0,0,0,0,0,0,0,0]], "10x10")
 
-    tablero26_10x10.informacionFilas = informacionFilas(tablero26_10x10)
-    tablero26_10x10.informacionColumnas = informacionColumnas(tablero26_10x10)
-
-
-    const tablero27_10x10 = new JuegoPredeterminado(67, "pixel", [
+const tablero27_10x10 = new JuegoPredeterminado(67, "pixel", [
     [1,1,1,0,1,1,0,0,0,1],
     [1,0,1,0,0,1,1,0,1,1],
     [1,1,1,0,1,0,1,1,1,0],
@@ -1069,13 +872,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,0,0,0,1,0,0,0,0],
     [0,1,1,0,0,1,0,0,0,0],
     [0,1,0,0,0,1,0,0,0,0],
-    [0,1,1,1,0,1,1,1,0,0]])
+    [0,1,1,1,0,1,1,1,0,0]], "10x10")
 
-    tablero27_10x10.informacionFilas = informacionFilas(tablero27_10x10)
-    tablero27_10x10.informacionColumnas = informacionColumnas(tablero27_10x10)
-
-
-    const tablero28_10x10 = new JuegoPredeterminado(68, "iphone", [
+const tablero28_10x10 = new JuegoPredeterminado(68, "iphone", [
     [1,0,0,1,1,1,1,1,1,1],
     [1,1,0,1,0,0,0,0,0,1],
     [0,1,1,1,0,1,0,1,0,1],
@@ -1085,13 +884,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,0,0,0,0,0,1],
     [1,1,0,1,1,1,1,1,1,1],
     [1,0,0,1,1,1,0,1,1,1],
-    [0,0,0,0,1,1,1,1,1,0]])
+    [0,0,0,0,1,1,1,1,1,0]], "10x10")
 
-    tablero28_10x10.informacionFilas = informacionFilas(tablero28_10x10)
-    tablero28_10x10.informacionColumnas = informacionColumnas(tablero28_10x10)
-
-
-    const tablero29_10x10 = new JuegoPredeterminado(69, "hamburguesa", [
+const tablero29_10x10 = new JuegoPredeterminado(69, "hamburguesa", [
     [0,0,0,1,1,1,1,0,0,0],
     [0,1,1,0,0,0,0,1,1,0],
     [1,0,0,1,0,0,0,0,0,1],
@@ -1101,13 +896,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,0,0,0,0,0,0,1,0],
     [1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,0,0,0,0,0,1],
-    [1,1,1,1,1,1,1,1,1,1]])
+    [1,1,1,1,1,1,1,1,1,1]], "10x10")
 
-    tablero29_10x10.informacionFilas = informacionFilas(tablero29_10x10)
-    tablero29_10x10.informacionColumnas = informacionColumnas(tablero29_10x10)
-
-
-    const tablero30_10x10 = new JuegoPredeterminado(70, "exclamacion", [
+const tablero30_10x10 = new JuegoPredeterminado(70, "exclamacion", [
     [0,0,0,1,1,1,1,0,0,0],
     [0,1,1,1,0,0,1,1,1,0],
     [1,1,1,1,0,0,1,1,1,1],
@@ -1117,13 +908,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,1,1,1,0,0,1,1,1,0],
     [0,0,1,1,1,1,1,1,0,0],
     [0,0,0,0,0,1,1,0,0,0],
-    [0,0,0,0,1,0,0,0,0,0]])
+    [0,0,0,0,1,0,0,0,0,0]], "10x10")
 
-    tablero30_10x10.informacionFilas = informacionFilas(tablero30_10x10)
-    tablero30_10x10.informacionColumnas = informacionColumnas(tablero30_10x10)
-
-
-    const tablero31_10x10 = new JuegoPredeterminado(71, "campamento", [
+const tablero31_10x10 = new JuegoPredeterminado(71, "campamento", [
     [0,0,0,0,0,0,1,1,1,0],
     [0,0,0,0,0,0,0,1,1,1],
     [0,0,0,1,0,1,0,1,1,1],
@@ -1133,13 +920,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [0,0,1,1,1,1,1,0,0,0],
     [0,1,1,1,0,1,1,1,0,0],
     [0,1,1,1,0,1,1,1,0,0],
-    [1,1,1,1,0,1,1,1,1,0]])
+    [1,1,1,1,0,1,1,1,1,0]], "10x10")
 
-    tablero31_10x10.informacionFilas = informacionFilas(tablero31_10x10)
-    tablero31_10x10.informacionColumnas = informacionColumnas(tablero31_10x10)
-
-
-    const tablero32_10x10 = new JuegoPredeterminado(72, "aerostatico", [
+const tablero32_10x10 = new JuegoPredeterminado(72, "aerostatico", [
     [0,0,0,1,1,1,1,1,1,1],
     [0,0,0,0,1,1,1,1,1,1],
     [0,0,0,0,1,1,1,1,1,1],
@@ -1149,13 +932,9 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,0,0,0,0,0,0,0,0],
     [1,0,0,0,0,0,1,1,0,0],
     [0,0,1,1,0,0,1,1,0,0],
-    [0,1,1,1,1,0,0,0,0,0]])
+    [0,1,1,1,1,0,0,0,0,0]], "10x10")
 
-    tablero32_10x10.informacionFilas = informacionFilas(tablero32_10x10)
-    tablero32_10x10.informacionColumnas = informacionColumnas(tablero32_10x10)
-
-
-    const tablero33_10x10 = new JuegoPredeterminado(73, "luna", [
+const tablero33_10x10 = new JuegoPredeterminado(73, "luna", [
     [0,0,1,1,1,1,1,1,0,0],
     [0,1,1,1,1,1,1,1,1,0],
     [1,1,1,1,1,0,0,0,1,1],
@@ -1165,117 +944,830 @@ const tablero6_10x10 = new JuegoPredeterminado(46, "congelado", [
     [1,1,1,1,0,0,0,0,1,1],
     [0,1,1,1,1,0,0,1,1,1],
     [0,0,1,1,1,1,1,1,1,0],
-    [0,0,0,1,1,1,1,1,0,0]])
-
-    tablero33_10x10.informacionFilas = informacionFilas(tablero33_10x10)
-    tablero33_10x10.informacionColumnas = informacionColumnas(tablero33_10x10)
+    [0,0,0,1,1,1,1,1,0,0]], "10x10")
 
 
-    const tablero34_10x10 = new JuegoPredeterminado(74, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+let arrayJuegos10x10 = [tablero1_10x10,tablero2_10x10,tablero3_10x10,tablero4_10x10,tablero5_10x10,tablero6_10x10,tablero7_10x10,tablero8_10x10,tablero9_10x10,tablero10_10x10,tablero11_10x10,tablero12_10x10,tablero13_10x10,tablero14_10x10,tablero15_10x10,tablero16_10x10,tablero17_10x10,tablero18_10x10,tablero19_10x10,tablero20_10x10,tablero21_10x10,tablero22_10x10,tablero23_10x10,tablero24_10x10,tablero25_10x10,tablero26_10x10,tablero27_10x10,tablero28_10x10,tablero29_10x10,tablero30_10x10,tablero31_10x10,tablero32_10x10,tablero33_10x10]
+
+arrayJuegos10x10.forEach(tablero =>{
+    tablero.informacionFilas = informacionFilas(tablero)
+    tablero.informacionColumnas = informacionColumnas(tablero)
+})
 
 
-    const tablero35_10x10 = new JuegoPredeterminado(75, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+const tablero1_15x15 = new JuegoPredeterminado(81, "flor", [
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,1,1,0,0,0,0,0,0,0,0,0,1,1,0],
+    [1,1,0,1,1,1,1,0,1,1,1,1,0,1,1],
+    [1,0,1,0,1,1,1,0,1,1,1,0,1,0,1],
+    [1,0,1,1,0,1,1,1,1,1,0,1,1,0,1],
+    [1,0,1,1,1,1,1,1,1,0,1,1,1,0,1],
+    [1,0,1,1,1,1,0,0,0,1,1,1,1,0,1],
+    [1,0,0,0,1,1,0,0,0,1,1,0,0,0,1],
+    [1,0,1,1,1,1,0,0,0,1,1,1,1,0,1],
+    [1,0,1,1,1,1,1,0,1,1,1,1,1,0,1],
+    [1,0,1,1,0,1,1,0,1,1,0,1,1,0,1],
+    [1,0,1,0,1,1,1,0,1,1,1,0,1,0,1],
+    [1,1,0,1,1,1,1,0,1,1,1,1,0,1,1],
+    [0,1,1,0,0,0,0,0,0,0,0,0,1,1,0],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,0,0]], "15x15")
+
+const tablero2_15x15 = new JuegoPredeterminado(82, "arbol", [
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,0,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,0,1,1,0,0,1,0,0,1,1,1,1],
+    [1,1,1,0,1,0,0,1,1,0,1,1,0,1,1],
+    [1,0,1,1,1,1,0,1,1,0,1,1,0,0,1],
+    [1,1,0,1,1,1,1,1,0,1,1,0,0,1,1],
+    [0,1,1,0,1,1,1,0,1,1,0,0,1,1,0],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,0,0,0,1,1,1,1,0,0,0,0,0,0,0],
+    [0,0,0,0,1,1,1,0,0,0,0,0,0,0,0],
+    [0,0,0,0,1,1,1,0,0,0,0,0,0,0,0],
+    [0,0,0,0,1,1,1,0,0,0,0,0,0,0,0],
+    [0,0,0,1,1,1,1,1,0,0,0,0,0,0,0],
+    [0,0,1,1,1,1,1,1,1,0,0,0,0,0,0]], "15x15")
+
+const tablero3_15x15 = new JuegoPredeterminado(83, "corbata", [
+    [1,0,0,0,0,1,1,1,1,1,0,0,0,0,1],
+    [1,1,0,0,0,1,1,1,1,1,0,0,0,1,1],
+    [1,0,1,0,1,1,1,1,1,1,1,0,1,0,1],
+    [1,0,0,1,0,0,1,1,1,0,0,1,0,0,1],
+    [1,0,0,0,0,0,0,1,0,0,0,0,0,0,1],
+    [1,1,0,0,0,0,0,1,0,0,0,0,0,1,1],
+    [1,1,0,0,0,0,1,1,1,0,0,0,0,1,1],
+    [1,1,0,0,0,0,1,1,1,0,0,0,0,1,1],
+    [1,1,1,0,0,1,1,1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1,1,1,0,0,1,1,1],
+    [1,1,1,0,0,1,1,1,1,1,0,0,1,1,1],
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1],
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,0],
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,0,0],
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1]], "15x15")
+
+const tablero4_15x15 = new JuegoPredeterminado(84, "unlock", [
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,1,0,0,0,0,1,1,0,0,0],
+    [1,1,1,1,1,1,0,0,0,1,1,1,1,0,0],
+    [1,1,1,1,1,1,0,0,0,1,1,1,1,0,0],
+    [1,1,1,1,1,1,1,1,0,0,1,1,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,1,1,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,1,1,0,0,0],
+    [1,1,0,1,1,0,0,1,0,1,1,1,1,0,0],
+    [1,1,0,1,1,0,0,1,0,1,1,1,1,0,0],
+    [1,1,0,1,1,0,0,1,0,1,1,1,1,0,0],
+    [1,1,1,1,1,1,1,1,0,1,1,1,1,0,0],
+    [1,1,1,1,1,1,0,0,1,1,1,1,1,1,0],
+    [1,1,1,1,1,1,0,0,1,1,1,1,1,1,0],
+    [1,1,1,1,1,1,0,0,1,1,1,1,1,1,0]], "15x15")
+
+const tablero5_15x15 = new JuegoPredeterminado(85, "luz", [
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1],
+    [1,1,1,1,0,1,0,0,0,1,0,1,1,1,1],
+    [0,1,1,1,1,0,0,0,0,0,1,1,1,1,0],
+    [1,0,1,1,0,0,0,0,0,0,0,1,0,0,1],
+    [1,1,0,1,0,0,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,0,0,1,1,1,0,0,1,1,1,1],
+    [1,1,1,1,0,0,1,0,1,0,0,1,1,1,1],
+    [1,1,1,0,1,0,0,1,0,0,1,0,1,1,1],
+    [0,0,0,1,1,1,0,1,0,1,1,1,0,0,0],
+    [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1],
+    [1,1,1,1,0,1,0,1,0,1,0,1,1,1,1],
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1],
+    [1,1,0,1,1,1,0,0,0,1,1,1,0,1,1],
+    [1,0,1,1,1,1,1,0,1,1,1,1,1,0,1],
+    [0,1,1,1,1,1,0,0,0,1,1,1,1,1,0]], "15x15")
+
+const tablero6_15x15 = new JuegoPredeterminado(86, "fuerza", [
+    [1,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,1,1,1,1,1,1,1,1,0,1,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,0,0,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,0,0],
+    [1,1,0,0,0,1,1,1,1,1,1,1,1,0,0],
+    [0,0,0,0,0,0,1,1,1,1,1,1,0,0,0],
+    [0,1,0,0,0,0,0,1,1,1,1,0,0,0,0],
+    [0,1,0,0,0,0,0,1,1,0,0,0,0,0,1],
+    [0,1,0,0,0,0,0,1,0,0,0,0,0,1,1],
+    [0,1,1,0,0,1,1,0,0,0,0,0,1,1,1],
+    [0,1,1,1,0,0,0,0,0,0,0,1,1,1,1],
+    [0,1,1,1,1,0,0,0,0,0,1,1,1,1,1],
+    [1,1,1,1,1,1,0,0,0,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,0,1,1,1,1,1,1,1]], "15x15")
+
+const tablero7_15x15 = new JuegoPredeterminado(87, "muuuu", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+    [0,1,1,1,0,1,1,1,0,0,0,0,1,0,1],
+    [1,0,1,1,1,1,1,0,1,1,1,1,1,0,1],
+    [0,0,1,0,1,0,1,1,1,1,0,0,1,0,0],
+    [0,0,1,1,1,1,1,1,0,1,1,0,1,1,0],
+    [0,0,1,1,1,1,1,1,0,0,1,1,1,1,0],
+    [0,1,1,1,1,1,1,1,1,1,1,0,0,1,0],
+    [0,1,1,0,1,0,1,1,1,1,1,0,0,1,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,0,1,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,0,1,1,1,1,1,0,0,1,0,0,1,0],
+    [0,0,0,1,0,1,0,0,0,0,1,0,0,1,0],
+    [0,0,0,1,0,1,0,0,0,0,1,0,0,1,0],
+    [0,0,0,1,0,1,0,0,0,0,1,0,0,1,0]], "15x15")
+
+const tablero8_15x15 = new JuegoPredeterminado(88, "hormiga", [
+    [1,1,1,1,1,0,0,1,0,1,1,1,1,1,1],
+    [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1],
+    [1,1,0,0,0,1,0,1,0,1,1,1,1,1,1],
+    [1,1,0,0,0,1,0,1,0,1,1,1,1,1,1],
+    [0,1,0,0,0,1,1,0,1,1,1,1,1,1,1],
+    [1,0,1,1,1,0,0,0,1,1,0,0,0,0,0],
+    [1,1,0,0,1,0,1,1,0,0,1,1,1,1,0],
+    [0,1,1,1,0,0,1,1,0,1,1,1,1,1,1],
+    [1,0,0,0,1,1,0,0,0,1,0,1,1,1,1],
+    [1,1,1,1,1,1,0,1,1,0,0,0,1,1,1],
+    [1,1,1,1,1,0,1,1,0,0,0,0,0,1,1],
+    [1,1,1,1,1,0,1,1,1,0,0,0,1,0,1],
+    [1,1,1,1,1,0,1,1,1,1,0,1,1,1,1],
+    [1,1,1,1,1,0,1,1,1,1,1,0,1,1,1],
+    [1,1,1,1,1,1,0,1,1,1,1,1,1,1,1]], "15x15")
+
+const tablero9_15x15 = new JuegoPredeterminado(89, "boom", [
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,1,1,1,1,1,0,0,0,0,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,1,1,0,0,0,1,0,0,0,1,1,0,0],
+    [1,1,0,1,1,0,1,1,1,0,1,1,0,1,1],
+    [0,1,1,0,0,1,1,1,1,1,0,0,1,1,0],
+    [0,0,1,1,0,0,0,1,0,0,0,1,1,0,1],
+    [1,0,0,1,0,0,1,1,1,0,0,1,0,1,1],
+    [1,1,0,0,0,0,1,1,1,0,0,0,0,1,1],
+    [1,1,1,0,0,1,1,1,1,1,0,0,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "15x15")
+
+const tablero10_15x15 = new JuegoPredeterminado(90, "fuente", [
+    [1,1,0,0,0,1,1,0,1,0,0,1,1,1,1],
+    [1,0,1,1,1,0,0,0,0,1,1,0,0,1,1],
+    [1,1,0,0,0,1,1,0,1,1,0,1,1,0,1],
+    [1,0,1,1,1,0,1,0,1,0,1,1,1,1,0],
+    [0,1,1,1,1,1,0,0,0,0,1,1,0,0,1],
+    [1,0,0,0,0,0,1,0,1,1,0,0,1,1,0],
+    [0,1,1,1,1,1,0,0,0,0,1,1,1,1,1],
+    [1,1,1,0,0,0,1,0,1,1,0,0,1,1,1],
+    [1,0,0,1,1,1,0,0,0,0,1,1,0,1,1],
+    [0,1,1,0,0,0,0,0,1,1,0,1,1,0,0],
+    [1,1,0,1,0,1,0,0,0,1,1,0,1,1,0],
+    [1,0,1,0,1,1,1,0,1,1,1,1,0,1,0],
+    [1,0,1,0,1,0,0,0,0,0,1,1,0,1,1],
+    [1,0,0,1,1,1,0,0,0,1,1,1,0,1,1],
+    [1,0,1,0,0,0,0,0,0,0,0,0,1,1,1]], "15x15")
+
+const tablero11_15x15 = new JuegoPredeterminado(91, "cactus", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0],
+    [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0],
+    [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0],
+    [0,0,1,1,0,0,1,1,1,1,1,1,0,0,0],
+    [0,0,1,1,1,0,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,0,0,0,0,0],
+    [0,0,0,0,1,1,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0]], "15x15")
+
+const tablero12_15x15 = new JuegoPredeterminado(92, "crucero", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,1,0,0,1,0,1,0,1,0],
+    [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,1,1,0,1,0,1,0,1,0,1,0,1,0,1],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,1,1,0,1,0,1,0,1,0,1,0,1],
+    [0,1,0,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,1,1,0,1,1,0,1,1,0,1,1,0,1],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,0,0,1,0,0,1,0,0,1,0,0,1,0],
+    [1,0,1,1,0,1,1,0,1,1,0,1,1,0,1]], "15x15")
 
 
-    const tablero36_10x10 = new JuegoPredeterminado(76, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+const tablero13_15x15 = new JuegoPredeterminado(93, "cartwheel", [
+    [0,0,0,0,0,1,1,1,1,1,1,1,1,0,0],
+    [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1],
+    [0,0,0,0,0,1,1,1,1,1,1,0,0,1,1],
+    [1,0,0,0,1,1,1,1,1,1,0,0,1,1,1],
+    [1,1,0,1,1,0,1,1,1,0,0,1,1,1,1],
+    [1,1,0,1,1,1,0,1,1,0,1,1,0,0,1],
+    [1,1,0,1,1,1,1,1,0,0,0,0,0,0,1],
+    [1,1,0,1,1,1,1,0,0,0,0,1,0,0,1],
+    [1,1,0,1,1,1,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,1,0,0,0,0,1,1,0,1,1,1],
+    [1,1,1,1,1,0,0,0,0,1,1,1,0,1,1],
+    [1,1,1,1,0,0,0,1,0,0,1,1,1,0,1],
+    [1,1,1,0,0,0,1,1,1,0,0,1,1,1,0],
+    [1,0,0,0,0,1,1,1,1,1,0,0,1,1,1],
+    [1,0,0,0,1,1,1,1,1,1,1,0,0,0,1]], "15x15")
+
+const tablero14_15x15 = new JuegoPredeterminado(94, "wizard", [
+    [1,1,1,0,1,1,1,1,1,1,1,0,1,1,1],
+    [1,1,0,1,1,0,0,0,0,0,0,1,0,1,1],
+    [1,0,1,0,0,1,0,0,0,0,1,0,1,0,1],
+    [0,1,0,0,1,0,0,0,0,0,0,1,0,1,0],
+    [1,0,0,0,1,1,0,0,0,1,1,1,0,0,1],
+    [1,1,0,0,1,1,0,0,0,1,1,1,0,0,1],
+    [1,1,1,0,0,0,1,0,0,1,0,0,0,1,1],
+    [1,1,1,1,1,1,1,0,0,1,1,1,1,1,1],
+    [1,1,1,1,1,1,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,1,1,1,1,0,1,1,1,1,1,1],
+    [1,1,1,0,0,0,0,1,1,1,0,0,0,0,0],
+    [1,1,0,0,0,0,0,0,1,1,0,0,0,0,0],
+    [1,0,0,0,0,0,0,1,1,1,1,0,0,0,1],
+    [1,1,0,0,0,1,1,0,1,1,0,1,1,1,1],
+    [1,1,1,1,1,1,1,1,0,0,1,1,1,1,1]], "15x15")
+
+const tablero15_15x15 = new JuegoPredeterminado(95, "sombras", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [1,1,1,1,1,1,0,0,1,1,1,1,1,1,1],
+    [0,0,0,1,1,1,1,0,1,1,1,1,1,0,0],
+    [1,1,1,1,1,1,1,0,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,1,1,0,1,1,1,1,0,0,1,1,0,1],
+    [1,0,0,1,1,0,1,1,1,1,0,0,1,1,0],
+    [1,1,0,0,1,1,1,0,1,1,1,0,0,1,1],
+    [1,1,1,0,0,1,1,0,1,1,1,1,0,0,1],
+    [1,1,1,1,1,1,0,0,0,1,1,1,1,1,1],
+    [0,1,1,1,1,1,0,0,0,1,1,1,1,1,0],
+    [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,0,0,1,0,0,0,0,0]], "15x15")
+
+const tablero16_15x15 = new JuegoPredeterminado(96, "yendo", [
+    [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,1,1,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,1,1,0,0,0,1,0,0,0],
+    [0,0,0,0,0,1,1,0,0,0,0,1,0,0,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,1,0,0,0,0,0,0,0,1,0,0,0],
+    [1,1,1,1,0,0,0,0,0,0,0,1,1,1,0],
+    [1,0,0,0,0,0,0,1,1,1,0,1,0,0,0],
+    [1,0,0,0,0,0,1,1,1,1,1,1,0,0,0],
+    [1,1,1,1,1,1,1,1,0,1,1,1,1,1,1],
+    [0,0,0,0,0,0,1,1,1,1,1,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,0,0,0,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1]], "15x15")
+
+const tablero17_15x15 = new JuegoPredeterminado(97, "casa", [
+    [0,0,0,0,0,0,0,0,0,1,1,1,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,1,1,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,1,1,0],
+    [0,0,0,0,0,1,1,1,1,1,1,1,0,1,0],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0,0,0,0,0,0,0,1,0],
+    [0,0,0,1,0,1,0,1,1,1,0,1,0,1,0],
+    [0,0,0,1,0,1,0,1,0,1,0,1,0,1,0],
+    [0,0,0,1,0,0,0,1,0,1,0,0,0,1,0],
+    [0,0,0,1,0,0,0,1,0,1,0,0,0,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,1,1,1,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,0,0,0,0,0]], "15x15")
+
+const tablero18_15x15 = new JuegoPredeterminado(98, "pascuas", [
+    [0,0,0,0,0,1,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,1,1,0,0,1,1,1,0,0,0,0],
+    [0,0,1,1,1,0,0,0,0,0,1,1,1,0,0],
+    [0,1,1,1,0,1,1,0,1,1,0,1,1,1,0],
+    [0,1,1,1,0,1,1,0,1,1,0,1,1,1,1],
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,1,0,1,0,1,0,1,0,1,0,1,1],
+    [1,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [0,1,1,1,1,0,1,1,0,1,1,0,0,1,1],
+    [0,0,1,1,1,0,1,1,0,1,1,0,1,1,0],
+    [0,0,1,1,0,0,0,0,0,0,0,1,1,0,0],
+    [0,0,0,1,1,0,0,0,0,1,1,1,0,0,0],
+    [0,0,0,0,1,1,1,1,1,1,1,0,0,0,0]], "15x15")
+
+const tablero19_15x15 = new JuegoPredeterminado(99, "surfing", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,1,0,1,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,0,1,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,0,0,1,0,0,0,0,0],
+    [0,0,0,0,1,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,1,1,1,1,1,1,1,0,0,0,0,0,0],
+    [0,0,1,1,1,1,1,1,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,1,1,0,0,0,0,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "15x15")
+
+const tablero20_15x15 = new JuegoPredeterminado(100, "wiii", [
+    [0,1,1,1,1,1,1,1,1,1,0,0,0,0,0],
+    [0,1,0,0,0,0,1,1,0,1,1,0,0,0,0],
+    [0,1,0,0,1,0,1,0,1,0,1,1,0,0,0],
+    [0,1,1,0,1,0,1,1,0,1,0,1,1,1,0],
+    [0,1,0,0,1,0,1,0,1,0,1,0,1,1,0],
+    [0,1,0,0,1,0,1,1,0,1,0,1,0,1,0],
+    [0,1,0,0,1,0,1,0,1,0,1,0,1,1,0],
+    [0,1,0,0,1,0,1,1,0,1,0,1,0,1,0],
+    [0,1,0,0,1,0,1,0,1,0,1,0,1,1,0],
+    [0,1,0,0,1,0,1,1,0,1,0,1,0,1,0],
+    [0,1,0,0,1,0,1,0,1,0,1,0,1,1,1],
+    [0,1,0,0,1,0,1,1,0,1,0,1,1,0,1],
+    [1,1,0,0,0,0,1,0,1,1,1,0,0,0,1],
+    [1,0,1,1,1,1,1,1,1,0,0,0,0,1,1],
+    [1,0,0,0,0,0,1,0,0,0,0,0,1,1,1]], "15x15")
+
+const tablero21_15x15 = new JuegoPredeterminado(101, "cafecito", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,0,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,1,1,1,1,1,1,0],
+    [0,0,0,0,0,1,1,1,1,1,1,0,0,0,0],
+    [0,0,0,1,1,0,0,1,0,1,1,1,0,0,0],
+    [0,0,1,0,0,0,1,0,1,1,0,0,1,0,0],
+    [0,0,1,0,1,1,1,1,1,1,1,0,1,0,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [1,0,1,0,0,1,1,1,1,1,0,0,1,0,0],
+    [1,0,1,0,0,0,0,0,0,0,0,0,1,1,1],
+    [1,1,1,0,0,0,0,0,0,0,0,0,1,1,1],
+    [1,1,1,1,0,0,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,0,0,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "15x15")
+
+const tablero22_15x15 = new JuegoPredeterminado(102, "lampara", [
+    [1,1,1,1,1,1,1,0,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,0,1,0,1,1,1,1,1,1],
+    [1,1,1,1,1,0,1,1,1,0,1,1,1,1,1],
+    [1,1,1,1,0,1,0,1,0,1,0,1,1,1,1],
+    [1,1,1,0,0,1,0,1,0,1,0,0,1,1,1],
+    [1,0,0,0,1,0,0,1,0,0,1,0,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,0,0,0,0,1,0,0,0,0,1,1,1],
+    [1,1,0,0,0,0,1,0,1,0,0,0,0,1,1],
+    [1,0,0,0,0,1,0,0,0,1,0,0,0,0,1],
+    [0,0,0,0,1,0,1,0,1,0,1,0,0,0,0],
+    [0,0,0,0,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,0,0,1,0,1,1,1,0,1,0,0,0,0],
+    [0,0,0,0,1,0,0,1,0,0,1,0,0,0,0],
+    [0,0,0,0,0,1,1,1,1,1,0,0,0,0,0]], "15x15")
+
+    const tablero23_15x15 = new JuegoPredeterminado(103, "telefono", [
+    [0,0,0,0,0,0,0,0,0,1,0,0,0,0,1],
+    [0,0,0,0,0,0,0,0,1,1,1,0,0,1,0],
+    [0,0,0,0,0,0,0,1,1,1,1,1,0,0,1],
+    [0,0,0,0,0,0,1,1,1,1,1,1,1,0,1],
+    [0,0,0,0,0,0,0,1,1,1,1,1,0,0,1],
+    [0,0,0,0,0,0,0,0,1,1,1,0,0,0,1],
+    [0,0,0,0,0,0,0,1,1,1,0,0,0,1,0],
+    [0,0,1,0,0,0,1,1,1,0,0,0,0,1,0],
+    [0,1,1,1,0,1,1,1,0,0,1,1,0,0,1],
+    [1,1,1,1,1,1,1,0,0,1,0,1,1,0,1],
+    [1,1,1,1,1,1,0,0,0,1,1,0,1,1,1],
+    [1,1,1,1,1,0,0,0,0,0,0,1,0,1,1],
+    [0,1,1,1,1,1,0,1,0,1,0,1,0,1,1],
+    [0,0,1,1,0,1,1,0,1,0,1,1,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]], "15x15")
+
+    const tablero24_15x15 = new JuegoPredeterminado(104, "octopus", [
+    [0,1,1,0,0,0,0,0,0,0,1,0,0,0,0],
+    [0,0,1,1,0,0,0,0,0,0,1,1,1,0,0],
+    [0,0,0,1,0,0,0,1,0,0,0,0,1,0,1],
+    [0,0,0,1,0,0,1,1,1,0,0,1,1,0,1],
+    [0,0,1,1,0,0,1,1,1,0,0,1,0,0,1],
+    [0,0,1,1,0,0,1,1,1,0,1,1,0,1,1],
+    [0,0,0,1,1,0,0,1,0,1,1,0,1,1,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,0,1],
+    [1,1,0,0,1,1,1,1,1,1,1,1,0,1,1],
+    [1,0,0,1,1,0,1,1,1,0,0,1,1,1,0],
+    [0,0,1,1,0,0,1,1,1,1,0,0,0,0,0],
+    [0,0,1,1,0,1,1,0,1,1,0,0,0,0,0],
+    [0,1,1,0,0,1,1,0,1,1,0,0,0,0,1],
+    [0,1,0,0,0,1,0,0,0,1,1,0,0,1,1],
+    [0,1,0,0,0,1,0,0,0,1,1,1,1,1,0]], "15x15")
+
+const tablero25_15x15 = new JuegoPredeterminado(105, "gnomo", [
+    [1,0,0,0,0,0,0,0,0,0,0,1,1,1,1],
+    [1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
+    [1,0,0,0,0,0,0,0,1,1,1,1,1,0,0],
+    [1,1,0,0,0,0,0,1,1,1,1,1,1,0,0],
+    [0,1,0,0,0,0,0,1,0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0,1,1,0,1,0,1,0,0],
+    [0,1,1,0,0,0,0,1,0,0,0,1,1,0,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,0,0,1,1,0,0,1,1,0,1,1,1,0,0],
+    [0,0,0,1,1,0,1,0,1,1,1,1,0,1,0],
+    [0,0,0,1,0,1,0,1,1,1,1,1,1,0,1],
+    [0,0,0,0,1,0,1,1,0,1,1,0,1,1,0],
+    [0,0,0,0,0,1,0,1,0,1,0,0,1,0,1],
+    [0,0,0,0,0,0,0,1,1,1,1,1,1,0,0],
+    [0,0,0,0,0,0,0,1,0,0,0,0,1,0,0]], "15x15")
+
+const tablero26_15x15 = new JuegoPredeterminado(106, "hongo", [
+    [0,0,0,0,1,1,1,1,0,0,0,0,0,0,0],
+    [0,0,0,1,1,0,0,1,1,0,0,0,0,0,0],
+    [0,0,1,1,0,0,1,0,1,1,0,0,0,0,0],
+    [0,0,1,1,0,0,1,0,1,1,1,1,0,0,0],
+    [0,1,1,1,0,0,0,0,0,1,1,1,1,0,0],
+    [1,1,0,0,0,0,1,1,0,0,0,0,1,1,0],
+    [1,1,0,1,0,0,1,1,1,0,0,0,0,1,1],
+    [1,0,0,1,1,0,0,0,0,0,0,0,1,1,1],
+    [1,0,0,0,0,0,0,1,1,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,1,1,1,1,1,1,1,1,0,0,0,0,0,0],
+    [0,0,0,1,1,0,0,1,1,0,0,0,0,1,1],
+    [1,0,0,1,1,0,0,1,1,0,0,0,1,1,1],
+    [1,1,1,1,0,0,0,0,1,1,1,1,1,1,1],
+    [1,1,1,0,0,0,0,0,0,1,1,1,1,1,1]], "15x15")
 
 
-    const tablero37_10x10 = new JuegoPredeterminado(77, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+
+let arrayJuegos15x15 = [tablero1_15x15,tablero2_15x15,tablero3_15x15,tablero4_15x15,tablero5_15x15,tablero6_15x15,tablero7_15x15,tablero8_15x15,tablero9_15x15,tablero10_15x15,tablero11_15x15,tablero12_15x15,tablero13_15x15,tablero14_15x15,tablero15_15x15,tablero16_15x15,tablero17_15x15,tablero18_15x15,tablero19_15x15,tablero20_15x15,tablero21_15x15,tablero22_15x15,tablero23_15x15,tablero24_15x15,tablero25_15x15,tablero26_15x15]
+
+arrayJuegos15x15.forEach(tablero =>{
+    tablero.informacionFilas = informacionFilas(tablero)
+    tablero.informacionColumnas = informacionColumnas(tablero)
+})
 
 
-    const tablero38_10x10 = new JuegoPredeterminado(78, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+const tablero1_20x20 = new JuegoPredeterminado(121, "como-una-lluvia", [
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,1,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1],
+    [0,1,1,0,0,0,1,1,1,1,1,1,0,1,1,1,0,0,1,1],
+    [0,1,1,0,0,1,0,1,1,1,1,0,0,1,1,1,1,1,1,0],
+    [1,0,0,0,1,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0],
+    [1,1,0,1,1,1,1,0,1,1,0,0,0,0,1,1,1,1,0,0],
+    [1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0],
+    [1,0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,1],
+    [0,0,1,0,0,0,1,0,1,1,0,1,1,1,0,0,0,0,1,1],
+    [0,1,1,0,0,1,1,0,0,0,0,0,1,1,1,0,0,0,1,1],
+    [1,1,1,1,0,1,1,0,1,0,0,0,0,1,1,1,0,0,0,1],
+    [1,1,1,1,0,0,0,1,1,0,0,0,1,0,1,1,1,0,0,0],
+    [0,1,1,0,1,0,1,1,1,1,0,1,1,0,0,1,1,0,0,0],
+    [0,0,0,0,1,0,1,1,1,1,0,1,1,0,1,1,0,0,0,0],
+    [0,0,1,0,0,1,0,1,1,0,0,0,0,0,1,1,0,0,1,0],
+    [0,1,1,0,1,1,0,0,0,0,1,0,0,1,1,0,0,1,1,0],
+    [1,1,1,1,0,0,0,1,0,1,1,0,1,1,0,0,1,1,1,1],
+    [1,1,1,1,0,0,1,1,0,1,1,0,1,0,0,0,1,1,1,1],
+    [0,1,1,0,0,1,1,1,1,0,0,0,0,1,0,0,0,1,1,0]], "20x20")
+
+const tablero2_20x20 = new JuegoPredeterminado(122, "albert", [
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,0,0,0,1,0,0,0,1,1,0,0,0,1,0,1,0,0,1],
+    [1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1],
+    [0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0],
+    [1,0,0,1,1,1,0,0,1,1,0,0,0,0,1,1,0,1,1,0],
+    [0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,1],
+    [1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1],
+    [1,0,0,0,1,1,1,0,0,1,1,1,0,1,1,0,1,1,0,0],
+    [1,0,0,1,0,0,1,0,1,1,1,1,0,1,1,1,1,0,1,0],
+    [0,0,0,1,0,1,1,0,0,0,1,0,0,1,1,0,1,0,1,0],
+    [0,0,1,1,0,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0],
+    [0,1,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0],
+    [1,1,0,0,1,1,1,0,0,0,1,1,0,1,0,0,1,1,0,0],
+    [1,0,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,0],
+    [0,0,1,1,0,0,1,0,0,0,0,1,1,1,0,0,1,0,1,1],
+    [0,1,0,0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,0,1],
+    [0,1,0,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,0,1],
+    [1,0,1,1,0,0,1,1,1,0,0,0,0,0,0,1,0,0,1,0],
+    [1,1,1,0,0,1,1,1,1,1,1,0,0,0,1,1,1,0,1,1],
+    [1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "20x20")
+
+const tablero3_20x20 = new JuegoPredeterminado(123, "frank", [
+    [0,0,0,0,1,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0,0,0,0],
+    [0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0],
+    [0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0],
+    [0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0],
+    [0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,1,0,0],
+    [0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0],
+    [0,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,1,0,0],
+    [0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0],
+    [0,1,1,1,1,0,0,0,0,1,1,0,0,0,1,1,1,1,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,0,0,0,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0],
+    [0,0,0,0,1,1,1,1,1,0,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+    [0,1,1,1,0,0,1,1,1,1,1,1,1,0,0,1,1,1,0,0],
+    [1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0],
+    [1,0,0,1,1,0,1,0,1,1,1,0,1,0,1,1,1,0,1,1],
+    [1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1]], "20x20")
+
+const tablero4_20x20 = new JuegoPredeterminado(124, "transmitiendo", [
+    [1,1,1,0,1,1,0,1,0,1,0,0,1,0,0,1,0,1,1,0],
+    [1,1,0,1,1,0,1,0,1,0,0,1,1,1,0,0,1,0,1,1],
+    [1,0,0,1,0,0,1,0,1,0,1,1,1,1,1,0,1,0,0,1],
+    [1,0,0,1,0,0,1,0,1,0,0,1,1,1,0,0,1,0,0,1],
+    [1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,1,0,1,1],
+    [1,0,0,1,0,0,1,1,0,0,1,1,1,1,1,0,0,1,1,0],
+    [1,0,0,1,1,0,0,1,0,1,1,0,1,0,1,1,0,0,0,1],
+    [1,0,0,0,1,1,0,0,1,1,1,0,1,0,1,1,1,0,1,1],
+    [1,1,0,0,0,1,1,0,1,1,0,1,1,1,0,1,1,0,1,0],
+    [0,1,1,0,0,0,0,1,1,1,1,0,1,0,1,1,1,1,0,0],
+    [0,0,1,1,0,0,0,1,1,0,1,1,1,1,1,0,1,1,0,1],
+    [1,0,0,1,1,0,1,1,1,0,0,1,1,1,0,0,1,1,1,0],
+    [1,1,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,1,1,0],
+    [0,1,1,0,0,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1],
+    [0,0,1,1,0,1,1,0,0,1,1,1,1,1,1,1,0,0,1,1],
+    [1,0,0,0,1,1,1,1,0,0,0,1,1,1,0,0,0,1,1,1],
+    [1,1,0,0,1,1,1,1,1,1,0,0,1,0,0,1,1,1,1,1],
+    [0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1],
+    [0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,1,1,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0]], "20x20")
+
+const tablero5_20x20 = new JuegoPredeterminado(125, "pancakes", [
+    [0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0],
+    [0,0,0,0,1,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0],
+    [0,0,1,0,1,1,1,0,1,1,1,0,1,1,1,1,0,0,1,0],
+    [0,0,0,1,1,1,0,0,0,1,1,0,0,1,1,1,1,1,0,0],
+    [0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0],
+    [0,0,1,0,1,1,0,0,0,0,1,1,0,0,1,1,0,1,1,0],
+    [1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,1,1,1,1,0],
+    [0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0],
+    [0,1,1,0,0,1,1,0,0,0,0,1,0,0,0,0,1,0,1,1],
+    [0,1,1,1,0,1,1,0,0,0,0,1,1,0,0,0,1,1,1,1],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0]], "20x20")
+
+const tablero6_20x20 = new JuegoPredeterminado(126, "nerd", [
+    [0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1],
+    [0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,0,0],
+    [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,0],
+    [0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,1,1,1,1,1,1,0,0,0,0,1,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0],
+    [0,0,0,1,1,1,0,0,0,1,1,1,1,0,0,0,1,1,1,1],
+    [0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0],
+    [0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,0],
+    [0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,1,1,0,0,0]], "20x20")
+
+    const tablero7_20x20 = new JuegoPredeterminado(127, "dragon", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1],
+    [0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1],
+    [0,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0],
+    [1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0],
+    [1,0,1,0,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0],
+    [0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1],
+    [0,1,1,1,0,0,0,0,1,1,0,1,1,1,1,1,1,1,1,1],
+    [1,1,0,1,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1],
+    [1,0,0,0,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1],
+    [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1,1,1],
+    [0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
+    [0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0]], "20x20")
+
+const tablero8_20x20 = new JuegoPredeterminado(128, "venecia", [
+    [1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,1,1,1,0],
+    [1,1,0,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,1,1,1],
+    [0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,1],
+    [0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0],
+    [0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0],
+    [0,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0],
+    [0,1,1,1,0,0,0,1,1,1,0,1,1,0,0,0,0,0,1,0],
+    [0,0,1,1,1,0,0,1,1,1,0,0,1,1,0,0,0,0,1,0],
+    [0,1,0,1,1,1,0,1,0,1,0,0,0,1,1,0,0,0,1,0],
+    [1,1,1,1,1,1,1,1,0,1,0,0,0,0,1,1,0,1,1,0],
+    [1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1],
+    [0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,0],
+    [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
+    [0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1,1,0,1],
+    [0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,0,0,0,0],
+    [0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,1,1,1]], "20x20")
+
+    const tablero9_20x20 = new JuegoPredeterminado(129, "vroom", [
+    [1,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,0],
+    [1,0,1,0,1,1,0,0,1,0,1,0,1,0,1,0,1,1,1,0],
+    [0,1,0,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,1,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0],
+    [1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,0],
+    [1,0,0,0,1,0,1,1,1,1,1,1,1,0,0,0,1,0,1,0],
+    [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0],
+    [0,1,0,0,1,1,0,1,0,0,0,0,0,0,1,1,0,0,1,0],
+    [0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,0,0,0],
+    [0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0],
+    [0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0],
+    [0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1],
+    [0,1,1,0,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1,1],
+    [0,0,0,0,0,1,1,1,0,0,0,1,1,1,0,0,1,1,1,1],
+    [1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,1,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1],
+    [1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]], "20x20")
+
+    const tablero10_20x20 = new JuegoPredeterminado(130, "bajo-el-mar", [
+    [1,1,1,1,1,0,1,0,1,1,1,0,1,1,0,0,0,1,0,1],
+    [0,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,1,0,0],
+    [0,0,0,0,1,0,1,0,1,1,1,0,0,1,1,1,1,1,1,0],
+    [0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1],
+    [0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1,1,1,0],
+    [0,1,0,1,1,1,0,0,1,0,1,1,1,0,0,1,1,1,1,0],
+    [1,0,0,0,0,1,0,0,0,1,1,1,1,1,0,1,1,1,0,0],
+    [1,1,1,0,1,1,1,0,1,0,1,1,1,0,1,0,1,1,0,0],
+    [1,0,0,1,1,1,1,1,0,0,0,0,0,1,1,0,0,1,1,0],
+    [0,0,1,0,1,1,1,0,0,0,0,0,0,1,0,0,0,1,1,0],
+    [1,1,0,0,0,0,0,1,0,1,0,0,1,1,0,1,0,0,1,1],
+    [1,1,1,0,1,1,0,1,1,0,0,1,1,0,0,1,1,0,1,1],
+    [1,1,0,0,0,1,0,0,1,1,0,0,1,1,0,0,1,1,1,0],
+    [0,0,1,0,0,1,1,0,0,1,1,0,1,0,0,0,0,1,0,0],
+    [1,0,1,1,0,0,1,1,0,0,1,1,1,0,0,1,0,0,0,1],
+    [1,0,0,1,1,0,0,1,1,0,0,1,0,1,0,1,1,0,0,1],
+    [1,1,0,0,1,0,0,0,1,0,1,1,0,0,1,1,0,0,1,1],
+    [0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0],
+    [0,0,1,1,0,0,1,0,1,1,1,0,1,1,0,0,1,0,1,1],
+    [1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1]], "20x20")
+
+    const tablero11_20x20 = new JuegoPredeterminado(131, "contando-ovejitas", [
+    [0,1,0,0,1,1,1,0,1,0,0,0,1,0,0,1,1,1,1,0],
+    [1,1,1,0,0,1,0,0,0,1,1,1,0,0,1,1,1,0,1,1],
+    [0,1,0,0,0,0,0,0,1,1,1,0,1,0,1,1,0,0,0,0],
+    [1,0,0,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0,1],
+    [1,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,1,0,1,1],
+    [1,0,1,1,1,0,0,0,0,0,0,1,0,0,0,1,1,1,1,1],
+    [0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,0,1,1,1,0],
+    [1,0,0,1,1,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1],
+    [0,0,1,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1],
+    [0,1,1,0,0,0,1,0,0,0,0,1,1,1,1,1,1,1,0,0],
+    [1,1,0,1,1,0,1,0,0,1,1,1,1,1,0,0,1,1,0,1],
+    [1,0,1,1,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1],
+    [0,1,1,0,0,1,1,1,1,1,0,0,1,1,1,0,1,1,0,0],
+    [0,0,0,1,1,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0],
+    [0,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,1,1,1,1],
+    [1,1,1,1,0,0,1,1,1,0,0,0,1,0,1,0,1,1,0,1],
+    [1,1,0,0,1,1,0,1,1,0,1,0,0,1,1,0,0,0,0,0],
+    [1,1,1,1,0,0,0,1,1,1,1,0,1,0,0,0,1,1,0,1],
+    [1,1,0,1,0,1,0,1,1,1,0,0,1,1,0,1,0,1,1,1],
+    [1,1,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,1,1]], "20x20")
+
+    const tablero12_20x20 = new JuegoPredeterminado(132, "payaso", [
+    [0,0,0,1,0,1,1,0,0,0,1,1,0,0,0,0,0,1,1,0],
+    [1,1,0,1,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,1],
+    [0,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,1,1,1,1],
+    [1,1,1,0,1,1,0,0,0,1,1,1,1,0,0,1,1,1,1,1],
+    [1,1,1,0,0,1,1,0,0,0,1,1,0,1,1,1,0,1,1,0],
+    [1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0],
+    [0,1,1,0,1,1,1,1,0,0,1,0,1,0,1,1,0,0,0,0],
+    [1,0,1,1,0,1,1,0,0,1,1,1,0,1,1,1,1,0,0,0],
+    [1,1,1,1,0,0,1,1,0,1,0,0,1,1,0,0,1,1,0,0],
+    [0,1,1,0,0,0,0,1,1,1,0,1,1,1,0,0,1,1,1,0],
+    [0,0,1,1,1,1,0,0,1,1,0,0,0,1,0,0,1,0,0,0],
+    [1,1,0,0,0,1,1,1,0,1,1,0,0,0,1,1,0,0,0,0],
+    [0,1,1,0,0,0,0,0,1,1,1,1,1,1,0,0,1,1,1,0],
+    [1,1,1,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,1,1],
+    [1,1,1,0,0,0,0,1,0,1,1,1,0,0,0,1,0,0,0,1],
+    [1,1,0,0,0,0,1,1,0,0,1,0,1,0,0,0,0,1,0,1],
+    [0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,1,0,1,0,1],
+    [0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1]], "20x20")
+
+    const tablero13_20x20 = new JuegoPredeterminado(133, "peanut-butter-jelly-time", [
+    [0,1,1,1,1,1,0,0,1,1,1,1,0,0,0,0,1,1,1,1],
+    [0,0,0,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,0],
+    [1,0,0,0,1,1,1,0,1,0,0,1,1,0,1,1,0,0,0,0],
+    [1,1,0,0,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0,1],
+    [1,1,1,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,1,1],
+    [0,0,1,1,1,0,1,1,1,1,1,0,0,1,1,0,0,1,1,1],
+    [1,0,0,0,1,0,1,0,1,0,1,0,0,1,1,0,1,1,0,0],
+    [1,1,0,0,0,0,1,1,1,1,1,0,0,1,1,0,0,0,0,1],
+    [1,1,1,1,0,0,0,0,1,0,0,1,0,1,1,0,0,0,1,1],
+    [0,0,1,1,1,1,0,0,1,1,1,1,0,1,1,0,1,1,1,1],
+    [1,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0],
+    [1,1,1,0,1,1,1,0,1,0,0,0,0,1,1,1,1,1,0,0],
+    [1,1,0,1,0,0,1,1,1,0,0,0,1,1,0,0,1,1,0,0],
+    [0,0,0,1,0,0,1,1,0,0,0,0,1,1,0,0,1,1,1,1],
+    [0,1,1,0,1,1,0,1,0,0,0,1,1,1,1,1,1,1,0,0],
+    [1,1,1,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,0,0],
+    [1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0],
+    [1,0,0,1,1,1,1,1,0,0,1,1,0,0,0,1,1,0,1,1],
+    [0,0,1,0,0,0,0,1,1,0,1,0,0,0,0,1,1,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "20x20")
+
+    const tablero14_20x20 = new JuegoPredeterminado(134, "bzzzz", [
+    [0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0],
+    [0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,1,1,1,0],
+    [0,0,0,0,0,0,0,0,1,1,1,0,0,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,0],
+    [0,0,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,0,0],
+    [0,1,1,0,0,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0],
+    [0,1,1,0,0,0,1,0,1,0,0,1,1,1,1,0,0,0,0,0],
+    [0,0,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,0,0,0],
+    [1,1,1,1,0,1,1,0,0,0,0,1,0,0,1,0,1,1,0,0],
+    [1,0,0,0,1,0,1,1,0,0,0,1,1,1,1,0,1,1,1,0],
+    [1,0,1,1,0,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0],
+    [1,0,0,0,1,1,1,1,0,1,1,0,0,1,1,1,0,1,1,0],
+    [0,1,1,1,0,0,1,1,1,0,1,0,0,1,1,0,1,1,1,0],
+    [0,0,1,1,1,0,1,0,1,0,1,1,0,0,1,1,0,1,1,0],
+    [0,1,1,1,1,0,1,0,1,0,0,1,1,0,0,1,1,1,0,0],
+    [0,1,1,0,1,0,1,0,1,1,0,0,1,0,0,0,1,0,0,0],
+    [1,1,1,0,1,0,0,0,1,1,1,1,1,0,0,0,1,0,0,0],
+    [1,1,0,0,0,1,0,1,1,0,0,0,0,0,0,0,1,0,0,0],
+    [1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0]], "20x20")
+
+    const tablero15_20x20 = new JuegoPredeterminado(135, "hokie-bird", [
+    [0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,0,0,0,0,0],
+    [0,0,0,0,0,1,0,1,1,0,1,1,1,1,1,0,0,0,0,0],
+    [0,0,0,0,1,1,1,0,1,1,1,0,0,0,1,1,0,0,0,0],
+    [0,0,0,1,1,0,1,1,1,1,0,0,1,0,1,1,0,0,0,0],
+    [0,0,0,1,0,0,0,1,1,1,0,1,1,0,1,1,0,0,0,0],
+    [0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0],
+    [0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0],
+    [0,0,0,1,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0],
+    [0,0,0,1,0,0,1,1,1,1,1,1,1,1,1,0,1,1,0,0],
+    [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0],
+    [0,0,0,0,0,0,1,1,1,1,1,0,0,0,1,1,1,1,0,0],
+    [0,0,0,0,1,1,0,0,0,0,0,1,1,1,1,1,1,1,0,0],
+    [0,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+    [0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "20x20")
+
+    const tablero16_20x20 = new JuegoPredeterminado(136, "gladiador", [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,1,1,0,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0],
+    [0,1,0,0,1,0,1,1,0,0,0,0,0,1,1,1,1,1,0,0],
+    [0,1,0,1,1,1,1,1,0,0,0,0,0,1,0,1,1,1,1,0],
+    [0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,1],
+    [1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,1,0,1],
+    [1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1],
+    [1,0,1,0,1,1,0,1,0,1,0,0,1,1,0,1,0,1,0,1],
+    [1,0,1,0,1,1,0,1,0,1,1,0,1,1,0,1,0,1,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1],
+    [1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1],
+    [1,0,0,1,0,0,0,0,1,0,0,1,0,0,1,1,0,0,0,1],
+    [1,0,1,1,1,0,0,1,1,1,0,1,0,0,0,1,0,1,0,1],
+    [1,0,1,1,1,0,0,1,1,1,0,1,0,0,0,1,0,1,0,1],
+    [1,0,1,1,1,0,0,1,1,1,0,0,1,0,0,1,0,1,0,1],
+    [1,0,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,1,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "20x20")
 
 
-    const tablero39_10x10 = new JuegoPredeterminado(79, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
+let arrayJuegos20x20 = [tablero1_20x20,tablero2_20x20,tablero3_20x20,tablero4_20x20,tablero5_20x20,tablero6_20x20,tablero7_20x20,tablero8_20x20,tablero9_20x20,tablero10_20x20,tablero11_20x20,tablero12_20x20,tablero13_20x20,tablero14_20x20,tablero15_20x20,tablero16_20x20]
 
-
-    const tablero40_10x10 = new JuegoPredeterminado(80, "", [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []])
-
-
-
-
-
-
-
-
-
-let arrayJuegos10x10 = [tablero1_10x10,tablero2_10x10,tablero3_10x10,tablero4_10x10,tablero5_10x10,tablero6_10x10,tablero7_10x10,tablero8_10x10,tablero9_10x10,tablero10_10x10,tablero11_10x10,tablero12_10x10,tablero13_10x10,tablero14_10x10,tablero15_10x10,tablero16_10x10,tablero17_10x10,tablero18_10x10,tablero19_10x10,tablero20_10x10,tablero21_10x10,tablero22_10x10,tablero23_10x10,tablero24_10x10,tablero25_10x10,tablero26_10x10,tablero27_10x10,tablero28_10x10,tablero29_10x10,tablero30_10x10,tablero31_10x10,tablero32_10x10,tablero33_10x10,tablero34_10x10,tablero35_10x10,tablero36_10x10,tablero37_10x10,tablero38_10x10,tablero39_10x10,tablero40_10x10]
-
-// let arrayJuegos15x15 = [tablero1_15x15,tablero2_15x15,tablero3_15x15,tablero4_15x15,tablero5_15x15,tablero6_15x15,tablero7_15x15,tablero8_15x15,tablero9_15x15,tablero10_15x15,tablero11_15x15,tablero12_15x15,tablero13_115x15,tablero14_15x15,tablero15_15x15,tablero16_15x15,tablero17_15x15,tablero18_15x15,tablero19_15x15,tablero20_15x15,tablero21_15x15,tablero22_15x15,tablero23_15x15,tablero24_15x15,tablero25_15x5,tablero26_15x15,tablero27_15x15,tablero28_15x15,tablero29_15x15,tablero30_15x15,tablero31_15x15,tablero32_15x15,tablero33_15x15,tablero34_15x15,tablero35_15x15,tablero36_15x15,tablero37_15x15,tablero38_15x15,tablero39_15x15,tablero40_15x15]
-
-// let arrayJuegos20x20 = [tablero1_20x20,tablero2_20x20,tablero3_20x20,tablero4_20x20,tablero5_20x20,tablero6_20x20,tablero7_20x20,tablero8_20x20,tablero9_20x20,tablero10_20x20,tablero11_20x20,tablero12_20x20,tablero13_20x20,tablero14_20x20,tablero15_20x20,tablero16_20x20,tablero17_20x20,tablero18_20x20,tablero19_20x12,tablero20_20x20,tablero21_20x20,tablero22_20x20,tablero23_20x20,tablero24_20x20,tablero25_20x20,tablero26_20x20,tablero27_20x20,tablero28_20x20,tablero29_20x20,tablero30_20x20,tablero31_20x20,tablero32_20x20,tablero33_20x20,tablero34_20x20,tablero35_20x20,tablero36_20x20,tablero37_20x20,tablero38_20x20,tablero39_20x20,tablero40_20x20]
-
-
+arrayJuegos20x20.forEach(tablero =>{
+    tablero.informacionColumnas = informacionColumnas(tablero)
+    tablero.informacionFilas = informacionFilas(tablero)
+    
+})
 
 // A HREF PARA LUEGO MOSTRAR EN DOM
 
@@ -1316,7 +1808,7 @@ if(ulLista20x20 != null){
     })
 }
 
-// creo constantes de divs que tengo en el HTML
+// creo constantes de divs que tengo en el HTML 5x5
 
 const aleatorioDiv = document.getElementById("aleatorioDiv")
 const castilloDiv = document.getElementById("castilloDiv")
@@ -1366,7 +1858,6 @@ const arribaDiv = document.getElementById("arribaDiv")
 
 // aplico la funcion DOM, para que mis tableros se muestren en el HTML solo en el caso que se encuentre el Div
 
-// aleatorioDiv ?? dom(aleatorioDiv, juegoRandom, "5x5") 
 
 
 
@@ -1374,61 +1865,250 @@ if(aleatorioDiv != null){
     dom(aleatorioDiv, juegoRandom)
 }
 
-
-
 if(castilloDiv != null){
     dom(castilloDiv, tablero1_5x5)
 }
-
 
 if(botonDiv != null){
     dom(botonDiv, tablero2_5x5)
 }
 
-
-
 if(pausaDiv != null){
     dom(pausaDiv, tablero3_5x5)
 }
-
 
 if(cangrejoDiv != null){
     dom(cangrejoDiv, tablero4_5x5)
 }
 
-
-
 if(besoDiv != null){
     dom(besoDiv, tablero5_5x5)
 }
-
-
-
 
 if(arribaDiv != null){
     dom(arribaDiv, tablero40_5x5)
 }
 
 
-
-
-
-//
+// 10x10
 const computadoraDiv = document.getElementById("computadoraDiv")
 const random10Div = document.getElementById("random10Div")
-const egiptoDiv = document.getElementById("egiptoDiv") // Egypt
+const egiptoDiv = document.getElementById("egiptoDiv")
 
 if(computadoraDiv != null){
-    dom(computadoraDiv, tablero1_10x10, "10x10")
+    dom(computadoraDiv, tablero1_10x10)
 }
 
 if(random10Div != null){
-    dom(random10Div, juegoRandom10, "10x10")
+    dom(random10Div, juegoRandom10)
 }
 
 if(egiptoDiv != null){
-    dom(egiptoDiv, tablero7_10x10, "10x10")
+    dom(egiptoDiv, tablero7_10x10)
 }
+
+// 15x15
+const flor15Div = document.getElementById("flor15Div")
+const arbolDiv = document.getElementById("arbolDiv")
+const corbataDiv = document.getElementById("corbataDiv")
+const unlockDiv = document.getElementById("unlockDiv")
+const luzDiv = document.getElementById("luzDiv")
+const fuerzaDiv = document.getElementById("fuerzaDiv")
+const muuuuDiv = document.getElementById("muuuuDiv")
+const hormigaDiv = document.getElementById("hormigaDiv")
+const boomDiv = document.getElementById("boomDiv")
+const fuenteDiv = document.getElementById("fuenteDiv")
+const cactusDiv = document.getElementById("cactusDiv")
+const cruceroDiv = document.getElementById("cruceroDiv")
+const cartwheelDiv = document.getElementById("cartwheelDiv")
+const wizardDiv = document.getElementById("wizardDiv")
+const sombrasDiv = document.getElementById("sombrasDiv")
+const yendoDiv = document.getElementById("yendoDiv")
+const casaDiv = document.getElementById("casaDiv")
+const pascuasDiv = document.getElementById("pascuasDiv")
+const surfingDiv = document.getElementById("surfingDiv")
+const wiiiDiv = document.getElementById("wiiiDiv")
+const cafecitoDiv = document.getElementById("cafecitoDiv")
+const lamparaDiv = document.getElementById("lamparaDiv")
+const telefonoDiv = document.getElementById("telefonoDiv")
+const ocutopusDiv = document.getElementById("ocutopusDiv")
+const gnomoDiv = document.getElementById("gnomoDiv")
+const hongoDiv = document.getElementById("hongoDiv")
+
+if(flor15Div != null){
+    dom(flor15Div, tablero1_15x15)
+}
+if(arbolDiv != null){
+    dom(arbolDiv, tablero2_15x15)
+}
+if(corbataDiv != null){
+    dom(corbataDiv, tablero3_15x15)
+}
+if(unlockDiv != null){
+    dom(unlockDiv, tablero4_15x15)
+}
+if(luzDiv != null){
+    dom(luzDiv, tablero5_15x15)
+}
+if(fuerzaDiv != null){
+    dom(fuerzaDiv, tablero6_15x15)
+}
+if(muuuuDiv != null){
+    dom(muuuuDiv, tablero7_15x15)
+}
+if(hormigaDiv != null){
+    dom(hormigaDiv, tablero8_15x15)
+}
+if(boomDiv != null){
+    dom(boomDiv, tablero9_15x15)
+}
+if(fuenteDiv != null){
+    dom(fuenteDiv, tablero10_15x15)
+}
+if(cactusDiv != null){
+    dom(cactusDiv, tablero11_15x15)
+}
+if(cruceroDiv != null){
+    dom(cruceroDiv, tablero12_15x15)
+}
+if(cartwheelDiv != null){
+    dom(cartwheelDiv, tablero13_15x15)
+}
+if(wizardDiv != null){
+    dom(wizardDiv, tablero14_15x15)
+}
+if(sombrasDiv != null){
+    dom(sombrasDiv, tablero15_15x15)
+}
+if(yendoDiv != null){
+    dom(yendoDiv, tablero16_15x15)
+}
+if(casaDiv != null){
+    dom(casaDiv, tablero17_15x15)
+}
+if(pascuasDiv != null){
+    dom(pascuasDiv, tablero18_15x15)
+}
+if(surfingDiv != null){
+    dom(surfingDiv, tablero19_15x15)
+}
+if(wiiiDiv != null){
+    dom(wiiiDiv, tablero20_15x15)
+}
+if(cafecitoDiv != null){
+    dom(cafecitoDiv, tablero21_15x15)
+}
+if(lamparaDiv != null){
+    dom(lamparaDiv, tablero22_15x15)
+}
+if(telefonoDiv != null){
+    dom(telefonoDiv, tablero23_15x15)
+}
+if(ocutopusDiv != null){
+    dom(ocutopusDiv, tablero24_15x15)
+}
+if(gnomoDiv != null){
+    dom(gnomoDiv, tablero25_15x15)
+}
+if(hongoDiv != null){
+    dom(hongoDiv, tablero26_15x15)
+}
+
+
+
+
+
+
+
+//20x20
+
+const comoDiv = document.getElementById("comoDiv")
+const albertDiv = document.getElementById("albertDiv")
+const frankDiv = document.getElementById("frankDiv")
+const transmitiendoDiv = document.getElementById("transmitiendoDiv")
+const pancakesDiv = document.getElementById("pancakesDiv")
+const nerdDiv = document.getElementById("nerdDiv")
+const dragonDiv = document.getElementById("dragonDiv")
+const veneciaDiv = document.getElementById("veneciaDiv")
+const vroomDiv = document.getElementById("vroomDiv")
+const bajoDiv = document.getElementById("bajoDiv")
+const contandoDiv = document.getElementById("contandoDiv")
+const payasoDiv = document.getElementById("payasoDiv")
+const peanutDiv = document.getElementById("peanutDiv")
+const bzzzzDiv = document.getElementById("bzzzzDiv")
+const hokieDiv = document.getElementById("hokieDiv")
+const gladiadorDiv = document.getElementById("gladiadorDiv")
+
+
+if(comoDiv != null){
+    dom(comoDiv, tablero1_20x20)
+}
+
+if(albertDiv != null){
+    dom(albertDiv, tablero2_20x20)
+}
+
+if(frankDiv != null){
+    dom(frankDiv, tablero3_20x20)
+}
+
+if(transmitiendoDiv != null){
+    dom(transmitiendoDiv, tablero4_20x20)
+}
+
+if(pancakesDiv != null){
+    dom(pancakesDiv, tablero5_20x20)
+}
+
+if(nerdDiv != null){
+    dom(nerdDiv, tablero6_20x20)
+}
+
+if(dragonDiv != null){
+    dom(dragonDiv, tablero7_20x20)
+}
+
+if(veneciaDiv != null){
+    dom(veneciaDiv, tablero8_20x20)
+}
+
+if(vroomDiv != null){
+    dom(vroomDiv, tablero9_20x20)
+}
+
+if(bajoDiv != null){
+    dom(bajoDiv, tablero10_20x20)
+}
+
+if(contandoDiv != null){
+    dom(contandoDiv, tablero11_20x20)
+}
+
+if(payasoDiv != null){
+    dom(payasoDiv, tablero12_20x20)
+}
+
+if(peanutDiv != null){
+    dom(peanutDiv, tablero13_20x20)
+}
+
+if(bzzzzDiv != null){
+    dom(bzzzzDiv, tablero14_20x20)
+}
+
+if(hokieDiv != null){
+    dom(hokieDiv, tablero15_20x20)
+}
+
+if(gladiadorDiv != null){
+    dom(gladiadorDiv, tablero16_20x20)
+}
+
+
+
+
+
+
 
 
 
@@ -1911,6 +2591,8 @@ function marcarTableroYContarVidas20(){
     }
 }
 
+// funcion para guardar resultados del usuario en el local storage cuando se gana
+
 function guardarResultados(tamano){
     let infoLocalSUsuario
     let nombreJuego = document.getElementById("nombreJuego")
@@ -1986,12 +2668,13 @@ function reloj (tamano){
 }
 
 
-
+// ejecuto la funcion marcar tablero según tamaños
 
 let marcarTablero5 = document.getElementsByClassName("marcarTablero5")
 let marcarTablero10 = document.getElementsByClassName("marcarTablero10")
 let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
+
 
 
 if(marcarTablero5[0] != null){

@@ -119,6 +119,47 @@ footer{
     gap: 2px;
 }
 
+/* PARA JUEGOS 15X15*/
+
+.gridTablero15x15{
+    display: grid;
+    grid-template-columns: 100px 500px;
+    grid-template-rows: 100px 500px;
+    grid-template-areas: 
+    "boton infoColumn15x15"
+    "infoFilas15x15 casilleros15x15"
+    "reloj corazon";
+    justify-content: center;
+    gap: 2px;
+}
+
+.infoColumn15x15{
+    grid-area: infoColumn15x15;
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-template-rows: 100px;
+    align-items: center;
+    gap: 2px;
+}
+
+.infoFilas15x15{
+    grid-area: infoFilas15x15;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(15, 50px);
+    align-items: center;
+    gap: 2px;
+}
+
+.casilleros15x15{
+    grid-area: casilleros15x15;
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-template-rows: repeat(15, 50px);
+    align-items: center;
+    gap: 2px;
+}
+
 /* PARA TODOS LOS JUEGOS*/
 
 .boton{
@@ -306,5 +347,5 @@ h1{
 #divResultadosUsuario{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
 }

@@ -1776,11 +1776,34 @@ const ulLista10x10 = document.getElementById("ulLista10x10")
 const ulLista15x15 = document.getElementById("ulLista15x15")
 const ulLista20x20 = document.getElementById("ulLista20x20")
 
+let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+
+
 if(ulLista5x5 != null){
     arrayJuegos5x5.forEach(juego =>{
-        ulLista5x5.innerHTML += `
-        <li><a href="./${juego.nombre}.html"> ${juego.nombre} </a></li>
-        `
+        let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+        if(infoLocalSUsuario[0].resultados.some ((el) => el == juego.nombre.toUpperCase())){
+            let indice = infoLocalSUsuario[0].resultados.indexOf(juego.nombre.toUpperCase())
+            ulLista5x5.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/vidas.png" alt="">
+                    ${juego.nombre}         
+                    <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
+                </a>
+            </li>
+            `
+        } else{
+            ulLista5x5.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/sinvida.png" alt="">
+                    ${juego.nombre}
+                    <p></p>
+                </a>
+            </li>
+            `
+        }
     })
 }
 
@@ -2794,7 +2817,7 @@ let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 if(marcarTablero5[0] != null){
     let {tamano} = tablero1_5x5
     marcarTableroYContarVidas5()
-    reloj(tamano)
+    reloj(tamano ?? "5x5")
 }
 
 if(marcarTablero10[0] != null){
@@ -2806,11 +2829,11 @@ if(marcarTablero10[0] != null){
 if(marcarTablero15[0] != null){
     let {tamano} = tablero1_15x15
     marcarTableroYContarVidas15()
-    reloj(tamano)
+    reloj(tamano ?? "15x15")
 }
 
 if(marcarTablero20[0] != null){
     let {tamano} = tablero1_20x20
     marcarTableroYContarVidas20()
-    reloj(tamano)
+    reloj(tamano ?? "20x20")
 }

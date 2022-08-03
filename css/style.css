@@ -390,3 +390,13 @@ h1{
     grid-template-columns: repeat(3, 1fr);
 
 }
+
+.listaTablero{
+    max-width: 500px;
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

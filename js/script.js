@@ -1885,6 +1885,108 @@ if(besoDiv != null){
     dom(besoDiv, tablero5_5x5)
 }
 
+if(eDiv != null){
+    dom(eDiv, tablero6_5x5)
+}
+if(sonrisaDiv != null){
+    dom(sonrisaDiv, tablero7_5x5)
+}
+if(fantasmaDiv != null){
+    dom(fantasmaDiv, tablero8_5x5)
+}
+if(vendettaDiv != null){
+    dom(vendettaDiv, tablero9_5x5)
+}
+if(xDiv != null){
+    dom(xDiv, tablero10_5x5)
+}
+if(solDiv != null){
+    dom(solDiv, tablero11_5x5)
+}
+if(mantelDiv != null){
+    dom(mantelDiv, tablero12_5x5)
+}
+if(wDiv != null){
+    dom(wDiv, tablero13_5x5)
+}
+if(reyDiv != null){
+    dom(reyDiv, tablero14_5x5)
+}
+if(tDiv != null){
+    dom(tDiv, tablero15_5x5)
+}
+if(tridenteDiv != null){
+    dom(tridenteDiv, tablero16_5x5)
+}
+if(suizaDiv != null){
+    dom(suizaDiv, tablero17_5x5)
+}
+if(ochoDiv != null){
+    dom(ochoDiv, tablero18_5x5)
+}
+if(cortinasDiv != null){
+    dom(cortinasDiv, tablero19_5x5)
+}
+if(escaleraDiv != null){
+    dom(escaleraDiv, tablero20_5x5)
+}
+if(estrellaDiv != null){
+    dom(Div, tablero21_5x5)
+}
+if(diamanteDiv != null){
+    dom(diamanteDiv, tablero22_5x5)
+}
+if(campanitaDiv != null){
+    dom(campanitaDiv, tablero23_5x5)
+}
+if(buzonDiv != null){
+    dom(buzonDiv, tablero24_5x5)
+}
+if(doceDiv != null){
+    dom(doceDiv, tablero25_5x5)
+}
+if(navidadDiv != null){
+    dom(navidadDiv, tablero26_5x5)
+}
+if(izquierdaDiv != null){
+    dom(izquierdaDiv, tablero27_5x5)
+}
+if(derechaDiv != null){
+    dom(derechaDiv, tablero28_5x5)
+}
+if(plusDiv != null){
+    dom(plusDiv, tablero29_5x5)
+}
+if(cometaDiv != null){
+    dom(cometaDiv, tablero30_5x5)
+}
+if(iglesiaDiv != null){
+    dom(iglesiaDiv, tablero31_5x5)
+}
+if(perroDiv != null){
+    dom(perroDiv, tablero32_5x5)
+}
+if(olaDiv != null){
+    dom(olaDiv, tablero33_5x5)
+}
+if(onDiv != null){
+    dom(onDiv, tablero34_5x5)
+}
+if(abajoDiv != null){
+    dom(abajoDiv, tablero35_5x5)
+}
+if(florDiv != null){
+    dom(florDiv, tablero36_5x5)
+}
+if(corazonDiv != null){
+    dom(corazonDiv, tablero37_5x5)
+}
+if(piDiv != null){
+    dom(piDiv, tablero38_5x5)
+}
+if(femeninoDiv != null){
+    dom(femeninoDiv, tablero39_5x5)
+}
 if(arribaDiv != null){
     dom(arribaDiv, tablero40_5x5)
 }

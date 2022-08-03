@@ -123,8 +123,8 @@ footer{
 
 .gridTablero15x15{
     display: grid;
-    grid-template-columns: 100px 750px;
-    grid-template-rows: 100px 750px;
+    grid-template-columns: 100px 800px;
+    grid-template-rows: 100px 800px;
     grid-template-areas: 
     "boton infoColumn15x15"
     "infoFilas15x15 casilleros15x15"

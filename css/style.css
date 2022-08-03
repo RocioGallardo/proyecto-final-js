@@ -123,8 +123,8 @@ footer{
 
 .gridTablero15x15{
     display: grid;
-    grid-template-columns: 100px 500px;
-    grid-template-rows: 100px 500px;
+    grid-template-columns: 100px 750px;
+    grid-template-rows: 100px 750px;
     grid-template-areas: 
     "boton infoColumn15x15"
     "infoFilas15x15 casilleros15x15"
@@ -156,6 +156,47 @@ footer{
     display: grid;
     grid-template-columns: repeat(15, 50px);
     grid-template-rows: repeat(15, 50px);
+    align-items: center;
+    gap: 2px;
+}
+
+/* PARA JUEGOS 20X20*/
+
+.gridTablero20x20{
+    display: grid;
+    grid-template-columns: 100px 1000px;
+    grid-template-rows: 100px 1000px;
+    grid-template-areas: 
+    "boton infoColumn20x20"
+    "infoFilas20x20 casilleros20x20"
+    "reloj corazon";
+    justify-content: center;
+    gap: 2px;
+}
+
+.infoColumn20x20{
+    grid-area: infoColumn20x20;
+    display: grid;
+    grid-template-columns: repeat(20, 50px);
+    grid-template-rows: 100px;
+    align-items: center;
+    gap: 2px;
+}
+
+.infoFilas20x20{
+    grid-area: infoFilas20x20;
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(20, 50px);
+    align-items: center;
+    gap: 2px;
+}
+
+.casilleros20x20{
+    grid-area: casilleros20x20;
+    display: grid;
+    grid-template-columns: repeat(20, 50px);
+    grid-template-rows: repeat(20, 50px);
     align-items: center;
     gap: 2px;
 }
@@ -203,7 +244,7 @@ p{
 }
 
 
-.infoColumn10x10 p, .infoColumn5x5 p {
+.infoColumn10x10 p, .infoColumn5x5 p, .infoColumn15x15 p, .infoColumn20x20 p {
     color: #B33951;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -213,7 +254,7 @@ p{
     border-radius: 10px;
 }
 
-.infoFilas10x10 p, .infoFilas5x5 p {
+.infoFilas5x5 p, .infoFilas10x10 p, .infoFilas15x15 p, .infoFilas20x20 p{
     color: #B33951;
     width: 100px;
     height: 50px;

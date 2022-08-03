@@ -249,7 +249,7 @@ const juegoRandom10 = new JuegoPredeterminado(1001, "random", tableroRandom10x10
 juegoRandom10.informacionFilas = informacionFilas(juegoRandom10)
 juegoRandom10.informacionColumnas = informacionColumnas(juegoRandom10)
 
-let tableroRandom15x15 = crearTableroRandom(10,10)
+let tableroRandom15x15 = crearTableroRandom(15,15)
 const juegoRandom15 = new JuegoPredeterminado(1002, "random", tableroRandom15x15, "15x15")
 juegoRandom15.informacionFilas = informacionFilas(juegoRandom15)
 juegoRandom15.informacionColumnas = informacionColumnas(juegoRandom15)
@@ -1891,9 +1891,14 @@ if(arribaDiv != null){
 
 
 // 10x10
+const aleatorio10Div = document.getElementById("aleatorio10Div")
 const computadoraDiv = document.getElementById("computadoraDiv")
 const random10Div = document.getElementById("random10Div")
 const egiptoDiv = document.getElementById("egiptoDiv")
+
+if(aleatorio10Div != null){
+    dom(aleatorio10Div, juegoRandom10)
+}
 
 if(computadoraDiv != null){
     dom(computadoraDiv, tablero1_10x10)
@@ -1908,6 +1913,7 @@ if(egiptoDiv != null){
 }
 
 // 15x15
+const aleatorio15Div = document.getElementById("aleatorio15Div")
 const flor15Div = document.getElementById("flor15Div")
 const arbolDiv = document.getElementById("arbolDiv")
 const corbataDiv = document.getElementById("corbataDiv")
@@ -1935,6 +1941,9 @@ const ocutopusDiv = document.getElementById("ocutopusDiv")
 const gnomoDiv = document.getElementById("gnomoDiv")
 const hongoDiv = document.getElementById("hongoDiv")
 
+if(aleatorio15Div != null){
+    dom(aleatorio15Div, juegoRandom15)
+}
 if(flor15Div != null){
     dom(flor15Div, tablero1_15x15)
 }
@@ -2021,7 +2030,7 @@ if(hongoDiv != null){
 
 
 //20x20
-
+const aleatorio20Div = document.getElementById("aleatorio20Div")
 const comoDiv = document.getElementById("comoDiv")
 const albertDiv = document.getElementById("albertDiv")
 const frankDiv = document.getElementById("frankDiv")
@@ -2039,6 +2048,9 @@ const bzzzzDiv = document.getElementById("bzzzzDiv")
 const hokieDiv = document.getElementById("hokieDiv")
 const gladiadorDiv = document.getElementById("gladiadorDiv")
 
+if(aleatorio20Div != null){
+    dom(aleatorio20Div, juegoRandom20)
+}
 
 if(comoDiv != null){
     dom(comoDiv, tablero1_20x20)

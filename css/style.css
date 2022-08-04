@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Press+Start+2P&display=swap');
 /* CONFIGURACIONES GENERALES */
 *{
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    color: #B33951;
+    font-family: 'Inconsolata', monospace;
+    color: #B43451;
 }
 
 body{
-    background-color: #F1F7ED;
+    background-color: #E6E2D0;
     /* cursor: url(../assets/cursor30.png), auto; */
 }
 
@@ -17,10 +17,16 @@ body{
     background-color: #111;
 }
 
+/* font-family: 'Bungee', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Londrina Outline', cursive;
+font-family: 'Press Start 2P', cursive; */
 
 h1, h3{
     margin: 50px auto;
     text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
 }
 
 footer{
@@ -37,33 +43,34 @@ footer{
 
 .gridTablero5x5{
     display: grid;
-    grid-template-columns: 100px 250px;
-    grid-template-rows: 100px 250px;
+    grid-template-columns: 100px 220px;
+    grid-template-rows: 100px 220px;
     grid-template-areas: 
     "boton infoColumn5x5"
     "infoFilas5x5 casilleros5x5"
     "reloj corazon";
     justify-content: center;
-    gap: 2px;
+    align-items: center;
+    gap: 5px;
 }
 
 
 .infoColumn5x5{
     grid-area: infoColumn5x5;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-columns: 40px 40px 40px 40px 40px;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 
 .infoFilas5x5{
     grid-area: infoFilas5x5;
     display: grid;
-    grid-template-columns: 100px;
-    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-columns: 80px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 
@@ -71,10 +78,10 @@ footer{
 .casilleros5x5{
     grid-area: casilleros5x5;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 
@@ -82,41 +89,60 @@ footer{
 
 .gridTablero10x10{
     display: grid;
-    grid-template-columns: 100px 500px;
-    grid-template-rows: 100px 500px;
+    grid-template-columns: 100px 350px;
+    grid-template-rows: 100px 350px;
     grid-template-areas: 
     "boton infoColumn10x10"
     "infoFilas10x10 casilleros10x10"
     "reloj corazon";
     justify-content: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .infoColumn10x10{
     grid-area: infoColumn10x10;
     display: grid;
-    grid-template-columns: repeat(10, 50px);
+    grid-template-columns: repeat(10, 30px);
     grid-template-rows: 100px;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
+
+}
+
+.infoColumn10x10 p {
+    color: #E6E2D0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 30px;
+    height: 100px;
+    background-color: #314975;
+    border-radius: 10px;
 }
 
 .infoFilas10x10{
     grid-area: infoFilas10x10;
     display: grid;
     grid-template-columns: 100px;
-    grid-template-rows: repeat(10, 50px);
+    grid-template-rows: repeat(10, 30px);
     align-items: center;
-    gap: 2px;
+    gap: 5px;
+}
+
+.infoFilas10x10 p {
+    color: #E6E2D0;
+    width: 100px;
+    height: 30px;
+    background-color: #314975;
+    border-radius: 10px;
 }
 
 .casilleros10x10{
     grid-area: casilleros10x10;
     display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 /* PARA JUEGOS 15X15*/
@@ -130,32 +156,32 @@ footer{
     "infoFilas15x15 casilleros15x15"
     "reloj corazon";
     justify-content: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .infoColumn15x15{
     grid-area: infoColumn15x15;
     display: grid;
-    grid-template-columns: repeat(15, 50px);
+    grid-template-columns: repeat(15, 25px);
     grid-template-rows: 100px;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .infoFilas15x15{
     grid-area: infoFilas15x15;
     display: grid;
     grid-template-columns: 100px;
-    grid-template-rows: repeat(15, 50px);
+    grid-template-rows: repeat(15, 25px);
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .casilleros15x15{
     grid-area: casilleros15x15;
     display: grid;
-    grid-template-columns: repeat(15, 50px);
-    grid-template-rows: repeat(15, 50px);
+    grid-template-columns: repeat(15, 25px);
+    grid-template-rows: repeat(15, 25px);
     align-items: center;
     gap: 2px;
 }
@@ -208,14 +234,13 @@ footer{
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    border: none;
-    background-color: lightgrey;
-    color: lightgrey;
+    border: 1px solid #314975;
+    background-color: #E6E2D0;
 }
 
 .botonVerde{
-    background-color: #429973;
-    color: #429973;
+    background-color: #9CB1A3;
+    color: #9CB1A3;
 }
 
 .corazon{
@@ -223,7 +248,7 @@ footer{
 }
 
 img{
-    width: 40px;
+    width: 30px;
     margin-top: 20px;
 }
 
@@ -235,64 +260,90 @@ p{
     user-select: none;
 }
 
-.celdas{
-    background-color: #91C7B1;
-    color: #91C7B1;
+.celdas5x5{
+    background-color: #E6E2D0;
+    color: #E6E2D0;
+    border: 1px solid #9CB1A3;
     border-radius: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.celdas10x10{
+    background-color: #E6E2D0;
+    color: #E6E2D0;
+    border: 1px solid #9CB1A3;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
 }
 
 
-.infoColumn10x10 p, .infoColumn5x5 p, .infoColumn15x15 p, .infoColumn20x20 p {
-    color: #B33951;
+.infoColumn5x5 p, .infoColumn15x15 p, .infoColumn20x20 p {
+    color: #E6E2D0;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    width: 50px;
+    width: 40px;
     height: 100px;
-    background-color: #E3D081;
+    background-color: #314975;
+    /*border: 2px solid #314975; */
     border-radius: 10px;
 }
+
+
 
 .infoFilas5x5 p, .infoFilas10x10 p, .infoFilas15x15 p, .infoFilas20x20 p{
-    color: #B33951;
+    color: #E6E2D0;
     width: 100px;
-    height: 50px;
-    background-color: #E3D081;
+    height: 40px;
+    background-color: #314975;
     border-radius: 10px;
 }
 
+
+
 .gris{
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #E6E2D0;
+    color: #E6E2D0;
+    border: none;
 }
 
 .activo{
-    background-color: #429973;
-    color: #429973;
+    background-color: #9CB1A3;
+    color: #9CB1A3;
+    border: none;
 }
 
-.cambiarColorIncorrecto{
+.cambiarColorIncorrecto5, .cambiarColorIncorrecto10, .cambiarColorIncorrecto15, .cambiarColorIncorrecto20{
     background-color: #B33951;
     color: #B33951;
+    border: none;
 }
 
-.cambiarColorIncorrecto::after{
+.cambiarColorIncorrecto5::after{
     content: " ";
-    width: 46px;
-    height: 46px;
-    background-color: lightgrey;
+    width: 36px;
+    height: 36px;
+    background-color: #E6E2D0;
     border-radius: 8px;
     position: absolute;
 }
 
+.cambiarColorIncorrecto10::after{
+    content: " ";
+    width: 26px;
+    height: 26px;
+    background-color: #E6E2D0;
+    border-radius: 6px;
+    position: absolute;
+}
+
 .esconder p{
-    color: #E3D081;
+    color: #314975;
 }
 
 .reloj{
     grid-area: reloj;
-    margin-top: 30px;
 }
 
 .reloj p{
@@ -301,7 +352,6 @@ p{
 }
 
 .btnPause{
-    margin: 0px 10px;
     width: 20px;
 }
 
@@ -399,4 +449,9 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.popUp-class{
+    border-radius: 10px;
 }

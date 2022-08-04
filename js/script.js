@@ -230,7 +230,7 @@ for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
 for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
     for(let j = 0 ; j<tablero.tablerojuego[i].length ; j++){
         casilleros.innerHTML +=`
-        <p class="celdas">${tablero.tablerojuego[i][j]}</p>
+        <p class="celdas celdas${tablero.tamano}">${tablero.tablerojuego[i][j]}</p>
         `
     }
 }
@@ -240,22 +240,22 @@ for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
 
 // creo un tablero random 
 let tableroRandom = crearTableroRandom(5,5) 
-const juegoRandom = new JuegoPredeterminado(1000, "random", tableroRandom, "5x5")
+const juegoRandom = new JuegoPredeterminado(1000, "random-5x5", tableroRandom, "5x5")
 juegoRandom.informacionFilas = informacionFilas(juegoRandom)
 juegoRandom.informacionColumnas = informacionColumnas(juegoRandom)
 
 let tableroRandom10x10 = crearTableroRandom(10,10)
-const juegoRandom10 = new JuegoPredeterminado(1001, "random", tableroRandom10x10, "10x10")
+const juegoRandom10 = new JuegoPredeterminado(1001, "random-10x10", tableroRandom10x10, "10x10")
 juegoRandom10.informacionFilas = informacionFilas(juegoRandom10)
 juegoRandom10.informacionColumnas = informacionColumnas(juegoRandom10)
 
 let tableroRandom15x15 = crearTableroRandom(15,15)
-const juegoRandom15 = new JuegoPredeterminado(1002, "random", tableroRandom15x15, "15x15")
+const juegoRandom15 = new JuegoPredeterminado(1002, "random-15x15", tableroRandom15x15, "15x15")
 juegoRandom15.informacionFilas = informacionFilas(juegoRandom15)
 juegoRandom15.informacionColumnas = informacionColumnas(juegoRandom15)
 
 let tableroRandom20x20 = crearTableroRandom(20,20)
-const juegoRandom20 = new JuegoPredeterminado(1003, "random", tableroRandom20x20, "20x20")
+const juegoRandom20 = new JuegoPredeterminado(1003, "random-20x20", tableroRandom20x20, "20x20")
 juegoRandom20.informacionFilas = informacionFilas(juegoRandom20)
 juegoRandom20.informacionColumnas = informacionColumnas(juegoRandom20)
 
@@ -541,7 +541,7 @@ const tablero40_5x5 = new JuegoPredeterminado(40, "arriba",[
     [0,0,1,0,0],
     [0,0,1,0,0]], "5x5")
 
-let arrayJuegos5x5 = [tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5,tablero6_5x5,tablero7_5x5,tablero8_5x5,tablero9_5x5,tablero10_5x5,tablero11_5x5,tablero12_5x5,tablero13_5x5,tablero14_5x5,tablero15_5x5,tablero16_5x5,tablero17_5x5,tablero18_5x5,tablero19_5x5,tablero20_5x5,tablero21_5x5,tablero22_5x5,tablero23_5x5,tablero24_5x5,tablero25_5x5,tablero26_5x5,tablero27_5x5,tablero28_5x5,tablero29_5x5,tablero30_5x5,tablero31_5x5,tablero32_5x5,tablero33_5x5,tablero34_5x5,tablero35_5x5,tablero36_5x5,tablero37_5x5,tablero38_5x5,tablero39_5x5,tablero40_5x5]
+let arrayJuegos5x5 = [juegoRandom,tablero1_5x5,tablero2_5x5,tablero3_5x5,tablero4_5x5,tablero5_5x5,tablero6_5x5,tablero7_5x5,tablero8_5x5,tablero9_5x5,tablero10_5x5,tablero11_5x5,tablero12_5x5,tablero13_5x5,tablero14_5x5,tablero15_5x5,tablero16_5x5,tablero17_5x5,tablero18_5x5,tablero19_5x5,tablero20_5x5,tablero21_5x5,tablero22_5x5,tablero23_5x5,tablero24_5x5,tablero25_5x5,tablero26_5x5,tablero27_5x5,tablero28_5x5,tablero29_5x5,tablero30_5x5,tablero31_5x5,tablero32_5x5,tablero33_5x5,tablero34_5x5,tablero35_5x5,tablero36_5x5,tablero37_5x5,tablero38_5x5,tablero39_5x5,tablero40_5x5]
 
 arrayJuegos5x5.forEach(tablero =>{
     tablero.informacionFilas = informacionFilas(tablero)
@@ -947,7 +947,7 @@ const tablero33_10x10 = new JuegoPredeterminado(73, "luna", [
     [0,0,0,1,1,1,1,1,0,0]], "10x10")
 
 
-let arrayJuegos10x10 = [tablero1_10x10,tablero2_10x10,tablero3_10x10,tablero4_10x10,tablero5_10x10,tablero6_10x10,tablero7_10x10,tablero8_10x10,tablero9_10x10,tablero10_10x10,tablero11_10x10,tablero12_10x10,tablero13_10x10,tablero14_10x10,tablero15_10x10,tablero16_10x10,tablero17_10x10,tablero18_10x10,tablero19_10x10,tablero20_10x10,tablero21_10x10,tablero22_10x10,tablero23_10x10,tablero24_10x10,tablero25_10x10,tablero26_10x10,tablero27_10x10,tablero28_10x10,tablero29_10x10,tablero30_10x10,tablero31_10x10,tablero32_10x10,tablero33_10x10]
+let arrayJuegos10x10 = [juegoRandom10,tablero1_10x10,tablero2_10x10,tablero3_10x10,tablero4_10x10,tablero5_10x10,tablero6_10x10,tablero7_10x10,tablero8_10x10,tablero9_10x10,tablero10_10x10,tablero11_10x10,tablero12_10x10,tablero13_10x10,tablero14_10x10,tablero15_10x10,tablero16_10x10,tablero17_10x10,tablero18_10x10,tablero19_10x10,tablero20_10x10,tablero21_10x10,tablero22_10x10,tablero23_10x10,tablero24_10x10,tablero25_10x10,tablero26_10x10,tablero27_10x10,tablero28_10x10,tablero29_10x10,tablero30_10x10,tablero31_10x10,tablero32_10x10,tablero33_10x10]
 
 arrayJuegos10x10.forEach(tablero =>{
     tablero.informacionFilas = informacionFilas(tablero)
@@ -1400,7 +1400,7 @@ const tablero26_15x15 = new JuegoPredeterminado(106, "hongo", [
 
 
 
-let arrayJuegos15x15 = [tablero1_15x15,tablero2_15x15,tablero3_15x15,tablero4_15x15,tablero5_15x15,tablero6_15x15,tablero7_15x15,tablero8_15x15,tablero9_15x15,tablero10_15x15,tablero11_15x15,tablero12_15x15,tablero13_15x15,tablero14_15x15,tablero15_15x15,tablero16_15x15,tablero17_15x15,tablero18_15x15,tablero19_15x15,tablero20_15x15,tablero21_15x15,tablero22_15x15,tablero23_15x15,tablero24_15x15,tablero25_15x15,tablero26_15x15]
+let arrayJuegos15x15 = [juegoRandom15,tablero1_15x15,tablero2_15x15,tablero3_15x15,tablero4_15x15,tablero5_15x15,tablero6_15x15,tablero7_15x15,tablero8_15x15,tablero9_15x15,tablero10_15x15,tablero11_15x15,tablero12_15x15,tablero13_15x15,tablero14_15x15,tablero15_15x15,tablero16_15x15,tablero17_15x15,tablero18_15x15,tablero19_15x15,tablero20_15x15,tablero21_15x15,tablero22_15x15,tablero23_15x15,tablero24_15x15,tablero25_15x15,tablero26_15x15]
 
 arrayJuegos15x15.forEach(tablero =>{
     tablero.informacionFilas = informacionFilas(tablero)
@@ -1761,7 +1761,7 @@ const tablero8_20x20 = new JuegoPredeterminado(128, "venecia", [
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]], "20x20")
 
 
-let arrayJuegos20x20 = [tablero1_20x20,tablero2_20x20,tablero3_20x20,tablero4_20x20,tablero5_20x20,tablero6_20x20,tablero7_20x20,tablero8_20x20,tablero9_20x20,tablero10_20x20,tablero11_20x20,tablero12_20x20,tablero13_20x20,tablero14_20x20,tablero15_20x20,tablero16_20x20]
+let arrayJuegos20x20 = [juegoRandom20,tablero1_20x20,tablero2_20x20,tablero3_20x20,tablero4_20x20,tablero5_20x20,tablero6_20x20,tablero7_20x20,tablero8_20x20,tablero9_20x20,tablero10_20x20,tablero11_20x20,tablero12_20x20,tablero13_20x20,tablero14_20x20,tablero15_20x20,tablero16_20x20]
 
 arrayJuegos20x20.forEach(tablero =>{
     tablero.informacionColumnas = informacionColumnas(tablero)
@@ -1809,25 +1809,85 @@ if(ulLista5x5 != null){
 
 if(ulLista10x10 != null){
     arrayJuegos10x10.forEach(juego =>{
-        ulLista10x10.innerHTML += `
-        <li><a href="./${juego.nombre}.html"> ${juego.nombre} </a></li>
-        `
+        let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+        if(infoLocalSUsuario[0].resultados.some ((el) => el == juego.nombre.toUpperCase())){
+            let indice = infoLocalSUsuario[0].resultados.indexOf(juego.nombre.toUpperCase())
+            ulLista10x10.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/vidas.png" alt="">
+                    ${juego.nombre}         
+                    <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
+                </a>
+            </li>
+            `
+        } else{
+            ulLista10x10.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/sinvida.png" alt="">
+                    ${juego.nombre}
+                    <p></p>
+                </a>
+            </li>
+            `
+        }
     })
 }
 
 if(ulLista15x15 != null){
     arrayJuegos15x15.forEach(juego =>{
-        ulLista15x15.innerHTML += `
-        <li><a href="./${juego.nombre}.html"> ${juego.nombre} </a></li>
-        `
+        let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+        if(infoLocalSUsuario[0].resultados.some ((el) => el == juego.nombre.toUpperCase())){
+            let indice = infoLocalSUsuario[0].resultados.indexOf(juego.nombre.toUpperCase())
+            ulLista15x15.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/vidas.png" alt="">
+                    ${juego.nombre}         
+                    <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
+                </a>
+            </li>
+            `
+        } else{
+            ulLista15x15.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/sinvida.png" alt="">
+                    ${juego.nombre}
+                    <p></p>
+                </a>
+            </li>
+            `
+        }
     })
 }
 
 if(ulLista20x20 != null){
     arrayJuegos20x20.forEach(juego =>{
-        ulLista20x20.innerHTML += `
-        <li><a href="./${juego.nombre}.html"> ${juego.nombre} </a></li>
-        `
+        let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+        if(infoLocalSUsuario[0].resultados.some ((el) => el == juego.nombre.toUpperCase())){
+            let indice = infoLocalSUsuario[0].resultados.indexOf(juego.nombre.toUpperCase())
+            ulLista20x20.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/vidas.png" alt="">
+                    ${juego.nombre}         
+                    <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
+                </a>
+            </li>
+            `
+        } else{
+            ulLista20x20.innerHTML += `
+            <li>
+                <a class="listaTablero"href="./${juego.nombre}.html">
+                    <img src="../../assets/sinvida.png" alt="">
+                    ${juego.nombre}
+                    <p></p>
+                </a>
+            </li>
+            `
+        }
     })
 }
 
@@ -2321,7 +2381,7 @@ function verificacionF(desde, hasta, datodom, tamanoTablero){
     let condicion = []
     let filtrado 
     for(let i = desde ; i < hasta ; i++){
-        if((p[i].innerText == 1 && p[i].classList[1] == "activo") || (p[i].innerText == 0 )){
+        if((p[i].innerText == 1 && p[i].classList[2] == "activo") || (p[i].innerText == 0 )){
             condicion.push("listo")
         }
     }
@@ -2337,7 +2397,7 @@ function verificacionC(desde, hasta, datodom, tamanoTablero){
     let condicion = []
     let filtrado
     for(let i = desde ; i < hasta ; i = i + tamanoTablero){
-        if((p[i].innerText == 1 && p[i].classList[1] == "activo") || (p[i].innerText == 0 )){
+        if((p[i].innerText == 1 && p[i].classList[2] == "activo") || (p[i].innerText == 0 )){
             condicion.push("listo")
         }
     }
@@ -2469,12 +2529,38 @@ function verificacionFYC20(){
 }
 
 // FUNCION PARA SABER CUANDO EL USUARIO GANÓ
+// function ganar5(){
+//     infoColumnp0.innerText == `✓` && 
+//     infoColumnp1.innerText == `✓` && 
+//     infoColumnp2.innerText == `✓` && 
+//     infoColumnp3.innerText == `✓` && 
+//     infoColumnp4.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
+// }
+
 function ganar5(){
-    infoColumnp0.innerText == `✓` && 
+    if(infoColumnp0.innerText == `✓` && 
     infoColumnp1.innerText == `✓` && 
     infoColumnp2.innerText == `✓` && 
     infoColumnp3.innerText == `✓` && 
-    infoColumnp4.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
+    infoColumnp4.innerText == `✓`){
+        resultado.innerText = `GANASTE`
+        Swal.fire({
+            html:'<h3>Ganaste !</h3>',
+            padding: '3em',
+            confirmButtonText: 'seguir',
+            timer: 5000,
+            timerProgressBar: true,
+            background: '#E6E2D0',
+            color: '#429973',
+            background: '#E6E2D0',
+            backdrop: `
+                #314975E6
+            `,
+            customClass:{
+                popup: 'popUp-class'
+            }
+        })
+    }
 }
 
 function ganar10(){
@@ -2597,7 +2683,10 @@ function mostrarVidas(){
 }
 
 // ESCUCHADORES EN CELDAS / VERIFICACIONES / VIDAS / MOSTRAR RESULTADO
-
+let sound = new Audio("../../assets/plop.flac")
+sound.volume = 0.1
+let error = new Audio("../../assets/error.flac")
+error.volume = 0.1
 function marcarTableroYContarVidas5(){
     for(let i = 0 ; i<25; i++){
         verificacionFYC5()
@@ -2613,12 +2702,14 @@ function marcarTableroYContarVidas5(){
                     }
                 }else {
                     if(p[i].innerText == 1){
+                        sound.play()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC5()
                         ganar5()
                     } else{
-                        p[i].classList.add("cambiarColorIncorrecto")
+                        error.play()
+                        p[i].classList.add("cambiarColorIncorrecto5")
                         vidas --
                         mostrarVidas()
                     }
@@ -2645,12 +2736,14 @@ function marcarTableroYContarVidas10(){
                     }
                 }else {
                     if(p[i].innerText == 1){
+                        sound.play()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC10()
                         ganar10()
                     } else{
-                        p[i].classList.add("cambiarColorIncorrecto")
+                        error.play()
+                        p[i].classList.add("cambiarColorIncorrecto10")
                         vidas --
                         mostrarVidas()
                     }
@@ -2678,12 +2771,13 @@ function marcarTableroYContarVidas15(){
                     }
                 }else {
                     if(p[i].innerText == 1){
+                        sound.play()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC15()
                         ganar15()
                     } else{
-                        p[i].classList.add("cambiarColorIncorrecto")
+                        p[i].classList.add("cambiarColorIncorrecto15")
                         vidas --
                         mostrarVidas()
                     }
@@ -2710,12 +2804,13 @@ function marcarTableroYContarVidas20(){
                     }
                 }else {
                     if(p[i].innerText == 1){
+                        sound.play()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC20()
                         ganar20()
                     } else{
-                        p[i].classList.add("cambiarColorIncorrecto")
+                        p[i].classList.add("cambiarColorIncorrecto20")
                         vidas --
                         mostrarVidas()
                     }
@@ -2735,7 +2830,7 @@ function guardarResultados(tamano){
     let nombreJuego = document.getElementById("nombreJuego")
     if(resultado.innerText == `GANASTE`){
         infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
-        infoLocalSUsuario[0].resultados.push(nombreJuego.innerText, tamano, tiempoTotal)
+        infoLocalSUsuario[0].resultados.unshift(nombreJuego.innerText, tamano, tiempoTotal)
         localStorage.setItem("Usuarios", JSON.stringify(infoLocalSUsuario))
         console.log (infoLocalSUsuario[0].resultados)
     }
@@ -2837,3 +2932,5 @@ if(marcarTablero20[0] != null){
     marcarTableroYContarVidas20()
     reloj(tamano ?? "20x20")
 }
+
+

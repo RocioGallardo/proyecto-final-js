@@ -9,14 +9,22 @@
 </head>
 <body>
     <header class="header">
-        <button class="bclaro" id="claro"> claro </button>
-        <button class="boscuro" id="oscuro"> oscuro </button>
-        <a href="./juegos5x5.html">volver</a>
+        <a href="./juegos5x5.html"> <img src="../../assets/volver.svg" alt="volver"></a>
+        <div id="corazon"></div>
+        <div>
+            <p id="minutos">00</p>
+            <p id="segundos">: 00</p>
+        </div>
+        <p id="puntajeTotal"></p>
+        <p id="puntajeTablero">0</p>
+        <!-- <button class="bclaro" id="claro"> claro </button>
+        <button class="boscuro" id="oscuro"> oscuro </button> -->
+        
     </header>
 
     <div class="marcarTablero5" id="cometaDiv" ></div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <script src="../../js/script.js"></script>
 </body>
 </html>

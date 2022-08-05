@@ -39,6 +39,7 @@ class Usuario {
         this.nombre = nombre
         this.email = email
         this.resultados = []
+        this.puntaje = 0
     }
 }
 
@@ -196,8 +197,11 @@ let vidas = 5
 
 // Funcion para mostrar en dom el juego
 function dom (nombrediv, tablero){
-nombrediv.innerHTML +=`
-    <h3 id="nombreJuego" >${tablero.nombre}</h3>
+    let puntajeTablero = document.getElementById("puntajeTablero")
+    puntajeTablero.innerHTML +=`
+        <h1>${tablero.nombre}</h1> <p id="puntajeTableroContador"></p>`
+
+        nombrediv.innerHTML +=`
     <div class="gridTablero${tablero.tamano}">
         <button class="boton botonVerde" id="boton"></button>
         <div class="infoColumn${tablero.tamano}" id="infoColumn" ></div>
@@ -205,36 +209,30 @@ nombrediv.innerHTML +=`
         <div class="casilleros${tablero.tamano}"id="casilleros${tablero.id}"></div>
         <div class="reloj">
             <img class="btnPause pause" id="pause" src="../../assets/playpause.png" alt="">
-            <p id="minutos">00</p>
-            <p id="segundos">: 00</p>
-        </div>
-        <div class="corazon"id="corazon">
         </div>
     </div>
-    <div id="resultado"></div>
     `
-const infoColumn = document.getElementById(`infoColumn`)
-const infoFilas = document.getElementById(`infoFilas`)
-const casilleros = document.getElementById(`casilleros${tablero.id}`)
+    const infoColumn = document.getElementById(`infoColumn`)
+    const infoFilas = document.getElementById(`infoFilas`)
+    const casilleros = document.getElementById(`casilleros${tablero.id}`)
 
-for(let i = 0 ; i<tablero.informacionColumnas.length ; i++){
-    infoColumn.innerHTML +=`
-    <p id="infoColumnp${i}">${tablero.informacionColumnas[i].join("")}</p>`
-}
-
-for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
-    infoFilas.innerHTML +=`
-    <p id="infoFila${i}">${tablero.informacionFilas[i].join(" ")}</p>`
-}
-
-for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
-    for(let j = 0 ; j<tablero.tablerojuego[i].length ; j++){
-        casilleros.innerHTML +=`
-        <p class="celdas celdas${tablero.tamano}">${tablero.tablerojuego[i][j]}</p>
-        `
+    for(let i = 0 ; i<tablero.informacionColumnas.length ; i++){
+        infoColumn.innerHTML +=`
+        <p id="infoColumnp${i}">${tablero.informacionColumnas[i].join(" ")}</p>`
     }
-}
 
+    for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
+        infoFilas.innerHTML +=`
+        <p id="infoFila${i}">${tablero.informacionFilas[i].join(" ")}</p>`
+    }
+
+    for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
+        for(let j = 0 ; j<tablero.tablerojuego[i].length ; j++){
+            casilleros.innerHTML +=`
+            <p class="celdas celdas${tablero.tamano}">${tablero.tablerojuego[i][j]}</p>
+        `
+        }
+    }
 }
 
 
@@ -1787,7 +1785,7 @@ if(ulLista5x5 != null){
             ulLista5x5.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/vidas.png" alt="">
+                    <img src="../../assets/listo.svg" alt="">
                     ${juego.nombre}         
                     <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
                 </a>
@@ -1797,7 +1795,7 @@ if(ulLista5x5 != null){
             ulLista5x5.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/sinvida.png" alt="">
+                    <img src="../../assets/nolisto.svg" alt="">
                     ${juego.nombre}
                     <p></p>
                 </a>
@@ -2537,13 +2535,55 @@ function verificacionFYC20(){
 //     infoColumnp4.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
 // }
 
+let win = new Audio("../../assets/win.wav")
+win.volume = 0.2
+
+let estadoJuego = ""
+
 function ganar5(){
     if(infoColumnp0.innerText == `✓` && 
     infoColumnp1.innerText == `✓` && 
     infoColumnp2.innerText == `✓` && 
     infoColumnp3.innerText == `✓` && 
     infoColumnp4.innerText == `✓`){
-        resultado.innerText = `GANASTE`
+        estadoJuego = "gana"
+        win.play()
+        setTimeout(() => {
+            location.href = "./juegos5x5.html"
+        }, 4999)
+        Swal.fire({
+            html:'<h3 class="h3ganaste">Ganaste !</h3>',
+            padding: '3em',
+            confirmButtonText: 'seguir',
+            timer: 5000,
+            timerProgressBar: true,
+            background: '#E6E2D0',
+            backdrop: `
+                #314975E6
+            `,
+            customClass:{
+                popup: 'popUp-class'
+            }
+        })
+    }
+}
+
+
+
+
+function ganar10(){
+    if(infoColumnp0.innerText == `✓` && 
+    infoColumnp1.innerText == `✓` && 
+    infoColumnp2.innerText == `✓` && 
+    infoColumnp3.innerText == `✓` && 
+    infoColumnp4.innerText == `✓` &&
+    infoColumnp5.innerText == `✓` && 
+    infoColumnp6.innerText == `✓` && 
+    infoColumnp7.innerText == `✓` && 
+    infoColumnp8.innerText == `✓` && 
+    infoColumnp9.innerText == `✓`){
+        estadoJuego = "gana"
+        win.play()
         Swal.fire({
             html:'<h3>Ganaste !</h3>',
             padding: '3em',
@@ -2563,21 +2603,8 @@ function ganar5(){
     }
 }
 
-function ganar10(){
-    infoColumnp0.innerText == `✓` && 
-    infoColumnp1.innerText == `✓` && 
-    infoColumnp2.innerText == `✓` && 
-    infoColumnp3.innerText == `✓` && 
-    infoColumnp4.innerText == `✓` &&
-    infoColumnp5.innerText == `✓` && 
-    infoColumnp6.innerText == `✓` && 
-    infoColumnp7.innerText == `✓` && 
-    infoColumnp8.innerText == `✓` && 
-    infoColumnp9.innerText == `✓`? resultado.innerText = `GANASTE` : ""
-}
-
 function ganar15(){
-    infoColumnp0.innerText == `✓` && 
+    if(infoColumnp0.innerText == `✓` && 
     infoColumnp1.innerText == `✓` && 
     infoColumnp2.innerText == `✓` && 
     infoColumnp3.innerText == `✓` && 
@@ -2591,11 +2618,31 @@ function ganar15(){
     infoColumnp11.innerText == `✓` && 
     infoColumnp12.innerText == `✓` && 
     infoColumnp13.innerText == `✓` && 
-    infoColumnp14.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
+    infoColumnp14.innerText == `✓`){
+        estadoJuego = "gana"
+
+        win.play()
+        Swal.fire({
+            html:'<h3>Ganaste !</h3>',
+            padding: '3em',
+            confirmButtonText: 'seguir',
+            timer: 5000,
+            timerProgressBar: true,
+            background: '#E6E2D0',
+            color: '#429973',
+            background: '#E6E2D0',
+            backdrop: `
+                #314975E6
+            `,
+            customClass:{
+                popup: 'popUp-class'
+            }
+        })
+    }
 }
 
 function ganar20(){
-    infoColumnp0.innerText == `✓` && 
+    if(infoColumnp0.innerText == `✓` && 
     infoColumnp1.innerText == `✓` && 
     infoColumnp2.innerText == `✓` && 
     infoColumnp3.innerText == `✓` && 
@@ -2614,7 +2661,26 @@ function ganar20(){
     infoColumnp16.innerText == `✓` && 
     infoColumnp17.innerText == `✓` && 
     infoColumnp18.innerText == `✓` && 
-    infoColumnp19.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
+    infoColumnp19.innerText == `✓`){
+        estadoJuego = "gana"
+        win.play()
+        Swal.fire({
+            html:'<h3>Ganaste !</h3>',
+            color: '#429973',
+            padding: '3em',
+            confirmButtonText: 'seguir',
+            timer: 5000,
+            timerProgressBar: true,
+            background: '#E6E2D0',
+            background: '#E6E2D0',
+            backdrop: `
+                #314975E6
+            `,
+            customClass:{
+                popup: 'popUp-class'
+            }
+        })
+    }
 
 }
 
@@ -2687,13 +2753,30 @@ let sound = new Audio("../../assets/plop.flac")
 sound.volume = 0.1
 let error = new Audio("../../assets/error.flac")
 error.volume = 0.1
+let lose = new Audio("../../assets/lose.wav")
+lose.volume = 0.2
+
+
+let puntajeTotal = document.getElementById("puntajeTotal")
+let puntajeTableroContador = document.getElementById("puntajeTableroContador")
+
+let contadorTablero = 0
+function contarPuntosTablero(){
+    puntajeTableroContador.innerText = `: ${contadorTablero}`
+}
+
+function recargarPagina(){
+    setTimeout(location.reload(), 5000)
+}
+
 function marcarTableroYContarVidas5(){
+        puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
     for(let i = 0 ; i<25; i++){
         verificacionFYC5()
         mostrarVidas()
-        
+        contarPuntosTablero()
         p[i].addEventListener("click", () => {
-            if((resultado.innerText != `GANASTE`) && (resultado.innerText != `PERDISTE`)){
+            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
                     if(p[i].classList[1] == "gris"){
                         p[i].classList.remove("gris")
@@ -2703,19 +2786,42 @@ function marcarTableroYContarVidas5(){
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
+                        contadorTablero ++
+                        contarPuntosTablero()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC5()
                         ganar5()
                     } else{
                         error.play()
+                        contadorTablero--
+                        contarPuntosTablero()
                         p[i].classList.add("cambiarColorIncorrecto5")
                         vidas --
                         mostrarVidas()
                     }
                 }
                 if(vidas <= 0){
-                resultado.innerText = `PERDISTE`
+                    estadoJuego = "pierde"
+                    lose.play()
+                    setTimeout(() => {
+                        location.reload()
+                    }, 5000)
+                    Swal.fire({
+                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                        padding: '3em',
+                        confirmButtonText: 'intentar de nuevo',
+                        confirmButtonColor: '#E6E2D073',
+                        timer: 5000,
+                        timerProgressBar: true,
+                        background: '#B33951',
+                        backdrop: `
+                            #314975E6
+                        `,
+                        customClass:{
+                            popup: 'popUp-class'
+                        }
+                    })
                 }
             }
         })
@@ -2723,11 +2829,13 @@ function marcarTableroYContarVidas5(){
 }
 
 function marcarTableroYContarVidas10(){
+    puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
     for(let i = 0 ; i<100; i++){
         verificacionFYC10()
         mostrarVidas()
+        contarPuntosTablero()
         p[i].addEventListener("click", () => {
-            if((resultado.innerText != `GANASTE`) && (resultado.innerText != `PERDISTE`)){
+            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
                     if(p[i].classList[1] == "gris"){
                         p[i].classList.remove("gris")
@@ -2737,20 +2845,40 @@ function marcarTableroYContarVidas10(){
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
+                        contadorTablero ++
+                        contarPuntosTablero()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC10()
                         ganar10()
                     } else{
                         error.play()
+                        contadorTablero--
+                        contarPuntosTablero()
                         p[i].classList.add("cambiarColorIncorrecto10")
                         vidas --
                         mostrarVidas()
                     }
                 }
                 if(vidas <= 0){
-                resultado.innerText = `PERDISTE`
-                }
+                    estadoJuego = "pierde"
+                    lose.play()
+                    Swal.fire({
+                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                        padding: '3em',
+                        confirmButtonText: 'intentar de nuevo',
+                        confirmButtonColor: '#E6E2D073',
+                        timer: 5000,
+                        timerProgressBar: true,
+                        background: '#B33951',
+                        backdrop: `
+                            #314975E6
+                        `,
+                        customClass:{
+                            popup: 'popUp-class'
+                        }
+                    })
+                    }
             }
         })
     }
@@ -2758,11 +2886,13 @@ function marcarTableroYContarVidas10(){
 
 
 function marcarTableroYContarVidas15(){
+    puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
     for(let i = 0 ; i<225; i++){
         verificacionFYC15()
         mostrarVidas()
+        contarPuntosTablero()
         p[i].addEventListener("click", () => {
-            if((resultado.innerText != `GANASTE`) && (resultado.innerText != `PERDISTE`)){
+            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
                     if(p[i].classList[1] == "gris"){
                         p[i].classList.remove("gris")
@@ -2772,30 +2902,53 @@ function marcarTableroYContarVidas15(){
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
+                        contadorTablero ++
+                        contarPuntosTablero()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC15()
                         ganar15()
                     } else{
+                        error.play()
+                        contadorTablero--
+                        contarPuntosTablero()
                         p[i].classList.add("cambiarColorIncorrecto15")
                         vidas --
                         mostrarVidas()
                     }
                 }
                 if(vidas <= 0){
-                resultado.innerText = `PERDISTE`
-                }
+                    estadoJuego = "pierde"
+                    lose.play()
+                    Swal.fire({
+                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                        padding: '3em',
+                        confirmButtonText: 'intentar de nuevo',
+                        confirmButtonColor: '#E6E2D073',
+                        timer: 5000,
+                        timerProgressBar: true,
+                        background: '#B33951',
+                        backdrop: `
+                            #314975E6
+                        `,
+                        customClass:{
+                            popup: 'popUp-class'
+                        }
+                    })
+                    }
             }
         })
     }
 }
 
 function marcarTableroYContarVidas20(){
+    puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
     for(let i = 0 ; i<400; i++){
         verificacionFYC20()
         mostrarVidas()
+        contarPuntosTablero()
         p[i].addEventListener("click", () => {
-            if((resultado.innerText != `GANASTE`) && (resultado.innerText != `PERDISTE`)){
+            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
                     if(p[i].classList[1] == "gris"){
                         p[i].classList.remove("gris")
@@ -2805,18 +2958,39 @@ function marcarTableroYContarVidas20(){
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
+                        contadorTablero ++
+                        contarPuntosTablero()
                         p[i].classList.remove("gris")
                         p[i].classList.add("activo")
                         verificacionFYC20()
                         ganar20()
                     } else{
+                        error.play()
+                        contadorTablero--
+                        contarPuntosTablero()
                         p[i].classList.add("cambiarColorIncorrecto20")
                         vidas --
                         mostrarVidas()
                     }
                 }
                 if(vidas <= 0){
-                resultado.innerText = `PERDISTE`
+                    estadoJuego = "pierde"
+                    lose.play()
+                    Swal.fire({
+                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                        padding: '3em',
+                        confirmButtonText: 'intentar de nuevo',
+                        confirmButtonColor: '#E6E2D073',
+                        timer: 5000,
+                        timerProgressBar: true,
+                        background: '#B33951',
+                        backdrop: `
+                            #314975E6
+                        `,
+                        customClass:{
+                            popup: 'popUp-class'
+                        }
+                    })
                 }
             }
         })
@@ -2825,14 +2999,20 @@ function marcarTableroYContarVidas20(){
 
 // funcion para guardar resultados del usuario en el local storage cuando se gana
 
+
+
+
 function guardarResultados(tamano){
     let infoLocalSUsuario
     let nombreJuego = document.getElementById("nombreJuego")
-    if(resultado.innerText == `GANASTE`){
+    if(estadoJuego == "gana"){
         infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
+        infoLocalSUsuario[0].puntaje = infoLocalSUsuario[0].puntaje + contadorTablero
+        let puntajeTotal = document.getElementById("puntajeTotal")
+        puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
         infoLocalSUsuario[0].resultados.unshift(nombreJuego.innerText, tamano, tiempoTotal)
+        
         localStorage.setItem("Usuarios", JSON.stringify(infoLocalSUsuario))
-        console.log (infoLocalSUsuario[0].resultados)
     }
 }
 
@@ -2873,7 +3053,7 @@ function reloj (tamano){
             segundosP.innerText = `: ${segundos}`
         }
         
-        if((resultado.innerText == `GANASTE`) || (resultado.innerText == `PERDISTE`)){
+        if((estadoJuego == "gana") || ( estadoJuego == "pierde")){
             clearInterval(intervalo)
             tiempoTotal = `${minutos} : ${segundos}`
             console.log(`${minutos} : ${segundos}`)
@@ -2908,6 +3088,9 @@ let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 
 
+// puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
+// let nombreUsuario = document.getElementById("nombreUsuario")
+// nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
 
 if(marcarTablero5[0] != null){
     let {tamano} = tablero1_5x5

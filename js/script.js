@@ -199,7 +199,7 @@ let vidas = 5
 function dom (nombrediv, tablero){
     let puntajeTablero = document.getElementById("puntajeTablero")
     puntajeTablero.innerHTML +=`
-        <h1>${tablero.nombre}</h1> <p id="puntajeTableroContador"></p>`
+        <h1 id="nombreJuego">${tablero.nombre}</h1> <p id="puntajeTableroContador"></p>`
 
         nombrediv.innerHTML +=`
     <div class="gridTablero${tablero.tamano}">
@@ -3011,7 +3011,6 @@ function guardarResultados(tamano){
         let puntajeTotal = document.getElementById("puntajeTotal")
         puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
         infoLocalSUsuario[0].resultados.unshift(nombreJuego.innerText, tamano, tiempoTotal)
-        
         localStorage.setItem("Usuarios", JSON.stringify(infoLocalSUsuario))
     }
 }
@@ -3056,7 +3055,6 @@ function reloj (tamano){
         if((estadoJuego == "gana") || ( estadoJuego == "pierde")){
             clearInterval(intervalo)
             tiempoTotal = `${minutos} : ${segundos}`
-            console.log(`${minutos} : ${segundos}`)
             guardarResultados(tamano)
         }
         

@@ -17,21 +17,20 @@ body{
     background-color: #1B222D;
 }
 
-/* font-family: 'Bungee', cursive;
-font-family: 'Inconsolata', monospace;
-font-family: 'Londrina Outline', cursive;
-font-family: 'Press Start 2P', cursive; */
+
 
 h1, h3{
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
-    /* -webkit-text-stroke: 1px #B33951;
-    color: transparent; */
+
 }
 
 footer{
+    width: 100%;
+    padding: 5px;
     margin-top: 70px;
+
 }
 
 .header{
@@ -40,6 +39,7 @@ footer{
     align-items: center;
     padding: 10px;
     font-size: 20px;
+    background-color: #31497526;
 }
 .header div{
     display: flex;
@@ -73,7 +73,7 @@ footer{
     height: 20px;
     margin: 3px;
     border-radius: 50%;
-    background-color:#E6E2D0 ;
+    background-color:#CBCBC2 ;
     transition-duration: 0.5s;
 }
 .circuloOscuro{
@@ -81,7 +81,7 @@ footer{
     height: 20px;
     margin: 3px;
     border-radius: 50%;
-    background-color:#1B222D ;
+    background-color:#1F2837 ;
     transition-duration: 0.5s;
 }
 
@@ -548,7 +548,7 @@ main{
 
 .h1index{
     font-size: 100px;
-    display: inline;
+    margin: 100px;
     animation-name: titulos;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -587,15 +587,17 @@ main{
     flex-wrap: wrap;
     z-index: -1;
 }
+
 .fondo div{
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     margin: 1px;
     border-radius: 5px;
     background-color: transparent;
     transition-delay: 0.2s;
     position: relative;
 }
+
 .fondo div:hover{
     background-color: #9CB1A3;
     transition-delay: 0s;
@@ -621,15 +623,10 @@ main{
     background-color: #E3D081;
 }
 
-#divResultadosUsuario{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
 
-}
 
 .listaTablero{
-    max-width: 500px;
-    margin: 5px auto;
+    margin: 0px 20px;
     text-decoration: none;
     text-transform: uppercase;
     display: grid;
@@ -639,10 +636,61 @@ main{
     align-items: center;
     font-family: 'Press Start 2P', cursive;
     border-radius: 10px;
+
 }
 
 .listaTablero:hover{
     background-color: #31497526;
+}
+
+#ulLista5x5{
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+}
+
+.h2Jugar{
+    margin: 80px auto;
+    font-size: 60px;
+}
+
+.ulListaTamanoTableros{
+    width: 50%;
+    margin: 50px auto;
+    list-style: none;
+}
+.ulListaTamanoTableros li{
+    margin: 20px ;
+    padding: 10px;
+    border-radius: 10px;
+    animation-name: titulos;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.ulListaTamanoTableros li:first-child{
+    animation-delay: 0.1s;
+}
+.ulListaTamanoTableros li:nth-child(2){
+    animation-delay: 0.2s;
+}
+.ulListaTamanoTableros li:nth-child(3){
+    animation-delay: 0.3s;
+}
+.ulListaTamanoTableros li:nth-child(4){
+    animation-delay: 0.4s;
+}
+
+.ulListaTamanoTableros li:hover{
+    background-color: #31497526;
+}
+
+.ulListaTamanoTableros li a{
+    margin: 20px 20px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
 }
 
 .popUp-class{
@@ -666,4 +714,72 @@ main{
     font-family: 'Press Start 2P', cursive;
     font-size: 30px;
     -webkit-text-stroke: 0.5px #B33951;
+}
+
+
+/* PERFIL PERFIL PERFIL PERFIL PERFIL PERFIL PERFIL PERFIL PERFIL */
+
+
+#infoUsuario{
+    margin: 50px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+#infoUsuario p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* FORMULARIO */
+
+.formulario{
+    margin: 50px auto;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid #B33951;
+    border-radius: 10px;
+}
+
+.label{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* #nombreFormLabel{
+} */
+#nombreForm{
+    margin: 10px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    background-color: #31497526;
+    border: none;
+    border-radius: 10px;
+}
+/* #emailFormLabel{
+
+} */
+#emailForm{
+    margin: 10px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    background-color: #31497526;
+    border: none;
+    border-radius: 10px;
+}
+.botonSubmit{
+    margin: 10px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #B33951;
+    color: #CBCBC2;
 }

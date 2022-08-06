@@ -13,22 +13,22 @@ class Usuario {
 
 const usuarios = JSON.parse(localStorage.getItem("Usuarios")) ?? []
 
-/* <label for="nombreForm" class="label">Nombre</label>
-<input type="text" class="input" id="nombreForm">
-<label for="emailForm" class="label">Correo Electrónico</label>
-<input type="email" class="input" id="emailForm">
+const cartelCrearUsuario = document.getElementById("cartelCrearUsuario")
 
-<button type="submit" class="">Crear Usuario</button> */
+if((cartelCrearUsuario != null) && (usuarios.length == 0)) {
+    cartelCrearUsuario.innerText += ` Para jugar, primero deberás crear un usuario`
+    cartelCrearUsuario.innerHTML += `<a href="../perfil.html"> Haz click aquí</a>`
+}
 
 const idFormulario = document.getElementById("formulario")
 
 if(usuarios.length <= 0 ){
     idFormulario.innerHTML += `
-    <label for="nombreForm" class="label">Nombre</label>
+    <label for="nombreForm" class="label" id="nombreFormLabel">Nombre</label>
     <input type="text" class="input" id="nombreForm">
-    <label for="emailForm" class="label">Correo Electrónico</label>
+    <label for="emailForm" class="label" id="emailFormLabel">Correo Electrónico</label>
     <input type="email" class="input" id="emailForm">
-    <button type="submit" class="">Crear Usuario</button>
+    <button type="submit" class="botonSubmit">Crear Usuario</button>
     `
 }
 
@@ -55,16 +55,9 @@ if(idFormulario != null){
     if (localStorage.getItem("Usuarios")) {
         infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
         infoLocalSUsuario.forEach((usuario, indice) =>{
-            infoUsuario.innerHTML +=`
-            <div id="usuario${indice}">
-                <h2>${usuario.nombre}</h2>
-                <div id="divResultadosUsuario"></div>
-            </div>
-            `
-            let resultadosUsuario = document.getElementById("divResultadosUsuario")
             usuario.resultados.forEach((resultados) =>{
-                resultadosUsuario.innerHTML +=`
-                <p>${resultados}</p>
+                infoUsuario.innerHTML +=`
+                <p class="infoUsuarioP">${resultados}</p>
                 `
             })
         })
@@ -2986,7 +2979,7 @@ function guardarResultados(tamano){
         infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
         infoLocalSUsuario[0].puntaje = infoLocalSUsuario[0].puntaje + contadorTablero
         let puntajeTotal = document.getElementById("puntajeTotal")
-        puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
+        puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
         infoLocalSUsuario[0].resultados.unshift(nombreJuego.innerText, tamano, tiempoTotal)
         localStorage.setItem("Usuarios", JSON.stringify(infoLocalSUsuario))
     }
@@ -3024,14 +3017,14 @@ function reloj (tamano){
         }
         // si segundos es menor a 10 agregar un 0 antes en el dom
         if(segundos < 10){
-            segundosP.innerText = `: 0${segundos}`
+            segundosP.innerText = `:0${segundos}`
         }else{
-            segundosP.innerText = `: ${segundos}`
+            segundosP.innerText = `:${segundos}`
         }
         
         if((estadoJuego == "gana") || ( estadoJuego == "pierde")){
             clearInterval(intervalo)
-            tiempoTotal = `${minutos} : ${segundos}`
+            tiempoTotal = `${minutos}:${segundos}`
             guardarResultados(tamano)
         }
         
@@ -3063,7 +3056,7 @@ let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 
 
-puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
+puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
 let nombreUsuario = document.getElementById("nombreUsuario")
 
 

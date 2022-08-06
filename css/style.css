@@ -45,6 +45,47 @@ footer{
     display: flex;
 }
 
+.theme{
+    width: 46px;
+    height: 26px;
+    background-color: #B43451;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition-duration: 0.5s;
+}
+.themeOscuro{
+    width: 46px;
+    height: 26px;
+    background-color: #314975;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition-duration: 0.5s;
+}
+
+.circulo{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color:#E6E2D0 ;
+    transition-duration: 0.5s;
+}
+.circuloOscuro{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color:#1B222D ;
+    transition-duration: 0.5s;
+}
+
+
 
 
 /*  JUEGOS 5X5  #0E402D*/
@@ -52,13 +93,14 @@ footer{
 .gridTablero5x5{
     margin: 50px;
     display: grid;
-    grid-template-columns:  100px 200px ;
+    grid-template-columns:  100px 220px ;
     grid-template-rows: 50px 50px 220px;
     grid-template-areas: 
     "reloj infoColumn5x5"
     "boton infoColumn5x5"
     "infoFilas5x5 casilleros5x5";
     justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 5px;
 }
@@ -79,6 +121,7 @@ footer{
     grid-template-columns: 80px;
     grid-template-rows: 40px 40px 40px 40px 40px;
     align-items: center;
+    justify-items: center;
     gap: 5px;
 }
 
@@ -297,17 +340,54 @@ footer{
 
 .boton{
     grid-area: boton;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid #314975;
+    width: 56px;
+    height: 31px;
+    border-radius: 15px;
+    border: 1px solid #9CB1A3;
     background-color: #E6E2D0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition-duration: 0.5s;
 }
 
 .botonVerde{
+    grid-area: boton;
+    width: 56px;
+    height: 31px;
+    border-radius: 15px;
+    border: none;
     background-color: #9CB1A3;
-    color: #9CB1A3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition-duration: 0.5s;
 }
+
+.circuloBoton{
+    width: 23px;
+    height: 23px;
+    margin: 3px;
+    border-radius: 50%;
+    border: 1px solid #9CB1A3;
+    background-color:#E6E2D0 ;
+    transition-duration: 0.5s;
+}
+
+.circuloBotonOscuro{
+    width: 23px;
+    height: 23px;
+    margin: 3px;
+    border-radius: 50%;
+    border: 1px solid #1B222D;
+    background-color:#1B222D ;
+    transition-duration: 0.5s;
+}
+
+
+
+
+
 
 .corazon{
     grid-area: corazon;
@@ -368,9 +448,9 @@ p{
 
 
 
-.gris{
-    background-color: #E6E2D0;
-    color: #E6E2D0;
+.ocultarCelda{
+    background-color: transparent;
+    color: transparent;
     border: none;
 }
 

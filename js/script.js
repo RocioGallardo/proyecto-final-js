@@ -1,36 +1,3 @@
-// LOCAL STORAGE THEME
-
-const claro = document.getElementById("claro")
-const oscuro = document.getElementById("oscuro")
-const fondo = document.getElementById("fondo")
-
-let infoLocalS
-
-if(localStorage.getItem("theme")){
-    infoLocalS = localStorage.getItem("theme")
-} else{
-    localStorage.setItem("theme", "claro")
-}
-
-if(infoLocalS == "oscuro"){
-    document.body.classList.add("oscuro")
-}
-
-
-
-oscuro.addEventListener("click", () =>{
-    document.body.classList.add("oscuro")
-    fondo.classList.add("fondoOscuro")
-    localStorage.setItem("theme", "oscuro")
-})
-
-claro.addEventListener("click", () =>{
-    document.body.classList.remove("oscuro")
-    fondo.classList.add("fondo")
-    fondo.classList.remove("fondoOscuro")
-    localStorage.setItem("theme", "claro")
-})
-
 
 //local storage usuarios
 
@@ -103,9 +70,6 @@ if(idFormulario != null){
         })
     }
 }
-
-
-
 
 
 
@@ -203,7 +167,10 @@ function dom (nombrediv, tablero){
 
         nombrediv.innerHTML +=`
     <div class="gridTablero${tablero.tamano}">
-        <button class="boton botonVerde" id="boton"></button>
+        <button class="botonVerde" id="boton">
+            <div class="circuloBoton" id="circuloBoton"></div>
+        </button>
+        
         <div class="infoColumn${tablero.tamano}" id="infoColumn" ></div>
         <div class="infoFilas${tablero.tamano}"id="infoFilas" ></div>
         <div class="casilleros${tablero.tamano}"id="casilleros${tablero.id}"></div>
@@ -211,7 +178,7 @@ function dom (nombrediv, tablero){
             <img class="btnPause pause" id="pause" src="../../assets/playpause.png" alt="">
         </div>
     </div>
-    `
+    `//<button class="boton botonVerde" id="boton"></button>
     const infoColumn = document.getElementById(`infoColumn`)
     const infoFilas = document.getElementById(`infoFilas`)
     const casilleros = document.getElementById(`casilleros${tablero.id}`)
@@ -2072,7 +2039,6 @@ if(arribaDiv != null){
     dom(arribaDiv, tablero40_5x5)
 }
 
-
 // 10x10
 const aleatorio10Div = document.getElementById("aleatorio10Div")
 const computadoraDiv = document.getElementById("computadoraDiv")
@@ -2210,8 +2176,6 @@ if(hongoDiv != null){
 
 
 
-
-
 //20x20
 const aleatorio20Div = document.getElementById("aleatorio20Div")
 const comoDiv = document.getElementById("comoDiv")
@@ -2309,16 +2273,30 @@ if(gladiadorDiv != null){
 
 // CREO BOTON PARA INTERCAMBIAR FUNCIONES DEL MOUSE
 
+
+
+
 const boton = document.getElementById("boton")
+
 if(boton != null){
     boton.addEventListener("click", () => {
-    if(boton.classList[1] == "botonVerde"){
+    if(boton.classList[0] == "botonVerde"){
         boton.classList.remove("botonVerde")
+        boton.classList.add("boton")
+        
     } else{
+        boton.classList.remove("boton")
         boton.classList.add("botonVerde")
     }
 })
 }
+
+
+
+
+
+
+
 
 
 // TRAIGO A JS ELEMENTOS DEL DOM
@@ -2570,7 +2548,6 @@ function ganar5(){
 
 
 
-
 function ganar10(){
     if(infoColumnp0.innerText == `✓` && 
     infoColumnp1.innerText == `✓` && 
@@ -2750,11 +2727,11 @@ function mostrarVidas(){
 
 // ESCUCHADORES EN CELDAS / VERIFICACIONES / VIDAS / MOSTRAR RESULTADO
 let sound = new Audio("../../assets/plop.flac")
-sound.volume = 0.1
+sound.volume = 0.5
 let error = new Audio("../../assets/error.flac")
-error.volume = 0.1
+error.volume = 0.5
 let lose = new Audio("../../assets/lose.wav")
-lose.volume = 0.2
+lose.volume = 0.5
 
 
 let puntajeTotal = document.getElementById("puntajeTotal")
@@ -2777,18 +2754,18 @@ function marcarTableroYContarVidas5(){
         contarPuntosTablero()
         p[i].addEventListener("click", () => {
             if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
-                if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "gris"){
-                        p[i].classList.remove("gris")
+                if(boton.classList[0] != "botonVerde"){
+                    if(p[i].classList[1] == "ocultarCelda"){
+                        p[i].classList.remove("ocultarCelda")
                     } else{
-                        p[i].classList.add("gris")
+                        p[i].classList.add("ocultarCelda")
                     }
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
                         contadorTablero ++
                         contarPuntosTablero()
-                        p[i].classList.remove("gris")
+                        p[i].classList.remove("ocultarCelda")
                         p[i].classList.add("activo")
                         verificacionFYC5()
                         ganar5()
@@ -2837,17 +2814,17 @@ function marcarTableroYContarVidas10(){
         p[i].addEventListener("click", () => {
             if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "gris"){
-                        p[i].classList.remove("gris")
+                    if(p[i].classList[1] == "ocultarCelda"){
+                        p[i].classList.remove("ocultarCelda")
                     } else{
-                        p[i].classList.add("gris")
+                        p[i].classList.add("ocultarCelda")
                     }
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
                         contadorTablero ++
                         contarPuntosTablero()
-                        p[i].classList.remove("gris")
+                        p[i].classList.remove("ocultarCelda")
                         p[i].classList.add("activo")
                         verificacionFYC10()
                         ganar10()
@@ -2894,17 +2871,17 @@ function marcarTableroYContarVidas15(){
         p[i].addEventListener("click", () => {
             if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "gris"){
-                        p[i].classList.remove("gris")
+                    if(p[i].classList[1] == "ocultarCelda"){
+                        p[i].classList.remove("ocultarCelda")
                     } else{
-                        p[i].classList.add("gris")
+                        p[i].classList.add("ocultarCeldas")
                     }
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
                         contadorTablero ++
                         contarPuntosTablero()
-                        p[i].classList.remove("gris")
+                        p[i].classList.remove("ocultarCelda")
                         p[i].classList.add("activo")
                         verificacionFYC15()
                         ganar15()
@@ -2950,17 +2927,17 @@ function marcarTableroYContarVidas20(){
         p[i].addEventListener("click", () => {
             if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "gris"){
-                        p[i].classList.remove("gris")
+                    if(p[i].classList[1] == "ocultarCelda"){
+                        p[i].classList.remove("ocultarCelda")
                     } else{
-                        p[i].classList.add("gris")
+                        p[i].classList.add("ocultarCelda")
                     }
                 }else {
                     if(p[i].innerText == 1){
                         sound.play()
                         contadorTablero ++
                         contarPuntosTablero()
-                        p[i].classList.remove("gris")
+                        p[i].classList.remove("ocultarCelda")
                         p[i].classList.add("activo")
                         verificacionFYC20()
                         ganar20()
@@ -3086,9 +3063,13 @@ let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 
 
-// puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
-// let nombreUsuario = document.getElementById("nombreUsuario")
-// nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
+puntajeTotal.innerText = `TOTAL :${infoLocalSUsuario[0].puntaje}`
+let nombreUsuario = document.getElementById("nombreUsuario")
+
+
+if(nombreUsuario != null){
+    nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
+}
 
 if(marcarTablero5[0] != null){
     let {tamano} = tablero1_5x5
@@ -3113,5 +3094,67 @@ if(marcarTablero20[0] != null){
     marcarTableroYContarVidas20()
     reloj(tamano ?? "20x20")
 }
+
+
+
+// LOCAL STORAGE THEME
+
+const toggleTheme = document.getElementById("toggleTheme")
+const circuloTheme = document.getElementById("circuloTheme")
+const fondo = document.getElementById("fondo")
+const circuloBoton = document.getElementById("circuloBoton")
+
+
+let infoLocalS
+
+if(localStorage.getItem("theme")){
+    infoLocalS = localStorage.getItem("theme")
+    if(infoLocalS == "oscuro"){
+        document.body.classList.add("oscuro")
+        toggleTheme.classList.add("themeOscuro")
+        toggleTheme.classList.remove("theme")
+        circuloTheme.classList.add("circuloOscuro")
+        circuloTheme.classList.remove("circulo")
+        if(circuloBoton != null){
+            circuloBoton.classList.add("circuloBotonOscuro")
+            circuloBoton.classList.remove("circuloBoton")
+        }
+    }
+} else{
+    localStorage.setItem("theme", "claro")
+}
+
+
+
+toggleTheme.addEventListener("click", () =>{
+    if(toggleTheme.classList[0] == "theme"){
+        document.body.classList.add("oscuro")
+        toggleTheme.classList.add("themeOscuro")
+        toggleTheme.classList.remove("theme")
+        circuloTheme.classList.add("circuloOscuro")
+        circuloTheme.classList.remove("circulo")
+        localStorage.setItem("theme", "oscuro")
+        console.log(circuloBoton)
+        if(circuloBoton != null){
+            circuloBoton.classList.add("circuloBotonOscuro")
+            circuloBoton.classList.remove("circuloBoton")
+        }
+    } else{
+        document.body.classList.remove("oscuro")
+
+        toggleTheme.classList.add("theme")
+        toggleTheme.classList.remove("themeOscuro")
+        circuloTheme.classList.add("circulo")
+        circuloTheme.classList.remove("circuloOscuro")
+
+        localStorage.setItem("theme", "claro")
+        if(circuloBoton != null){
+            circuloBoton.classList.add("circuloBoton")
+            circuloBoton.classList.remove("circuloBotonOscuro")
+        }
+    }
+
+})
+
 
 

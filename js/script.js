@@ -2,10 +2,11 @@
 //local storage usuarios
 
 class Usuario {
-    constructor(nombre, email){
+    constructor(nombre, email, avatar){
         this.nombre = nombre
         this.email = email
         this.resultados = []
+        this.avatar = avatar
         this.puntaje = 0
     }
 }
@@ -24,12 +25,109 @@ const idFormulario = document.getElementById("formulario")
 
 if(usuarios.length <= 0 ){
     idFormulario.innerHTML += `
+    <img src="../assets/user0.svg" alt="" class="perfil" id="perfil">
+    <div id="divAvatar"></div>
     <label for="nombreForm" class="label" id="nombreFormLabel">Nombre</label>
     <input type="text" class="input" id="nombreForm">
     <label for="emailForm" class="label" id="emailFormLabel">Correo Electrónico</label>
     <input type="email" class="input" id="emailForm">
     <button type="submit" class="botonSubmit">Crear Usuario</button>
     `
+
+const divAvatar = document.getElementById("divAvatar")
+// fetch("../json/img-users.json")
+// .then(response => response.json())
+// .then(imagenAvatar => {
+//     imagenAvatar.forEach((imagen, indice) => {
+//         divAvatar.innerHTML += `
+//         <img id="avatar${indice}" src="../assets/${imagen.url}">
+//         `
+//     })
+//     const avatar0 = document.getElementById("avatar0")
+//     avatar0.addEventListener("click", () =>{
+//     console.log("click")
+//     })
+// })
+
+async function mostrarAvatars(){
+    const avatares = await fetch("../json/img-users.json")
+    const avataresParseados = await avatares.json()
+    avataresParseados.forEach((imagen, indice) => {
+        divAvatar.innerHTML += `
+            <img id="avatar${indice}" src="../assets/${imagen.url}">
+            `
+    })
+}
+
+
+const perfil = document.getElementById("perfil")
+
+mostrarAvatars().then( () => {
+    const avatar0 = document.getElementById("avatar0")
+    const avatar1 = document.getElementById("avatar1")
+    const avatar2 = document.getElementById("avatar2")
+    const avatar3 = document.getElementById("avatar3")
+    const avatar4 = document.getElementById("avatar4")
+    const avatar5 = document.getElementById("avatar5")
+    const avatar6 = document.getElementById("avatar6")
+    const avatar7 = document.getElementById("avatar7")
+    const avatar8 = document.getElementById("avatar8")
+    avatar0.addEventListener("click", () =>{
+        perfil.src = avatar0.src
+        perfil.classList.remove("user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8")
+        perfil.classList.add("user0")
+        console.log(perfil)
+    })
+    avatar1.addEventListener("click", () =>{
+        perfil.src = avatar1.src
+        perfil.classList.remove("user0", "user2", "user3", "user4", "user5", "user6", "user7", "user8")
+        perfil.classList.add("user1")
+        console.log(perfil)
+    })
+    avatar2.addEventListener("click", () =>{
+        perfil.src = avatar2.src
+        perfil.classList.remove("user0", "user1", "user3", "user4", "user5", "user6", "user7", "user8")
+        perfil.classList.add("user2")
+        console.log(perfil)
+    })
+    avatar3.addEventListener("click", () =>{
+        perfil.src = avatar3.src
+        perfil.classList.remove("user0", "user1", "user2", "user4", "user5", "user6", "user7", "user8")
+        perfil.classList.add("user3")
+        console.log(perfil)
+    })
+    avatar4.addEventListener("click", () =>{
+        perfil.src = avatar4.src
+        perfil.classList.remove("user0", "user1", "user2", "user3", "user5", "user6", "user7", "user8")
+        perfil.classList.add("user4")
+        console.log(perfil)
+    })
+    avatar5.addEventListener("click", () =>{
+        perfil.src = avatar5.src
+        perfil.classList.remove("user0", "user1", "user2", "user3", "user4", "user6", "user7", "user8")
+        perfil.classList.add("user5")
+        console.log(perfil)
+    })
+    avatar6.addEventListener("click", () =>{
+        perfil.src = avatar6.src
+        perfil.classList.remove("user0", "user1", "user2", "user3", "user4", "user5", "user7", "user8")
+        perfil.classList.add("user6")
+        console.log(perfil)
+    })
+    avatar7.addEventListener("click", () =>{
+        perfil.src = avatar7.src
+        perfil.classList.remove("user0", "user1", "user2", "user3", "user4", "user5", "user6", "user8")
+        perfil.classList.add("user7")
+        console.log(perfil)
+    })
+    avatar8.addEventListener("click", () =>{
+        perfil.src = avatar8.src
+        perfil.classList.remove("user0", "user1", "user2", "user3", "user4", "user5", "user6", "user7")
+        perfil.classList.add("user8")
+        console.log(perfil)
+    })
+})
+
 }
 
 
@@ -38,7 +136,9 @@ if(idFormulario != null){
         e.preventDefault()
         let nombre = document.getElementById("nombreForm").value
         let email = document.getElementById("emailForm").value
-        let usuario = new Usuario (nombre, email)
+        let avatar = perfil.classList[1]
+        let usuario = new Usuario (nombre, email, avatar)
+        
         usuarios.push(usuario)
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))
         idFormulario.reset()
@@ -163,7 +263,6 @@ function dom (nombrediv, tablero){
         <button class="botonVerde" id="boton">
             <div class="circuloBoton" id="circuloBoton"></div>
         </button>
-        
         <div class="infoColumn${tablero.tamano}" id="infoColumn" ></div>
         <div class="infoFilas${tablero.tamano}"id="infoFilas" ></div>
         <div class="casilleros${tablero.tamano}"id="casilleros${tablero.id}"></div>
@@ -3056,12 +3155,27 @@ let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 
 
-puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
+
 let nombreUsuario = document.getElementById("nombreUsuario")
+let avatarUsuario = document.getElementById("avatarUsuario")
+let avatarUsuario2 = document.getElementById("avatarUsuario2")
+let avatarUsuario3 = document.getElementById("avatarUsuario3")
 
 
-if(nombreUsuario != null){
+if((puntajeTotal != null) && (infoLocalSUsuario != null)) {
+    puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
+}
+
+if((nombreUsuario != null) && (infoLocalSUsuario != null) ){
     nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
+    if(avatarUsuario != null){
+        avatarUsuario.src = `./assets/${infoLocalSUsuario[0].avatar}.svg`
+    } else if(avatarUsuario2 != null){
+        avatarUsuario2.src = `../assets/${infoLocalSUsuario[0].avatar}.svg`
+    } else if(avatarUsuario3 != null){
+        avatarUsuario3.src = `../../assets/${infoLocalSUsuario[0].avatar}.svg`
+    }
+    
 }
 
 if(marcarTablero5[0] != null){
@@ -3127,7 +3241,6 @@ toggleTheme.addEventListener("click", () =>{
         circuloTheme.classList.add("circuloOscuro")
         circuloTheme.classList.remove("circulo")
         localStorage.setItem("theme", "oscuro")
-        console.log(circuloBoton)
         if(circuloBoton != null){
             circuloBoton.classList.add("circuloBotonOscuro")
             circuloBoton.classList.remove("circuloBoton")
@@ -3148,6 +3261,7 @@ toggleTheme.addEventListener("click", () =>{
     }
 
 })
+
 
 
 

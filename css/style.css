@@ -665,21 +665,6 @@ main{
     margin: 20px ;
     padding: 10px;
     border-radius: 10px;
-    animation-name: titulos;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-}
-.ulListaTamanoTableros li:first-child{
-    animation-delay: 0.1s;
-}
-.ulListaTamanoTableros li:nth-child(2){
-    animation-delay: 0.2s;
-}
-.ulListaTamanoTableros li:nth-child(3){
-    animation-delay: 0.3s;
-}
-.ulListaTamanoTableros li:nth-child(4){
-    animation-delay: 0.4s;
 }
 
 .ulListaTamanoTableros li:hover{
@@ -741,7 +726,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border: 1px solid #B33951;
     border-radius: 10px;
 }
 
@@ -782,4 +766,18 @@ main{
     border-radius: 10px;
     background-color: #B33951;
     color: #CBCBC2;
+}
+
+.imgAvatar{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.borde{
+    border: 1px solid #B33951;
+    border-radius: 50%;
+}
+.perfil{
+    width: 120px;
+    border-radius: 50%;
 }

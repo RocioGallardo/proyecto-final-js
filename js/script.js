@@ -140,15 +140,7 @@ if(idFormulario != null){
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))
         idFormulario.reset()
         location.href = "../index.html"
-        mostrarInfo(usuario)
     })
-    const respuestaCrearUsuario = document.getElementById("respuestaCrearUsuario")
-        mostrarInfo = (usuario) => {
-        respuestaCrearUsuario.innerHTML = `
-        <p>Hola ${usuario.nombre}! con tu usuario creado ya puedes jugar</p>
-        <button><a href="./jugar.html">Jugar</a></button>
-        `
-    }
     let infoLocalSUsuario
     const infoUsuario = document.getElementById("infoUsuario")
     if (localStorage.getItem("Usuarios")) {
@@ -3286,10 +3278,13 @@ if((nombreUsuario != null) && (infoLocalSUsuario != null) ){
     nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
     if(avatarUsuario != null){
         avatarUsuario.src = `./assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario.alt = "avatar-usuario"
     } else if(avatarUsuario2 != null){
         avatarUsuario2.src = `../assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario2.alt = "avatar-usuario"
     } else if(avatarUsuario3 != null){
         avatarUsuario3.src = `../../assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario3.alt = "avatar-usuario"
     }
 }
 

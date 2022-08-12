@@ -6,6 +6,7 @@
     text-align: center;
     font-family: 'Inconsolata', monospace;
     color: #B43451;
+    text-decoration: none;
 }
 
 body{
@@ -32,7 +33,6 @@ footer{
     width: 100%;
     padding: 5px;
     margin-top: 70px;
-
 }
 
 .header{
@@ -43,7 +43,7 @@ footer{
     font-size: 20px;
     background-color: #31497526;
 }
-.header div{
+.header div, .aPerfilHeader{
     display: flex;
 }
 
@@ -93,7 +93,7 @@ footer{
 /*  JUEGOS 5X5  #0E402D*/
 
 .gridTablero5x5{
-    margin: 50px;
+    margin: 100px;
     display: grid;
     grid-template-columns:  100px 220px ;
     grid-template-rows: 50px 50px 220px;
@@ -169,6 +169,7 @@ footer{
     "boton infoColumn10x10"
     "infoFilas10x10 casilleros10x10";
     justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 5px;
 }
@@ -221,13 +222,14 @@ footer{
 .gridTablero15x15{
     margin: 50px;
     display: grid;
-    grid-template-columns: 100px 450px;
-    grid-template-rows: 50px 50px 450px;
+    grid-template-columns: 100px 445px;
+    grid-template-rows: 50px 50px 438px;
     grid-template-areas: 
     "reloj infoColumn15x15"
     "boton infoColumn15x15"
     "infoFilas15x15 casilleros15x15";
     justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 5px;
 }
@@ -280,13 +282,14 @@ footer{
 .gridTablero20x20{
     margin: 50px;
     display: grid;
-    grid-template-columns: 150px 500px;
+    grid-template-columns: 150px 475px;
     grid-template-rows: 60px 60px 475px;
     grid-template-areas: 
     "reloj infoColumn20x20"
     "boton infoColumn20x20"
     "infoFilas20x20 casilleros20x20";
     justify-content: center;
+    justify-items: center;
     align-items: center;
     gap: 4px;
 }
@@ -405,45 +408,36 @@ p{
 }
 
 .celdas5x5{
-    background-color: #E6E2D0;
-    color: #E6E2D0;
-    border: 1px solid #9CB1A3;
+    background-color: #31497526;
+    color: transparent;
     border-radius: 10px;
     width: 40px;
     height: 40px;
 }
 
 .celdas10x10{
-    background-color: #E6E2D0;
-    color: #E6E2D0;
-    border: 1px solid #9CB1A3;
+    background-color: #31497526;
+    color: transparent;
     border-radius: 8px;
     width: 30px;
     height: 30px;
 }
 
 .celdas15x15{
-    background-color: #E6E2D0;
-    color: #E6E2D0;
-    border: 1px solid #9CB1A3;
+    background-color: #31497526;
+    color: transparent;
     border-radius: 8px;
     width: 25px;
     height: 25px;
 }
 
 .celdas20x20{
-    background-color: #E6E2D0;
-    color: #E6E2D0;
-    border: 1px solid #9CB1A3;
+    background-color: #31497526;
+    color: transparent;
     border-radius: 6px;
     width: 20px;
     height: 20px;
 }
-
-
-
-
-
 
 
 .ocultarCelda{

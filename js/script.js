@@ -23,7 +23,7 @@ if((cartelCrearUsuario != null) && (usuarios.length == 0)) {
 
 const idFormulario = document.getElementById("formulario")
 
-if(usuarios.length <= 0 ){
+if((usuarios.length <= 0) && (idFormulario != null)){
     idFormulario.innerHTML += `
     <img src="../assets/user0.svg" alt="" class="perfil" id="perfil">
     <div id="divAvatar"></div>
@@ -33,7 +33,6 @@ if(usuarios.length <= 0 ){
     <input type="email" class="input" id="emailForm" required>
     <button type="submit" class="botonSubmit">Crear Usuario</button>
     `
-
 const divAvatar = document.getElementById("divAvatar")
 // fetch("../json/img-users.json")
 // .then(response => response.json())
@@ -137,12 +136,11 @@ if(idFormulario != null){
         let email = document.getElementById("emailForm").value
         let avatar = perfil.classList[1]
         let usuario = new Usuario (nombre, email, avatar)
-        
         usuarios.push(usuario)
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))
         idFormulario.reset()
+        location.href = "../index.html"
         mostrarInfo(usuario)
-        console.log(usuarios)
     })
     const respuestaCrearUsuario = document.getElementById("respuestaCrearUsuario")
         mostrarInfo = (usuario) => {
@@ -1835,7 +1833,7 @@ const ulLista20x20 = document.getElementById("ulLista20x20")
 let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
 
 
-if(ulLista5x5 != null){
+if((ulLista5x5 != null) && (usuarios.length != 0)){
     arrayJuegos5x5.forEach(juego =>{
         let infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
         if(infoLocalSUsuario[0].resultados.some ((el) => el == juego.nombre.toUpperCase())){
@@ -3035,7 +3033,7 @@ for(let i = 0 ; i<100; i++){
                     error.play()
                     contadorTablero--
                     contarPuntosTablero()
-                    p[i].classList.add("cambiarColorIncorrecto5")
+                    p[i].classList.add("cambiarColorIncorrecto10")
                     vidas --
                     mostrarVidas()
                 }
@@ -3094,7 +3092,7 @@ for(let i = 0 ; i<225; i++){
                     error.play()
                     contadorTablero--
                     contarPuntosTablero()
-                    p[i].classList.add("cambiarColorIncorrecto5")
+                    p[i].classList.add("cambiarColorIncorrecto15")
                     vidas --
                     mostrarVidas()
                 }
@@ -3152,7 +3150,7 @@ for(let i = 0 ; i<400; i++){
                     error.play()
                     contadorTablero--
                     contarPuntosTablero()
-                    p[i].classList.add("cambiarColorIncorrecto5")
+                    p[i].classList.add("cambiarColorIncorrecto20")
                     vidas --
                     mostrarVidas()
                 }

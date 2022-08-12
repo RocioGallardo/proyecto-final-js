@@ -2071,7 +2071,7 @@ if(escaleraDiv != null){
     dom(escaleraDiv, tablero20_5x5)
 }
 if(estrellaDiv != null){
-    dom(Div, tablero21_5x5)
+    dom(estrellaDiv, tablero21_5x5)
 }
 if(diamanteDiv != null){
     dom(diamanteDiv, tablero22_5x5)
@@ -2653,14 +2653,15 @@ function ganar10(){
     infoColumnp9.innerText == `✓`){
         estadoJuego = "gana"
         win.play()
+        setTimeout(() => {
+            location.href = "./juegos10x10.html"
+        }, 4999)
         Swal.fire({
-            html:'<h3>Ganaste !</h3>',
+            html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
             timer: 5000,
             timerProgressBar: true,
-            background: '#E6E2D0',
-            color: '#429973',
             background: '#E6E2D0',
             backdrop: `
                 #314975E6
@@ -2689,16 +2690,16 @@ function ganar15(){
     infoColumnp13.innerText == `✓` && 
     infoColumnp14.innerText == `✓`){
         estadoJuego = "gana"
-
         win.play()
+        setTimeout(() => {
+            location.href = "./juegos15x15.html"
+        }, 4999)
         Swal.fire({
-            html:'<h3>Ganaste !</h3>',
+            html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
             timer: 5000,
             timerProgressBar: true,
-            background: '#E6E2D0',
-            color: '#429973',
             background: '#E6E2D0',
             backdrop: `
                 #314975E6
@@ -2733,14 +2734,15 @@ function ganar20(){
     infoColumnp19.innerText == `✓`){
         estadoJuego = "gana"
         win.play()
+        setTimeout(() => {
+            location.href = "./juegos20x20.html"
+        }, 4999)
         Swal.fire({
-            html:'<h3>Ganaste !</h3>',
-            color: '#429973',
+            html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
             timer: 5000,
             timerProgressBar: true,
-            background: '#E6E2D0',
             background: '#E6E2D0',
             backdrop: `
                 #314975E6

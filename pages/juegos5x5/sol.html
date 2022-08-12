@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/vidas.png">
+    <title>Sol | Pixelgame</title>
 </head>
 <body>
     <header class="header">
         <a href="./juegos5x5.html"> <img src="../../assets/volver.svg" alt="volver"></a>
-        <div id="corazon"></div>
-        <div>
+        
+        <img id="avatarUsuario3" src="" alt="avatar-usuario">
+        <p id="nombreUsuario"></p>
+        <p id="puntajeTotal"></p>
+        <div id="puntajeTablero"></div>
+                <div>
             <p id="minutos">00</p>
             <p id="segundos">: 00</p>
         </div>
-        <p id="puntajeTotal"></p>
-        <p id="puntajeTablero">0</p>
-        <!-- <button class="bclaro" id="claro"> claro </button>
-        <button class="boscuro" id="oscuro"> oscuro </button> -->
-        
+        <div id="corazon"></div>
+        <button class="theme" id="toggleTheme">
+            <div class="circulo" id="circuloTheme"></div>
+        </button>
     </header>
 
     <div class="marcarTablero5" id="solDiv" ></div>

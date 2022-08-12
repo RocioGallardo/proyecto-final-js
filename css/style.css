@@ -27,6 +27,8 @@ h1, h3{
 }
 
 footer{
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 5px;
     margin-top: 70px;
@@ -139,8 +141,6 @@ footer{
 
 .infoColumn5x5 p{
     color: #E6E2D0;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
     width: 40px;
     height: 100px;
     background-color: #314975;
@@ -160,6 +160,7 @@ footer{
 /* PARA JUEGOS 10X10*/
 
 .gridTablero10x10{
+    margin: 50px;
     display: grid;
     grid-template-columns: 100px 350px;
     grid-template-rows: 50px 50px 350px;
@@ -183,8 +184,6 @@ footer{
 
 .infoColumn10x10 p {
     color: #E6E2D0;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
     width: 30px;
     height: 100px;
     background-color: #314975;
@@ -220,6 +219,7 @@ footer{
 /* PARA JUEGOS 15X15*/
 
 .gridTablero15x15{
+    margin: 50px;
     display: grid;
     grid-template-columns: 100px 450px;
     grid-template-rows: 50px 50px 450px;
@@ -261,8 +261,6 @@ footer{
 
 .infoColumn15x15 p{
     color: #E6E2D0;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
     width: 25px;
     height: 100px;
     background-color: #314975;
@@ -280,6 +278,7 @@ footer{
 /* PARA JUEGOS 20X20*/
 
 .gridTablero20x20{
+    margin: 50px;
     display: grid;
     grid-template-columns: 150px 500px;
     grid-template-rows: 60px 60px 475px;
@@ -321,7 +320,6 @@ footer{
 
 .infoColumn20x20 p {
     color: #E6E2D0;
-    text-orientation: upright;
     width: 20px;
     height: 120px;
     background-color: #314975;
@@ -643,7 +641,7 @@ main{
     background-color: #31497526;
 }
 
-#ulLista5x5{
+#ulLista5x5, #ulLista10x10, #ulLista15x15, #ulLista20x20{
     width: 80%;
     margin: 50px auto;
     display: grid;

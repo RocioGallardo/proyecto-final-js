@@ -1,21 +1,37 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/vidas.png">
+    <title>Surfing | Pixelgame</title>
 </head>
 <body>
     <header class="header">
-        <button class="bclaro" id="claro"> claro </button>
-        <button class="boscuro" id="oscuro"> oscuro </button>
-        <a href="./juegos15x15.html">volver</a>
+        <a href="./juegos15x15.html"> <img src="../../assets/volver.svg" alt="volver"></a>
+        <img id="avatarUsuario3" src="" alt="avatar-usuario">
+        <p id="nombreUsuario"></p>
+        <p id="puntajeTotal"></p>
+        <div id="puntajeTablero"></div>
+                <div>
+            <p id="minutos">00</p>
+            <p id="segundos">: 00</p>
+        </div>
+        <div id="corazon"></div>
+        <button class="theme" id="toggleTheme">
+            <div class="circulo" id="circuloTheme"></div>
+        </button>
     </header>
     
     <div class="marcarTablero15" id="surfingDiv" ></div>
-
-
+    <footer>
+        <p>Creada con ♥ por Rocio Gallardo </p>
+        <a target="_blank" href="https://www.linkedin.com/in/holagallardo/"><img src="../../assets/linkedin.svg" alt=""></a>
+        <a target="_blank" href="https://github.com/RocioGallardo"><img src="../../assets/github.svg" alt=""></a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <script src="../../js/script.js"></script>
 </body>
 </html>

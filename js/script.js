@@ -28,9 +28,9 @@ if(usuarios.length <= 0 ){
     <img src="../assets/user0.svg" alt="" class="perfil" id="perfil">
     <div id="divAvatar"></div>
     <label for="nombreForm" class="label" id="nombreFormLabel">Nombre</label>
-    <input type="text" class="input" id="nombreForm">
+    <input type="text" class="input" id="nombreForm" required>
     <label for="emailForm" class="label" id="emailFormLabel">Correo Electrónico</label>
-    <input type="email" class="input" id="emailForm">
+    <input type="email" class="input" id="emailForm" required>
     <button type="submit" class="botonSubmit">Crear Usuario</button>
     `
 
@@ -127,7 +127,6 @@ mostrarAvatars().then( () => {
         console.log(perfil)
     })
 })
-
 }
 
 
@@ -147,14 +146,18 @@ if(idFormulario != null){
     })
     const respuestaCrearUsuario = document.getElementById("respuestaCrearUsuario")
         mostrarInfo = (usuario) => {
-        respuestaCrearUsuario.innerText = `
-        Hola ! ${usuario.nombre}, ahora al jugar se guardarán tus tiempos de resolución `
+        respuestaCrearUsuario.innerHTML = `
+        <p>Hola ${usuario.nombre}! con tu usuario creado ya puedes jugar</p>
+        <button><a href="./jugar.html">Jugar</a></button>
+        `
     }
     let infoLocalSUsuario
     const infoUsuario = document.getElementById("infoUsuario")
     if (localStorage.getItem("Usuarios")) {
         infoLocalSUsuario = JSON.parse(localStorage.getItem("Usuarios"))
-        infoLocalSUsuario.forEach((usuario, indice) =>{
+        infoLocalSUsuario.forEach((usuario) =>{
+            infoUsuario.innerHTML +=`<p>NOMBRE</p>
+            <p>TAMAÑO</p><p>TIEMPO</p>`
             usuario.resultados.forEach((resultados) =>{
                 infoUsuario.innerHTML +=`
                 <p class="infoUsuarioP">${resultados}</p>
@@ -257,7 +260,6 @@ function dom (nombrediv, tablero){
     let puntajeTablero = document.getElementById("puntajeTablero")
     puntajeTablero.innerHTML +=`
         <h1 id="nombreJuego">${tablero.nombre}</h1> <p id="puntajeTableroContador"></p>`
-
         nombrediv.innerHTML +=`
     <div class="gridTablero${tablero.tamano}">
         <button class="botonVerde" id="boton">
@@ -270,21 +272,18 @@ function dom (nombrediv, tablero){
             <img class="btnPause pause" id="pause" src="../../assets/playpause.png" alt="">
         </div>
     </div>
-    `//<button class="boton botonVerde" id="boton"></button>
+    `
     const infoColumn = document.getElementById(`infoColumn`)
     const infoFilas = document.getElementById(`infoFilas`)
     const casilleros = document.getElementById(`casilleros${tablero.id}`)
-
     for(let i = 0 ; i<tablero.informacionColumnas.length ; i++){
         infoColumn.innerHTML +=`
-        <p id="infoColumnp${i}">${tablero.informacionColumnas[i].join(" ")}</p>`
+        <p id="infoColumnp${i}">${tablero.informacionColumnas[i].join("</br>")}</p>`
     }
-
     for(let i = 0 ; i<tablero.informacionFilas.length ; i++){
         infoFilas.innerHTML +=`
         <p id="infoFila${i}">${tablero.informacionFilas[i].join(" ")}</p>`
     }
-
     for(let i = 0 ; i <tablero.tablerojuego.length ; i++){
         for(let j = 0 ; j<tablero.tablerojuego[i].length ; j++){
             casilleros.innerHTML +=`
@@ -1872,7 +1871,7 @@ if(ulLista10x10 != null){
             ulLista10x10.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/vidas.png" alt="">
+                    <img src="../../assets/listo.svg" alt="">
                     ${juego.nombre}         
                     <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
                 </a>
@@ -1882,7 +1881,7 @@ if(ulLista10x10 != null){
             ulLista10x10.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/sinvida.png" alt="">
+                    <img src="../../assets/nolisto.svg" alt="">
                     ${juego.nombre}
                     <p></p>
                 </a>
@@ -1900,7 +1899,7 @@ if(ulLista15x15 != null){
             ulLista15x15.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/vidas.png" alt="">
+                    <img src="../../assets/listo.svg" alt="">
                     ${juego.nombre}         
                     <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
                 </a>
@@ -1910,7 +1909,7 @@ if(ulLista15x15 != null){
             ulLista15x15.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/sinvida.png" alt="">
+                    <img src="../../assets/nolisto.svg" alt="">
                     ${juego.nombre}
                     <p></p>
                 </a>
@@ -1928,7 +1927,7 @@ if(ulLista20x20 != null){
             ulLista20x20.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/vidas.png" alt="">
+                    <img src="../../assets/listo.svg" alt="">
                     ${juego.nombre}         
                     <p>${infoLocalSUsuario[0].resultados[indice + 2]}</p>
                 </a>
@@ -1938,7 +1937,7 @@ if(ulLista20x20 != null){
             ulLista20x20.innerHTML += `
             <li>
                 <a class="listaTablero"href="./${juego.nombre}.html">
-                    <img src="../../assets/sinvida.png" alt="">
+                    <img src="../../assets/nolisto.svg" alt="">
                     ${juego.nombre}
                     <p></p>
                 </a>
@@ -2134,23 +2133,141 @@ if(arribaDiv != null){
 // 10x10
 const aleatorio10Div = document.getElementById("aleatorio10Div")
 const computadoraDiv = document.getElementById("computadoraDiv")
-const random10Div = document.getElementById("random10Div")
+const shortsDiv = document.getElementById("shortsDiv")
+const cenaDiv = document.getElementById("cenaDiv")
+const juegoDiv = document.getElementById("juegoDiv")
+const monstruoDiv = document.getElementById("monstruoDiv")
+const congeladoDiv = document.getElementById("congeladoDiv")
 const egiptoDiv = document.getElementById("egiptoDiv")
+const malvadoDiv = document.getElementById("malvadoDiv")
+const bosqueDiv = document.getElementById("bosqueDiv")
+const noDiv = document.getElementById("noDiv")
+const halloweenDiv = document.getElementById("halloweenDiv")
+const fuegoDiv = document.getElementById("fuegoDiv")
+const pavaDiv = document.getElementById("pavaDiv")
+const avestruzDiv = document.getElementById("avestruzDiv")
+const robotDiv = document.getElementById("robotDiv")
+const naturalezaDiv = document.getElementById("naturalezaDiv")
+const amanecerDiv = document.getElementById("amanecerDiv")
+const tvDiv = document.getElementById("tvDiv")
+const jardinDiv = document.getElementById("jardinDiv")
+const vinoDiv = document.getElementById("vinoDiv")
+const supermanDiv = document.getElementById("supermanDiv")
+const hogarDiv = document.getElementById("hogarDiv")
+const ojoDiv = document.getElementById("ojoDiv")
+const barbudoDiv = document.getElementById("barbudoDiv")
+const cavernaDiv = document.getElementById("cavernaDiv")
+const cocodriloDiv = document.getElementById("cocodriloDiv")
+const pixelDiv = document.getElementById("pixelDiv")
+const iphoneDiv = document.getElementById("iphoneDiv")
+const hamburguesaDiv = document.getElementById("hamburguesaDiv")
+const exclamacionDiv = document.getElementById("exclamacionDiv")
+const campamentoDiv = document.getElementById("campamentoDiv")
+const aerostaticoDiv = document.getElementById("aerostaticoDiv")
+const lunaDiv = document.getElementById("lunaDiv")
+
 
 if(aleatorio10Div != null){
     dom(aleatorio10Div, juegoRandom10)
 }
-
 if(computadoraDiv != null){
     dom(computadoraDiv, tablero1_10x10)
 }
-
-if(random10Div != null){
-    dom(random10Div, juegoRandom10)
+if(shortsDiv != null){
+    dom(shortsDiv, tablero2_10x10)
 }
-
+if(cenaDiv != null){
+    dom(cenaDiv, tablero3_10x10)
+}
+if(juegoDiv != null){
+    dom(juegoDiv, tablero4_10x10)
+}
+if(monstruoDiv != null){
+    dom(monstruoDiv, tablero5_10x10)
+}
+if(congeladoDiv != null){
+    dom(congeladoDiv, tablero6_10x10)
+}
 if(egiptoDiv != null){
     dom(egiptoDiv, tablero7_10x10)
+}
+if(malvadoDiv != null){
+    dom(malvadoDiv, tablero8_10x10)
+}
+if(bosqueDiv != null){
+    dom(bosqueDiv, tablero9_10x10)
+}
+if(noDiv != null){
+    dom(noDiv, tablero10_10x10)
+}
+if(halloweenDiv != null){
+    dom(halloweenDiv, tablero11_10x10)
+}
+if(fuegoDiv != null){
+    dom(fuegoDiv, tablero12_10x10)
+}
+if(pavaDiv != null){
+    dom(pavaDiv, tablero13_10x10)
+}
+if(avestruzDiv != null){
+    dom(avestruzDiv, tablero14_10x10)
+}
+if(robotDiv != null){
+    dom(robotDiv, tablero15_10x10)
+}
+if(naturalezaDiv != null){
+    dom(naturalezaDiv, tablero16_10x10)
+}
+if(amanecerDiv != null){
+    dom(amanecerDiv, tablero17_10x10)
+}
+if(tvDiv != null){
+    dom(tvDiv, tablero18_10x10)
+}
+if(jardinDiv != null){
+    dom(jardinDiv, tablero19_10x10)
+}
+if(vinoDiv != null){
+    dom(vinoDiv, tablero20_10x10)
+}
+if(supermanDiv != null){
+    dom(supermanDiv, tablero21_10x10)
+}
+if(hogarDiv != null){
+    dom(hogarDiv, tablero22_10x10)
+}
+if(ojoDiv != null){
+    dom(ojoDiv, tablero23_10x10)
+}
+if(barbudoDiv != null){
+    dom(barbudoDiv, tablero24_10x10)
+}
+if(cavernaDiv != null){
+    dom(cavernaDiv, tablero25_10x10)
+}
+if(cocodriloDiv != null){
+    dom(cocodriloDiv, tablero26_10x10)
+}
+if(pixelDiv != null){
+    dom(pixelDiv, tablero27_10x10)
+}
+if(iphoneDiv != null){
+    dom(iphoneDiv, tablero28_10x10)
+}
+if(hamburguesaDiv != null){
+    dom(hamburguesaDiv, tablero29_10x10)
+}
+if(exclamacionDiv != null){
+    dom(exclamacionDiv, tablero30_10x10)
+}
+if(campamentoDiv != null){
+    dom(campamentoDiv, tablero31_10x10)
+}
+if(aerostaticoDiv != null){
+    dom(aerostaticoDiv, tablero32_10x10)
+}
+if(lunaDiv != null){
+    dom(lunaDiv, tablero33_10x10)
 }
 
 // 15x15
@@ -2597,13 +2714,6 @@ function verificacionFYC20(){
 }
 
 // FUNCION PARA SABER CUANDO EL USUARIO GANÓ
-// function ganar5(){
-//     infoColumnp0.innerText == `✓` && 
-//     infoColumnp1.innerText == `✓` && 
-//     infoColumnp2.innerText == `✓` && 
-//     infoColumnp3.innerText == `✓` && 
-//     infoColumnp4.innerText == `✓` ? resultado.innerText = `GANASTE` : ""
-// }
 
 let win = new Audio("../../assets/win.wav")
 win.volume = 0.2
@@ -2620,12 +2730,12 @@ function ganar5(){
         win.play()
         setTimeout(() => {
             location.href = "./juegos5x5.html"
-        }, 4999)
+        }, 2999)
         Swal.fire({
             html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
-            timer: 5000,
+            timer: 3000,
             timerProgressBar: true,
             background: '#E6E2D0',
             backdrop: `
@@ -2655,12 +2765,12 @@ function ganar10(){
         win.play()
         setTimeout(() => {
             location.href = "./juegos10x10.html"
-        }, 4999)
+        }, 2999)
         Swal.fire({
             html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
-            timer: 5000,
+            timer: 3000,
             timerProgressBar: true,
             background: '#E6E2D0',
             backdrop: `
@@ -2693,12 +2803,12 @@ function ganar15(){
         win.play()
         setTimeout(() => {
             location.href = "./juegos15x15.html"
-        }, 4999)
+        }, 2999)
         Swal.fire({
             html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
-            timer: 5000,
+            timer: 3000,
             timerProgressBar: true,
             background: '#E6E2D0',
             backdrop: `
@@ -2736,12 +2846,12 @@ function ganar20(){
         win.play()
         setTimeout(() => {
             location.href = "./juegos20x20.html"
-        }, 4999)
+        }, 2999)
         Swal.fire({
             html:'<h3 class="h3ganaste">Ganaste !</h3>',
             padding: '3em',
             confirmButtonText: 'seguir',
-            timer: 5000,
+            timer: 3000,
             timerProgressBar: true,
             background: '#E6E2D0',
             backdrop: `
@@ -2837,7 +2947,7 @@ function contarPuntosTablero(){
 }
 
 function recargarPagina(){
-    setTimeout(location.reload(), 5000)
+    setTimeout(location.reload(), 3000)
 }
 
 function marcarTableroYContarVidas5(){
@@ -2898,174 +3008,180 @@ function marcarTableroYContarVidas5(){
         })
     }
 }
-
 function marcarTableroYContarVidas10(){
     puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
-    for(let i = 0 ; i<100; i++){
-        verificacionFYC10()
-        mostrarVidas()
-        contarPuntosTablero()
-        p[i].addEventListener("click", () => {
-            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
-                if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "ocultarCelda"){
-                        p[i].classList.remove("ocultarCelda")
-                    } else{
-                        p[i].classList.add("ocultarCelda")
-                    }
-                }else {
-                    if(p[i].innerText == 1){
-                        sound.play()
-                        contadorTablero ++
-                        contarPuntosTablero()
-                        p[i].classList.remove("ocultarCelda")
-                        p[i].classList.add("activo")
-                        verificacionFYC10()
-                        ganar10()
-                    } else{
-                        error.play()
-                        contadorTablero--
-                        contarPuntosTablero()
-                        p[i].classList.add("cambiarColorIncorrecto10")
-                        vidas --
-                        mostrarVidas()
-                    }
+for(let i = 0 ; i<100; i++){
+    verificacionFYC10()
+    mostrarVidas()
+    contarPuntosTablero()
+    p[i].addEventListener("click", () => {
+        if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
+            if(boton.classList[0] != "botonVerde"){
+                if(p[i].classList[1] == "ocultarCelda"){
+                    p[i].classList.remove("ocultarCelda")
+                } else{
+                    p[i].classList.add("ocultarCelda")
                 }
-                if(vidas <= 0){
-                    estadoJuego = "pierde"
-                    lose.play()
-                    Swal.fire({
-                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                        padding: '3em',
-                        confirmButtonText: 'intentar de nuevo',
-                        confirmButtonColor: '#E6E2D073',
-                        timer: 5000,
-                        timerProgressBar: true,
-                        background: '#B33951',
-                        backdrop: `
-                            #314975E6
-                        `,
-                        customClass:{
-                            popup: 'popUp-class'
-                        }
-                    })
-                    }
+            }else {
+                if(p[i].innerText == 1){
+                    sound.play()
+                    contadorTablero ++
+                    contarPuntosTablero()
+                    p[i].classList.remove("ocultarCelda")
+                    p[i].classList.add("activo")
+                    verificacionFYC10()
+                    ganar10()
+                } else{
+                    error.play()
+                    contadorTablero--
+                    contarPuntosTablero()
+                    p[i].classList.add("cambiarColorIncorrecto5")
+                    vidas --
+                    mostrarVidas()
+                }
             }
-        })
-    }
+            if(vidas <= 0){
+                estadoJuego = "pierde"
+                lose.play()
+                setTimeout(() => {
+                    location.reload()
+                }, 3000)
+                Swal.fire({
+                    html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                    padding: '3em',
+                    confirmButtonText: 'intentar de nuevo',
+                    confirmButtonColor: '#E6E2D073',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    background: '#B33951',
+                    backdrop: `
+                        #314975E6
+                    `,
+                    customClass:{
+                        popup: 'popUp-class'
+                    }
+                })
+            }
+        }
+    })
 }
-
+}
 
 function marcarTableroYContarVidas15(){
     puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
-    for(let i = 0 ; i<225; i++){
-        verificacionFYC15()
-        mostrarVidas()
-        contarPuntosTablero()
-        p[i].addEventListener("click", () => {
-            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
-                if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "ocultarCelda"){
-                        p[i].classList.remove("ocultarCelda")
-                    } else{
-                        p[i].classList.add("ocultarCeldas")
-                    }
-                }else {
-                    if(p[i].innerText == 1){
-                        sound.play()
-                        contadorTablero ++
-                        contarPuntosTablero()
-                        p[i].classList.remove("ocultarCelda")
-                        p[i].classList.add("activo")
-                        verificacionFYC15()
-                        ganar15()
-                    } else{
-                        error.play()
-                        contadorTablero--
-                        contarPuntosTablero()
-                        p[i].classList.add("cambiarColorIncorrecto15")
-                        vidas --
-                        mostrarVidas()
-                    }
+for(let i = 0 ; i<225; i++){
+    verificacionFYC15()
+    mostrarVidas()
+    contarPuntosTablero()
+    p[i].addEventListener("click", () => {
+        if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
+            if(boton.classList[0] != "botonVerde"){
+                if(p[i].classList[1] == "ocultarCelda"){
+                    p[i].classList.remove("ocultarCelda")
+                } else{
+                    p[i].classList.add("ocultarCelda")
                 }
-                if(vidas <= 0){
-                    estadoJuego = "pierde"
-                    lose.play()
-                    Swal.fire({
-                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                        padding: '3em',
-                        confirmButtonText: 'intentar de nuevo',
-                        confirmButtonColor: '#E6E2D073',
-                        timer: 5000,
-                        timerProgressBar: true,
-                        background: '#B33951',
-                        backdrop: `
-                            #314975E6
-                        `,
-                        customClass:{
-                            popup: 'popUp-class'
-                        }
-                    })
-                    }
+            }else {
+                if(p[i].innerText == 1){
+                    sound.play()
+                    contadorTablero ++
+                    contarPuntosTablero()
+                    p[i].classList.remove("ocultarCelda")
+                    p[i].classList.add("activo")
+                    verificacionFYC15()
+                    ganar15()
+                } else{
+                    error.play()
+                    contadorTablero--
+                    contarPuntosTablero()
+                    p[i].classList.add("cambiarColorIncorrecto5")
+                    vidas --
+                    mostrarVidas()
+                }
             }
-        })
-    }
+            if(vidas <= 0){
+                estadoJuego = "pierde"
+                lose.play()
+                setTimeout(() => {
+                    location.reload()
+                }, 3000)
+                Swal.fire({
+                    html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                    padding: '3em',
+                    confirmButtonText: 'intentar de nuevo',
+                    confirmButtonColor: '#E6E2D073',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    background: '#B33951',
+                    backdrop: `
+                        #314975E6
+                    `,
+                    customClass:{
+                        popup: 'popUp-class'
+                    }
+                })
+            }
+        }
+    })
 }
-
+}
 function marcarTableroYContarVidas20(){
     puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
-    for(let i = 0 ; i<400; i++){
-        verificacionFYC20()
-        mostrarVidas()
-        contarPuntosTablero()
-        p[i].addEventListener("click", () => {
-            if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
-                if(boton.classList[1] != "botonVerde"){
-                    if(p[i].classList[1] == "ocultarCelda"){
-                        p[i].classList.remove("ocultarCelda")
-                    } else{
-                        p[i].classList.add("ocultarCelda")
-                    }
-                }else {
-                    if(p[i].innerText == 1){
-                        sound.play()
-                        contadorTablero ++
-                        contarPuntosTablero()
-                        p[i].classList.remove("ocultarCelda")
-                        p[i].classList.add("activo")
-                        verificacionFYC20()
-                        ganar20()
-                    } else{
-                        error.play()
-                        contadorTablero--
-                        contarPuntosTablero()
-                        p[i].classList.add("cambiarColorIncorrecto20")
-                        vidas --
-                        mostrarVidas()
-                    }
+for(let i = 0 ; i<400; i++){
+    verificacionFYC20()
+    mostrarVidas()
+    contarPuntosTablero()
+    p[i].addEventListener("click", () => {
+        if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
+            if(boton.classList[0] != "botonVerde"){
+                if(p[i].classList[1] == "ocultarCelda"){
+                    p[i].classList.remove("ocultarCelda")
+                } else{
+                    p[i].classList.add("ocultarCelda")
                 }
-                if(vidas <= 0){
-                    estadoJuego = "pierde"
-                    lose.play()
-                    Swal.fire({
-                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                        padding: '3em',
-                        confirmButtonText: 'intentar de nuevo',
-                        confirmButtonColor: '#E6E2D073',
-                        timer: 5000,
-                        timerProgressBar: true,
-                        background: '#B33951',
-                        backdrop: `
-                            #314975E6
-                        `,
-                        customClass:{
-                            popup: 'popUp-class'
-                        }
-                    })
+            }else {
+                if(p[i].innerText == 1){
+                    sound.play()
+                    contadorTablero ++
+                    contarPuntosTablero()
+                    p[i].classList.remove("ocultarCelda")
+                    p[i].classList.add("activo")
+                    verificacionFYC20()
+                    ganar20()
+                } else{
+                    error.play()
+                    contadorTablero--
+                    contarPuntosTablero()
+                    p[i].classList.add("cambiarColorIncorrecto5")
+                    vidas --
+                    mostrarVidas()
                 }
             }
-        })
-    }
+            if(vidas <= 0){
+                estadoJuego = "pierde"
+                lose.play()
+                setTimeout(() => {
+                    location.reload()
+                }, 3000)
+                Swal.fire({
+                    html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+                    padding: '3em',
+                    confirmButtonText: 'intentar de nuevo',
+                    confirmButtonColor: '#E6E2D073',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    background: '#B33951',
+                    backdrop: `
+                        #314975E6
+                    `,
+                    customClass:{
+                        popup: 'popUp-class'
+                    }
+                })
+            }
+        }
+    })
+}
 }
 
 // funcion para guardar resultados del usuario en el local storage cuando se gana
@@ -3177,7 +3293,6 @@ if((nombreUsuario != null) && (infoLocalSUsuario != null) ){
     } else if(avatarUsuario3 != null){
         avatarUsuario3.src = `../../assets/${infoLocalSUsuario[0].avatar}.svg`
     }
-    
 }
 
 if(marcarTablero5[0] != null){
@@ -3249,21 +3364,15 @@ toggleTheme.addEventListener("click", () =>{
         }
     } else{
         document.body.classList.remove("oscuro")
-
         toggleTheme.classList.add("theme")
         toggleTheme.classList.remove("themeOscuro")
         circuloTheme.classList.add("circulo")
         circuloTheme.classList.remove("circuloOscuro")
-
         localStorage.setItem("theme", "claro")
         if(circuloBoton != null){
             circuloBoton.classList.add("circuloBoton")
             circuloBoton.classList.remove("circuloBotonOscuro")
         }
     }
-
 })
-
-
-
 

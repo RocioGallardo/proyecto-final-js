@@ -802,3 +802,49 @@ main{
     }
 }
 
+@media screen and (max-width: 500px) {
+    .gridTablero10x10{
+        grid-template-columns: 100px 230px;
+        grid-template-rows: 50px 50px 230px;
+        gap: 3px;
+    }
+    
+    .infoColumn10x10{
+        grid-template-columns: repeat(10, 20px);
+        gap: 3px;
+    }
+    
+    .infoColumn10x10 p {
+        width: 20px;
+        border-radius: 6px;
+    }
+    
+    .infoFilas10x10{
+        grid-template-rows: repeat(10, 20px);
+        gap: 3px;
+    }
+    
+    .infoFilas10x10 p {
+        height: 20px;
+        border-radius: 6px;
+    }
+    
+    .casilleros10x10{
+        grid-template-columns: repeat(10, 20px);
+        grid-template-rows: repeat(10, 20px);
+        gap: 3px;
+    }
+    .celdas10x10{
+        border-radius: 6px;
+        width: 20px;
+        height: 20px;
+    }
+    .cambiarColorIncorrecto10::after{
+        content: " ";
+        width: 16px;
+        height: 16px;
+        background-color: #E6E2D0;
+        border-radius: 4px;
+        position: absolute;
+    }
+}

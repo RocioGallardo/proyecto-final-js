@@ -793,20 +793,5 @@ main{
         grid-template-columns: 1fr;
         list-style: none;
     }
-    .h1index{
-    font-size: 40px;
-    }
-    .header{
-        justify-content: space-between;
-    }
-    .header > *{
-        display: none;
-    }
-    .header div{
-        padding: 5px;
-    }
-    .menu{
-        display: inline;
-    }
 }
 

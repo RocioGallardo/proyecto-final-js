@@ -49,6 +49,10 @@ footer{
     display: flex;
 }
 
+.header * {
+    margin: 3px;
+}
+
 .theme{
     width: 46px;
     height: 26px;
@@ -792,6 +796,9 @@ main{
         display: grid;
         grid-template-columns: 1fr;
         list-style: none;
+    }
+    .header{
+        justify-content: space-between;
     }
 }
 

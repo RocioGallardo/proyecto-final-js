@@ -3370,11 +3370,11 @@ toggleTheme.addEventListener("click", () =>{
 })
 
 let tamanoPantalla = screen.width
-const header = document.getElementById("header")
+const header = document.getElementsByTagName("header")
 const menuHamburguesa = document.getElementById("menuHamburguesa")
 
 if(tamanoPantalla <= "800"){
-    header.innerHTML += `
+    header[0].innerHTML += `
     <img src="./assets/menu.svg" alt="">
     `
 }

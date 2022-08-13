@@ -37,11 +37,13 @@ footer{
 
 .header{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
     font-size: 20px;
     background-color: #31497526;
+
 }
 .header div, .aPerfilHeader{
     display: flex;
@@ -774,5 +776,37 @@ main{
     border-radius: 50%;
 }
 
+/* 
+.menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    z-index: 2100;
+} */
 
+
+@media screen and (max-width: 700px) {
+    #ulLista5x5, #ulLista10x10, #ulLista15x15, #ulLista20x20{
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style: none;
+    }
+    .h1index{
+    font-size: 40px;
+    }
+    .header{
+        justify-content: space-between;
+    }
+    .header > *{
+        display: none;
+    }
+    .header div{
+        padding: 5px;
+    }
+    .menu{
+        display: inline;
+    }
+}
 

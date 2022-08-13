@@ -25,7 +25,7 @@ const idFormulario = document.getElementById("formulario")
 
 if((usuarios.length <= 0) && (idFormulario != null)){
     idFormulario.innerHTML += `
-    <img src="../assets/user0.svg" alt="" class="perfil" id="perfil">
+    <img src="../assets/user0default.svg" alt="" class="perfil" id="perfil">
     <div id="divAvatar"></div>
     <label for="nombreForm" class="label" id="nombreFormLabel">Nombre</label>
     <input type="text" class="input" id="nombreForm" required>
@@ -3369,3 +3369,12 @@ toggleTheme.addEventListener("click", () =>{
     }
 })
 
+let tamanoPantalla = screen.width
+const header = document.getElementById("header")
+const menuHamburguesa = document.getElementById("menuHamburguesa")
+
+if(tamanoPantalla <= "800"){
+    header.innerHTML += `
+    <img src="./assets/menu.svg" alt="">
+    `
+}

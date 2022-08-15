@@ -599,6 +599,9 @@ main{
     width: 50%;
     margin: 50px auto;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .ulListaTamanoTableros li{
     margin: 20px ;
@@ -797,5 +800,8 @@ main{
     .circulo, .circuloOscuro{
         width: 14px;
         height: 14px;
+    }
+    .h1index{
+        font-size: 35px;
     }
 }

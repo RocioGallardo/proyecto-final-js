@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Press+Start+2P&display=swap');
-/* CONFIGURACIONES GENERALES */
+
+/* GENERAL */
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
     font-family: 'Inconsolata', monospace;
     color: #B43451;
     text-decoration: none;
+
 }
 
 body{
@@ -19,20 +21,10 @@ body{
 }
 
 
-
 h1, h3{
-    text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
-
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-    margin-top: 70px;
+    text-transform: uppercase;
 }
 
 .header{
@@ -43,14 +35,22 @@ footer{
     padding: 10px;
     font-size: 20px;
     background-color: #31497526;
-
 }
+
 .header div, .aPerfilHeader{
     display: flex;
 }
 
 .header * {
     margin: 3px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin-top: 70px;
 }
 
 .theme{
@@ -64,6 +64,7 @@ footer{
     justify-content: flex-start;
     transition-duration: 0.5s;
 }
+
 .themeOscuro{
     width: 46px;
     height: 26px;
@@ -96,299 +97,249 @@ footer{
 
 
 
-/*  JUEGOS 5X5  #0E402D*/
+/*  JUEGOS 5X5  */
+.gridTablero5x5, .gridTablero10x10, .gridTablero15x15, .gridTablero20x20 {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
 
 .gridTablero5x5{
     margin: 100px;
-    display: grid;
     grid-template-columns:  100px 220px ;
     grid-template-rows: 50px 50px 220px;
     grid-template-areas: 
     "reloj infoColumn5x5"
     "boton infoColumn5x5"
     "infoFilas5x5 casilleros5x5";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
     gap: 5px;
 }
-
-
-.infoColumn5x5{
-    grid-area: infoColumn5x5;
-    display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px;
-    align-items: center;
-    gap: 5px;
-}
-
-
-.infoFilas5x5{
-    grid-area: infoFilas5x5;
-    display: grid;
-    grid-template-columns: 80px;
-    grid-template-rows: 40px 40px 40px 40px 40px;
-    align-items: center;
-    justify-items: center;
-    gap: 5px;
-}
-
-
-
-.casilleros5x5{
-    grid-area: casilleros5x5;
-    display: grid;
-    grid-template-columns: repeat(5, 40px);
-    grid-template-rows: repeat(5, 40px);
-    align-items: center;
-    gap: 5px;
-}
-
-
-.infoColumn5x5 p{
-    color: #E6E2D0;
-    width: 40px;
-    height: 100px;
-    background-color: #314975;
-    border-radius: 10px;
-}
-
-
-.infoFilas5x5 p{
-    color: #E6E2D0;
-    width: 100px;
-    height: 40px;
-    background-color: #314975;
-    border-radius: 10px;
-}
-
-
-/* PARA JUEGOS 10X10*/
 
 .gridTablero10x10{
     margin: 50px;
-    display: grid;
     grid-template-columns: 100px 350px;
     grid-template-rows: 50px 50px 350px;
     grid-template-areas: 
     "reloj infoColumn10x10"
     "boton infoColumn10x10"
     "infoFilas10x10 casilleros10x10";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
     gap: 5px;
 }
-
-.infoColumn10x10{
-    grid-area: infoColumn10x10;
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: 100px;
-    align-items: center;
-    gap: 5px;
-}
-
-.infoColumn10x10 p {
-    color: #E6E2D0;
-    width: 30px;
-    height: 100px;
-    background-color: #314975;
-    border-radius: 10px;
-}
-
-.infoFilas10x10{
-    grid-area: infoFilas10x10;
-    display: grid;
-    grid-template-columns: 100px;
-    grid-template-rows: repeat(10, 30px);
-    align-items: center;
-    gap: 5px;
-}
-
-.infoFilas10x10 p {
-    color: #E6E2D0;
-    width: 100px;
-    height: 30px;
-    background-color: #314975;
-    border-radius: 10px;
-}
-
-.casilleros10x10{
-    grid-area: casilleros10x10;
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
-    align-items: center;
-    gap: 5px;
-}
-
-/* PARA JUEGOS 15X15*/
 
 .gridTablero15x15{
     margin: 50px;
-    display: grid;
     grid-template-columns: 100px 445px;
     grid-template-rows: 50px 50px 438px;
     grid-template-areas: 
     "reloj infoColumn15x15"
     "boton infoColumn15x15"
     "infoFilas15x15 casilleros15x15";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
     gap: 5px;
 }
-
-.infoColumn15x15{
-    grid-area: infoColumn15x15;
-    display: grid;
-    grid-template-columns: repeat(15, 25px);
-    grid-template-rows: 100px;
-    align-items: center;
-    gap: 5px;
-}
-
-.infoFilas15x15{
-    grid-area: infoFilas15x15;
-    display: grid;
-    grid-template-columns: 100px;
-    grid-template-rows: repeat(15, 25px);
-    align-items: center;
-    gap: 5px;
-}
-
-.casilleros15x15{
-    grid-area: casilleros15x15;
-    display: grid;
-    grid-template-columns: repeat(15, 25px);
-    grid-template-rows: repeat(15, 25px);
-    align-items: center;
-    gap: 5px;
-}
-
-.infoColumn15x15 p{
-    color: #E6E2D0;
-    width: 25px;
-    height: 100px;
-    background-color: #314975;
-    border-radius: 8px;
-}
-
-.infoFilas15x15 p{
-    color: #E6E2D0;
-    width: 100px;
-    height: 25px;
-    background-color: #314975;
-    border-radius: 8px;
-}
-
-/* PARA JUEGOS 20X20*/
 
 .gridTablero20x20{
     margin: 50px;
-    display: grid;
     grid-template-columns: 150px 475px;
     grid-template-rows: 60px 60px 475px;
     grid-template-areas: 
     "reloj infoColumn20x20"
     "boton infoColumn20x20"
     "infoFilas20x20 casilleros20x20";
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
     gap: 4px;
+}
+
+.infoColumn5x5, .infoColumn10x10, .infoColumn15x15, .infoColumn20x20{
+    display: grid;
+    align-items: center;
+}
+
+.infoColumn5x5{
+    grid-area: infoColumn5x5;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    gap: 5px;
+}
+
+.infoColumn10x10{
+    grid-area: infoColumn10x10;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: 100px;
+    gap: 5px;
+}
+
+.infoColumn15x15{
+    grid-area: infoColumn15x15;
+    grid-template-columns: repeat(15, 25px);
+    grid-template-rows: 100px;
+    gap: 5px;
 }
 
 .infoColumn20x20{
     grid-area: infoColumn20x20;
-    display: grid;
     grid-template-columns: repeat(20, 20px);
     grid-template-rows: 120px;
-    align-items: center;
     gap: 4px;
+}
+
+.infoFilas5x5, .infoFilas10x10, .infoFilas15x15, .infoFilas20x20{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.infoFilas5x5{
+    grid-area: infoFilas5x5;
+    grid-template-columns: 80px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    gap: 5px;
+}
+
+.infoFilas10x10{
+    grid-area: infoFilas10x10;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(10, 30px);
+    gap: 5px;
+}
+
+.infoFilas15x15{
+    grid-area: infoFilas15x15;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(15, 25px);
+    gap: 5px;
 }
 
 .infoFilas20x20{
     grid-area: infoFilas20x20;
-    display: grid;
     grid-template-columns: 150px;
     grid-template-rows: repeat(20, 20px);
-    align-items: center;
     gap: 4px;
+}
+
+.casilleros5x5, .casilleros10x10, .casilleros15x15, .casilleros20x20{
+    display: grid;
+    align-items: center;
+}
+
+.casilleros5x5{
+    grid-area: casilleros5x5;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
+    gap: 5px;
+}
+
+.casilleros10x10{
+    grid-area: casilleros10x10;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 5px;
+}
+
+.casilleros15x15{
+    grid-area: casilleros15x15;
+    grid-template-columns: repeat(15, 25px);
+    grid-template-rows: repeat(15, 25px);
+    gap: 5px;
 }
 
 .casilleros20x20{
     grid-area: casilleros20x20;
-    display: grid;
     grid-template-columns: repeat(20, 20px);
     grid-template-rows: repeat(20, 20px);
-    align-items: center;
     gap: 4px;
 }
 
-.infoColumn20x20 p {
+.infoColumn5x5 p, .infoColumn10x10 p, .infoColumn15x15 p, .infoColumn20x20 p, .infoFilas5x5 p, .infoFilas10x10 p, .infoFilas15x15 p, .infoFilas20x20 p{
     color: #E6E2D0;
+    background-color: #314975;
+}
+
+.infoColumn5x5 p{
+    width: 40px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.infoColumn10x10 p {
+    width: 30px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.infoColumn15x15 p{
+    width: 25px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.infoColumn20x20 p {
     width: 20px;
     height: 120px;
-    background-color: #314975;
     border-radius: 6px;
 }
 
+.infoFilas5x5 p{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.infoFilas10x10 p {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.infoFilas15x15 p{
+    width: 100px;
+    height: 25px;
+    border-radius: 8px;
+}
 
 .infoFilas20x20 p{
-    color: #E6E2D0;
     width: 150px;
     height: 20px;
-    background-color: #314975;
     border-radius: 6px;
 }
-/* PARA TODOS LOS JUEGOS*/
 
-.boton{
+
+
+/* PARA TODOS LOS JUEGOS*/
+.boton, .botonVerde{
     grid-area: boton;
     width: 56px;
     height: 31px;
     border-radius: 15px;
-    border: 1px solid #9CB1A3;
-    background-color: #E6E2D0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     transition-duration: 0.5s;
 }
 
-.botonVerde{
-    grid-area: boton;
-    width: 56px;
-    height: 31px;
-    border-radius: 15px;
-    border: none;
-    background-color: #9CB1A3;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    transition-duration: 0.5s;
+.boton{
+    border: 1px solid #9CB1A3;
+    background-color: #E6E2D0;
 }
 
-.circuloBoton{
+.botonVerde{
+    border: none;
+    background-color: #9CB1A3;
+}
+
+.circuloBoton, .circuloBotonOscuro{
     width: 23px;
     height: 23px;
     margin: 3px;
     border-radius: 50%;
+    transition-duration: 0.5s;
+}
+.circuloBoton{
     border: 1px solid #9CB1A3;
     background-color:#E6E2D0 ;
-    transition-duration: 0.5s;
 }
 
 .circuloBotonOscuro{
-    width: 23px;
-    height: 23px;
-    margin: 3px;
-    border-radius: 50%;
     border: 1px solid #1B222D;
     background-color:#1B222D ;
-    transition-duration: 0.5s;
 }
 
 
@@ -413,33 +364,30 @@ p{
     user-select: none;
 }
 
-.celdas5x5{
+.celdas5x5, .celdas10x10, .celdas15x15, .celdas20x20{
     background-color: #31497526;
     color: transparent;
+}
+
+.celdas5x5{
     border-radius: 10px;
     width: 40px;
     height: 40px;
 }
 
 .celdas10x10{
-    background-color: #31497526;
-    color: transparent;
     border-radius: 8px;
     width: 30px;
     height: 30px;
 }
 
 .celdas15x15{
-    background-color: #31497526;
-    color: transparent;
     border-radius: 8px;
     width: 25px;
     height: 25px;
 }
 
 .celdas20x20{
-    background-color: #31497526;
-    color: transparent;
     border-radius: 6px;
     width: 20px;
     height: 20px;
@@ -464,40 +412,34 @@ p{
     border: none;
 }
 
-.cambiarColorIncorrecto5::after{
+.cambiarColorIncorrecto5::after, .cambiarColorIncorrecto10::after, .cambiarColorIncorrecto15::after, .cambiarColorIncorrecto20::after{
     content: " ";
+    background-color: #E6E2D0;
+    position: absolute;
+}
+
+.cambiarColorIncorrecto5::after{
     width: 36px;
     height: 36px;
-    background-color: #E6E2D0;
     border-radius: 8px;
-    position: absolute;
 }
 
 .cambiarColorIncorrecto10::after{
-    content: " ";
     width: 26px;
     height: 26px;
-    background-color: #E6E2D0;
     border-radius: 6px;
-    position: absolute;
 }
 
 .cambiarColorIncorrecto15::after{
-    content: " ";
     width: 21px;
     height: 21px;
-    background-color: #E6E2D0;
     border-radius: 6px;
-    position: absolute;
 }
 
 .cambiarColorIncorrecto20::after{
-    content: " ";
     width: 16px;
     height: 16px;
-    background-color: #E6E2D0;
     border-radius: 4px;
-    position: absolute;
 }
 
 .esconder p{
@@ -570,7 +512,6 @@ main{
         transform: translateX(-5px) translateY(-5px);
     }
     80%{
-        
         transform: translateX(5px) translateY(-5px);
     }
 }
@@ -780,13 +721,6 @@ main{
     border-radius: 50%;
 }
 
-/* 
-.menu{
-    display: none;
-    background-color: transparent;
-    border: none;
-    z-index: 2100;
-} */
 
 
 @media screen and (max-width: 700px) {
@@ -846,5 +780,22 @@ main{
         background-color: #E6E2D0;
         border-radius: 4px;
         position: absolute;
+    }
+    header p{
+        font-size: 15px;
+    }
+    header h1{
+        font-size: 15px;
+    }
+    header img{
+        width: 20px;
+    }
+    .theme, .themeOscuro{
+        width: 36px;
+        height: 20px;
+    }
+    .circulo, .circuloOscuro{
+        width: 14px;
+        height: 14px;
     }
 }

@@ -37,19 +37,7 @@ if((usuarios.length <= 0) && (idFormulario != null)){
     <button type="submit" class="botonSubmit">Crear Usuario</button>
     `
 const divAvatar = document.getElementById("divAvatar")
-// fetch("../json/img-users.json")
-// .then(response => response.json())
-// .then(imagenAvatar => {
-//     imagenAvatar.forEach((imagen, indice) => {
-//         divAvatar.innerHTML += `
-//         <img id="avatar${indice}" src="../assets/${imagen.url}">
-//         `
-//     })
-//     const avatar0 = document.getElementById("avatar0")
-//     avatar0.addEventListener("click", () =>{
-//     console.log("click")
-//     })
-// })
+
 
 async function mostrarAvatars(){
     const avatares = await fetch("../json/img-users.json")
@@ -137,7 +125,7 @@ if(idFormulario != null){
         e.preventDefault()
         let nombre = document.getElementById("nombreForm").value
         let email = document.getElementById("emailForm").value
-        let avatar = perfil.classList[1]
+        let avatar = perfil.classList[1] ?? "user0default"
         let usuario = new Usuario (nombre, email, avatar)
         usuarios.push(usuario)
         localStorage.setItem("Usuarios", JSON.stringify(usuarios))

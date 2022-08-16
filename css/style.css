@@ -328,18 +328,19 @@ footer{
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     transition-duration: 0.5s;
 }
 
 .boton{
     border: 1px solid #9CB1A3;
-    background-color: #E6E2D0;
+    background-color: transparent;
+    justify-content: flex-start;
 }
 
 .botonVerde{
     border: none;
     background-color: #9CB1A3;
+    justify-content: flex-end;
 }
 
 .circuloBoton, .circuloBotonOscuro{
@@ -355,7 +356,7 @@ footer{
 }
 
 .circuloBotonOscuro{
-    border: 1px solid #1B222D;
+    border: 1px solid #9CB1A3;
     background-color:#1B222D ;
 }
 
@@ -489,21 +490,16 @@ p{
 }
 
 main{
-    height: 10px;
+    width: 90%;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    z-index: 50;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+
 }
 
 .h1index{
+    grid-area: h1index;
     font-size: 100px;
     margin: 100px;
     animation-name: titulos;
@@ -534,33 +530,6 @@ main{
 }
 
 
-
-
-.fondo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    z-index: -1;
-}
-
-.fondo div{
-    width: 15px;
-    height: 15px;
-    margin: 1px;
-    border-radius: 5px;
-    background-color: transparent;
-    transition-delay: 0.2s;
-    position: relative;
-}
-
-.fondo div:hover{
-    background-color: #9CB1A3;
-    transition-delay: 0s;
-}
-.fondoOscuro div:hover:hover{
-    background-color: #314975;
-}
 
 
 

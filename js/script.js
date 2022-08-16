@@ -17,8 +17,11 @@ const usuarios = JSON.parse(localStorage.getItem("Usuarios")) ?? []
 const cartelCrearUsuario = document.getElementById("cartelCrearUsuario")
 
 if((cartelCrearUsuario != null) && (usuarios.length == 0)) {
-    cartelCrearUsuario.innerText += ` Para jugar, primero deberás crear un usuario`
-    cartelCrearUsuario.innerHTML += `<a href="../perfil.html"> Haz click aquí</a>`
+    cartelCrearUsuario.innerHTML =`
+    <h3>Para jugar, tendrás crear un usuario</h3>
+    <button><a href="../perfil.html"> Haz click aquí</a></button>
+    `
+    console.log("true")
 }
 
 const idFormulario = document.getElementById("formulario")
@@ -2936,16 +2939,39 @@ function contarPuntosTablero(){
     puntajeTableroContador.innerText = `: ${contadorTablero}`
 }
 
-function recargarPagina(){
-    setTimeout(location.reload(), 3000)
+
+
+function perder(){
+    estadoJuego = "pierde"
+    lose.play()
+    setTimeout(() => {
+        location.reload()
+    }, 3000)
+    Swal.fire({
+        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
+        padding: '3em',
+        confirmButtonText: 'intentar de nuevo',
+        confirmButtonColor: '#E6E2D073',
+        timer: 3000,
+        timerProgressBar: true,
+        background: '#B33951',
+        backdrop: `
+        #314975E6
+        `,
+        customClass:{
+            popup: 'popUp-class'
+        }
+    })
 }
 
+
+
 function marcarTableroYContarVidas5(){
-        puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
+    verificacionFYC5()
+    mostrarVidas()
+    contarPuntosTablero()
+    puntajeTotal.innerText = `TOTAL : ${usuarios[0].puntaje}`
     for(let i = 0 ; i<25; i++){
-        verificacionFYC5()
-        mostrarVidas()
-        contarPuntosTablero()
         p[i].addEventListener("click", () => {
             if((estadoJuego != "gana") && (estadoJuego!= "pierde")){
                 if(boton.classList[0] != "botonVerde"){
@@ -2973,26 +2999,7 @@ function marcarTableroYContarVidas5(){
                     }
                 }
                 if(vidas <= 0){
-                    estadoJuego = "pierde"
-                    lose.play()
-                    setTimeout(() => {
-                        location.reload()
-                    }, 5000)
-                    Swal.fire({
-                        html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                        padding: '3em',
-                        confirmButtonText: 'intentar de nuevo',
-                        confirmButtonColor: '#E6E2D073',
-                        timer: 5000,
-                        timerProgressBar: true,
-                        background: '#B33951',
-                        backdrop: `
-                            #314975E6
-                        `,
-                        customClass:{
-                            popup: 'popUp-class'
-                        }
-                    })
+                    perder()
                 }
             }
         })
@@ -3031,26 +3038,7 @@ for(let i = 0 ; i<100; i++){
                 }
             }
             if(vidas <= 0){
-                estadoJuego = "pierde"
-                lose.play()
-                setTimeout(() => {
-                    location.reload()
-                }, 3000)
-                Swal.fire({
-                    html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                    padding: '3em',
-                    confirmButtonText: 'intentar de nuevo',
-                    confirmButtonColor: '#E6E2D073',
-                    timer: 3000,
-                    timerProgressBar: true,
-                    background: '#B33951',
-                    backdrop: `
-                        #314975E6
-                    `,
-                    customClass:{
-                        popup: 'popUp-class'
-                    }
-                })
+                perder()
             }
         }
     })
@@ -3090,26 +3078,7 @@ for(let i = 0 ; i<225; i++){
                 }
             }
             if(vidas <= 0){
-                estadoJuego = "pierde"
-                lose.play()
-                setTimeout(() => {
-                    location.reload()
-                }, 3000)
-                Swal.fire({
-                    html:'<h3 class="h3perdiste">PERDISTE :( </h3>',
-                    padding: '3em',
-                    confirmButtonText: 'intentar de nuevo',
-                    confirmButtonColor: '#E6E2D073',
-                    timer: 3000,
-                    timerProgressBar: true,
-                    background: '#B33951',
-                    backdrop: `
-                        #314975E6
-                    `,
-                    customClass:{
-                        popup: 'popUp-class'
-                    }
-                })
+                perder()
             }
         }
     })
@@ -3174,11 +3143,9 @@ for(let i = 0 ; i<400; i++){
 }
 }
 
+
+
 // funcion para guardar resultados del usuario en el local storage cuando se gana
-
-
-
-
 function guardarResultados(tamano){
     let infoLocalSUsuario
     let nombreJuego = document.getElementById("nombreJuego")
@@ -3228,13 +3195,11 @@ function reloj (tamano){
         }else{
             segundosP.innerText = `:${segundos}`
         }
-        
         if((estadoJuego == "gana") || ( estadoJuego == "pierde")){
             clearInterval(intervalo)
             tiempoTotal = `${minutos}:${segundos}`
             guardarResultados(tamano)
         }
-        
     }
     let intervalo = setInterval(contar, 1000)
     pause.addEventListener("click", () => {
@@ -3262,31 +3227,6 @@ let marcarTablero10 = document.getElementsByClassName("marcarTablero10")
 let marcarTablero15 = document.getElementsByClassName("marcarTablero15")
 let marcarTablero20 = document.getElementsByClassName("marcarTablero20")
 
-
-
-let nombreUsuario = document.getElementById("nombreUsuario")
-let avatarUsuario = document.getElementById("avatarUsuario")
-let avatarUsuario2 = document.getElementById("avatarUsuario2")
-let avatarUsuario3 = document.getElementById("avatarUsuario3")
-
-
-if((puntajeTotal != null) && (infoLocalSUsuario != null)) {
-    puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
-}
-
-if((nombreUsuario != null) && (infoLocalSUsuario != null) ){
-    nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
-    if(avatarUsuario != null){
-        avatarUsuario.src = `./assets/${infoLocalSUsuario[0].avatar}.svg`
-        avatarUsuario.alt = "avatar-usuario"
-    } else if(avatarUsuario2 != null){
-        avatarUsuario2.src = `../assets/${infoLocalSUsuario[0].avatar}.svg`
-        avatarUsuario2.alt = "avatar-usuario"
-    } else if(avatarUsuario3 != null){
-        avatarUsuario3.src = `../../assets/${infoLocalSUsuario[0].avatar}.svg`
-        avatarUsuario3.alt = "avatar-usuario"
-    }
-}
 
 if(marcarTablero5[0] != null){
     let {tamano} = tablero1_5x5
@@ -3369,4 +3309,28 @@ toggleTheme.addEventListener("click", () =>{
     }
 })
 
-let tamanoPantalla = screen.width
+// informacion del usuario en el header , creo tres tipos de avatarUsuario para que no haya error en rutas
+
+let nombreUsuario = document.getElementById("nombreUsuario")
+let avatarUsuario = document.getElementById("avatarUsuario")
+let avatarUsuario2 = document.getElementById("avatarUsuario2")
+let avatarUsuario3 = document.getElementById("avatarUsuario3")
+
+
+if((puntajeTotal != null) && (infoLocalSUsuario != null)) {
+    puntajeTotal.innerText = `TOTAL:${infoLocalSUsuario[0].puntaje}`
+}
+
+if((nombreUsuario != null) && (infoLocalSUsuario != null) ){
+    nombreUsuario.innerText = `${infoLocalSUsuario[0].nombre.toUpperCase()}`
+    if(avatarUsuario != null){
+        avatarUsuario.src = `./assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario.alt = "avatar-usuario"
+    } else if(avatarUsuario2 != null){
+        avatarUsuario2.src = `../assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario2.alt = "avatar-usuario"
+    } else if(avatarUsuario3 != null){
+        avatarUsuario3.src = `../../assets/${infoLocalSUsuario[0].avatar}.svg`
+        avatarUsuario3.alt = "avatar-usuario"
+    }
+}
